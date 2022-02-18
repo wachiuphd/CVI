@@ -34,3 +34,10 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+.DS_Store
+CheckDist copy 2.pdf
+CheckDist copy 3.pdf
+.DS_Store
+CheckDist copy 4.pdf
+CheckDist copy.pdf
+CheckDist.pdf

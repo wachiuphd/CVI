@@ -1,5 +1,9 @@
 library(data.table)
-library(openxlsx)
+library(stringr)
+library(dplyr)
+library(naniar)
+#library(openxlsx)
+library(readxl)
 datafolder <- "Data"
 
 ### Get census tracts from 2019 Census Tract Gazetteer File
@@ -7,26 +11,106 @@ datafolder <- "Data"
 tracts <- fread(file.path(datafolder,"2019_Gaz_tracts_national.txt"),
                 keepLeadingZeros = TRUE)
 tracts[, c("ALAND","AWATER","ALAND_SQMI","AWATER_SQMI","INTPTLAT","INTPTLONG"):=NULL]
+tracts$GEOID.Tract <- tracts$GEOID
 tracts$GEOID.State <- substring(tracts$GEOID,1,2)
 tracts$GEOID.County <- substring(tracts$GEOID,1,5)
 
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 12.20.2021.xlsx",
-                        sheet="Subcategories (In Progress)")
-for (j in 1:41) {
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 02.07.22.xlsx",
+                        sheet="Subcategories (In Progress)",trim_ws = FALSE)
+
+
+checkdatrow <- function(jrow) {
+  j<-jrow
   fname<-(file.path("~/Dropbox/Climate Health Vulnerability Index",
-                            cvi.master$`Path To File`[j]))
+                    cvi.master$`Path To File`[j]))
   fname.exists <- file.exists(fname)
   cat(fname," exists? ",fname.exists,"\n")
+  tmp <- data.frame()
   if (fname.exists) {
     tmp <- fread(fname,
                  keepLeadingZeros = TRUE)
-    cat(names(tmp),sep="\n")
-    cat("\n")
-    # cols<-c("GEOID",cvi.master$`Indicator Name`[j])
-    # setnames(tmp, cvi.master$`GEOID Column Name`[j], cols[1])
-    # setnames(tmp, cvi.master$`Data Column Name`[j], cols[2])
-    # tmp <- tmp[,..cols]
+    cat("****GEOID Column Name ",cvi.master$`GEOID Column Name`[j],
+        cvi.master$`GEOID Column Name`[j] %in% names(tmp),"\n")
+    if (!is.na(cvi.master$`Subset Column Name`[j])) {
+      subsetcolnum <- which(names(tmp)==cvi.master$`Subset Column Name`[j])
+      tmp.subsets<-unique(tmp[[subsetcolnum]])
+      cvi.master$`Indicator Name`[j] %in% tmp.subsets
+      cat("****Indicator subset ",cvi.master$`Indicator Name`[j],
+          cvi.master$`Indicator Name`[j] %in% tmp.subsets,"\n")
+      tmp <- tmp[tmp[[subsetcolnum]]==cvi.master$`Indicator Name`[j],]
+    }
+    cat("****Data Column Name ",cvi.master$`Data Column Name`[j],
+        cvi.master$`Data Column Name`[j] %in% names(tmp),"\n")
+    cols<-c("GEOID",
+            cvi.master$`Indicator Name`[j]
+            )
+    setnames(tmp, cvi.master$`GEOID Column Name`[j], cols[1])
+    setnames(tmp, cvi.master$`Data Column Name`[j], cols[2])
+    tmp <- tmp[,..cols]
+    if (class(tmp[[2]]) == "character") {
+      tmp[[2]][tmp[[2]]=="N/A"] <- NA
+      tmp[[2]] <- as.numeric(tmp[[2]])
+    }
+    tmp[[2]][tmp[[2]]==-999] <- NA
+    cat("number of rows: ",nrow(tmp),"\n")
+    cat("number of na rows: ",sum(is.na(tmp[,2]))," or ",sum(tmp[,2]<0),"\n")
+#    tmp$Category <- cvi.master$`Baseline Vulnerability`[j]
+#    tmp$Subcategory <- cvi.master$Subcategory[j]
+    print(head(tmp))
+    vartext <- abbreviate(cols[2],minlength = 20)
+    par(mfrow=c(2,2))
+    y <- tmp[[2]]
+    y <- y[!is.na(y)]
+    if (length(grep("change",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
+        length(grep("additional",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1) {
+      y <- y[y>=0]
+    }
+    qqnorm(y,main=vartext,pch=15,cex=0.2); qqline(y);
+    qqnorm(log(y[y>0]),main=paste("Log",vartext),pch=15,cex=0.2); qqline(log(y[y>0]));
+    hist(y,main="",xlab=vartext);
+    hist(log(y[y>0]),main="",xlab=paste("Log",vartext));
+    mtext(paste("Row",jrow),outer=TRUE,line=-1)
+    cat("-------------------------------\n\n")
+  }
+  if (nrow(tmp)>0 & ncol(tmp)==2) {
+    return(tmp)
+  } else {
+    return(NA)
   }
 }
+
+pdf("CheckDist.pdf")
+capture.output( {
+for (j in 1:nrow(cvi.master)) {
+  print(paste("-----",j))
+  tmp.df <- try(checkdatrow(j))
+  if (is.data.frame(tmp.df)) {
+    if (length(unique(str_length(tmp.df$GEOID)))==1) {
+      if (str_length(tmp.df$GEOID[1]) == 11) {
+        tmp.df$GEOID.County <- substr(tmp.df$GEOID,1,5)
+        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+        names(tmp.df)[1] <- "GEOID.Tract"
+        tracts <- left_join(tracts,tmp.df)
+      } else if (str_length(tmp.df$GEOID[1]) == 5) {
+        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+        names(tmp.df)[1] <- "GEOID.County"
+        tracts <- left_join(tracts,tmp.df)
+      } else if (str_length(tmp.df$GEOID[1]) == 2) {
+        names(tmp.df)[1] <- "GEOID.State"
+        tracts <- left_join(tracts,tmp.df)
+      } 
+    }
+    print(head(tmp.df))
+  }
+  cat("\n\n")
+}
+},file="Checkoutput.txt")
+dev.off()
+icols <- c("Indicator Name","Adverse Direction","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
+indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:5)])
+indicators.df <- left_join(indicators.df,as.data.table(cvi.master)[,..icols])
+indicators.df$`Adverse Direction`<-as.numeric(indicators.df$`Adverse Direction`)
+fwrite(tracts,"CVI_data_current.csv")
+fwrite(indicators.df,"CVI_indicators_current.csv")
