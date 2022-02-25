@@ -6,18 +6,26 @@ library(naniar)
 library(readxl)
 datafolder <- "Data"
 
-### Get census tracts from 2019 Census Tract Gazetteer File
-### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2019_Gazetteer/2019_Gaz_tracts_national.zip
-tracts <- fread(file.path(datafolder,"2019_Gaz_tracts_national.txt"),
-                keepLeadingZeros = TRUE)
-tracts[, c("ALAND","AWATER","ALAND_SQMI","AWATER_SQMI","INTPTLAT","INTPTLONG"):=NULL]
-tracts$GEOID.Tract <- tracts$GEOID
-tracts$GEOID.State <- substring(tracts$GEOID,1,2)
-tracts$GEOID.County <- substring(tracts$GEOID,1,5)
+# ### Get census tracts from 2019 Census Tract Gazetteer File
+# ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2019_Gazetteer/2019_Gaz_tracts_national.zip
+# tracts <- fread(file.path(datafolder,"2019_Gaz_tracts_national.txt"),
+#                 keepLeadingZeros = TRUE)
+# tracts[, c("ALAND","AWATER","ALAND_SQMI","AWATER_SQMI","INTPTLAT","INTPTLONG"):=NULL]
+# tracts$GEOID.Tract <- tracts$GEOID
+# tracts$GEOID.State <- substring(tracts$GEOID,1,2)
+# tracts$GEOID.County <- substring(tracts$GEOID,1,5)
+
+# Census tracts from 22-02_CVI_state_county_tract.xlsx
+tractsraw <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/Other/22-02_CVI_state_county_tract.xlsx",
+  sheet="Tract")
+tracts <- tractsraw[,c("STATE","County_Name","NAMELSAD10")]
+tracts$GEOID.State <- tractsraw$STATEFP10
+tracts$GEOID.County <- tractsraw$FIPS
+tracts$GEOID.Tract <- tractsraw$GEOID10
 
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 02.07.22.xlsx",
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 02.23.22.xlsx",
                         sheet="Subcategories (In Progress)",trim_ws = FALSE)
 
 
@@ -54,6 +62,8 @@ checkdatrow <- function(jrow) {
       tmp[[2]] <- as.numeric(tmp[[2]])
     }
     tmp[[2]][tmp[[2]]==-999] <- NA
+    tmp <- subset(tmp,!is.na(GEOID)) # Remove row without GEOID
+    tmp <- subset(tmp,GEOID != "") # Remove row without GEOID
     cat("number of rows: ",nrow(tmp),"\n")
     cat("number of na rows: ",sum(is.na(tmp[,2]))," or ",sum(tmp[,2]<0),"\n")
 #    tmp$Category <- cvi.master$`Baseline Vulnerability`[j]
@@ -108,8 +118,8 @@ for (j in 1:nrow(cvi.master)) {
 }
 },file="Checkoutput.txt")
 dev.off()
-icols <- c("Indicator Name","Adverse Direction","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
-indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:5)])
+icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
+indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:6)])
 indicators.df <- left_join(indicators.df,as.data.table(cvi.master)[,..icols])
 indicators.df$`Adverse Direction`<-as.numeric(indicators.df$`Adverse Direction`)
 fwrite(tracts,"CVI_data_current.csv")
