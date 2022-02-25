@@ -5,6 +5,7 @@ Mental health not good for >=14 days among adults aged >=18 years,1,1,Health,Men
 Fatal Drug Overdose,1,1,Health,Mental Health & Deaths of Despair,Fatal Overdose Data,CDC,2019,State 
 Binge drinking among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Alcohol Abuse,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 Opiod Overdose,1,1,Health,Mental Health & Deaths of Despair,"Opioid Overdose Per 100,000 People",Policy Map,2019,County
+Suicide,1,1,Health,Mental Health & Deaths of Despair,Suicide Rates,CDC  ,2019,State 
 Current asthma among adults aged >=18 years,1,1,Health,Chronic Disease,Current Asthma Over Age 18,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 Stroke among adults aged >=18 years,1,1,Health,Chronic Disease,Stroke,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 Chronic obstructive pulmonary disease among adults aged >=18 years,1,1,Health,Chronic Disease,COPD,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
@@ -24,25 +25,64 @@ Gonorrhea,1,1,Health,Infectious Diseases,Gonorrhea,Policy Map,2017,County
 Syphillis,1,1,Health,Infectious Diseases,Syphillis,Policy Map,2017,County
 Infant Mortality,1,1,Health,Child Health,Infant Mortality,Policy Map,2017,County
 Low Birthweight,1,1,Health,Child Health,Low birthweight,Policy Map,2018,County
-Socioeconomic,1,,Social,Socioeconomic Status,Socioeconomic theme,ASTDR,2018,Census Tract
-Household Composition & Disability,1,,Social,Housing Composition & Disability,Household Composition and Disability,ASTDR,2018,Census Tract
-Minority Status & Language,1,,Social,Minority Status & Language,Minority Status and language,ASTDR,2018,Census Tract
-Housing Type & Transportation,1,,Social,Housing & Transportation,Housing and Transportation,ASTDR,2018,Census Tract
-Power Grid Generation,-1,,Infrastructure,Energy,Power Grid Resilience- Generation,Policy Map,2019,County
-Air Markets,1,,Infrastructure,Energy,Air Markets Program Data ,EPA,2020,County
-Renewable Energy,-1,,Infrastructure,Energy,Renewable Energy,Policy Map,2019,County
-Housing Built Past v.s. Now,1,,Infrastructure,Financial Services,"Redlining, Percent of Housing Units Built Between 1940-1969 as of 2015-2019",Policy Map,2015-2019,Census Tract
-Nursing Homes,-1,,Infrastructure,Dependent Care,Senior/ Disability Care Deserts,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,
-Real Estate Taxes,-1,,Infrastructure,Governance,Tax Base: Median Real Estate Taxes Paid,Policy Map,2015-2019,Census Tract
-Public Libraries,-1,,Infrastructure,Government Services,Public Library Locations,Policy Map,2020,Point
-Risk-Screening Environmental Indicators (RSEI) ,1,,Environment,Toxic Releases,Risk-Screening Environmental Indicators (RSEI) ,EASYRSEI,2019,Census Tract
-Landfills,1,,Environment,Toxic Releases,EPA FRS,EPA Landfill Methane Outreach Program,As of Sept 2021,Point
-TSCA Facilities,1,,Environment,Toxic Releases,TSCA Facilities ,"Jennifer McPartland, EDF",2015-2019,
-Superfund Sites,1,,Environment,Pollutant Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level
-Regulated Facilities and Sites,1,,Environment,Pollutant Sources,Geospatial Data for EPA Regulated Facilities and Sites,EPA Facility Registry Service,2020,Facility Level
-Ports,1,,Environment,Transportation,Waterborne Shipping,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point
-Parks and Greenspace,-1,,Environment,Land Use,Parks/Green Spaces,National Neighborhood Data Archive (NaNDA),2018,Census Tract
-Tribal Lands,1,,Environment,Land Use,Native American Lands,USGS,2014,"USGS 1:1,000,000-Scale Indian Lands of the United States 201412 Shapefile"
-Agriculture.2,1,,CC: Economic,Sectors Vulnerable to Disruption,Agriculture,Policy Map,2015,County
-Flooding risk to properties,1,,CC: Economic,Costs of Climate Disasters,"Change in percent of properties at risk of flooding under100 year flood probabilities, between 2050 and 2020, across four major flood types: rain, riverine, tidal events, and storm surge, ",First Street Foundation Flood Model,2020,County Level
-Extreme Weather Events,1,,CC: Extreme Events,Extreme Weather Events,18 indicators,FEMA,1/1/2014 - 4/15/2021,Census Tract
+Pre-term Birth,1,1,Health,Child Health,Pre-term birth,March of Dimes,2014,State
+Childhood Asthma,1,1,Health,Child Health,Childhood Asthma,CDC EPH Tracking,2018,State
+Socioeconomic,1,1,Social,Socioeconomic Status,Socioeconomic theme,ASTDR,2018,Census Tract
+Household Composition & Disability,1,1,Social,Housing Composition & Disability,Household Composition and Disability,ASTDR,2018,Census Tract
+Minority Status & Language,1,1,Social,Minority Status & Language,Minority Status and language,ASTDR,2018,Census Tract
+Housing Type & Transportation,1,1,Social,Housing & Transportation,Housing and Transportation,ASTDR,2018,Census Tract
+Foreclosure Rate,1,1,Social,HUD Foreclosure,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract
+Power Grid Generation,-1,1,Infrastructure,Energy,Power Grid Resilience- Generation,Policy Map,2019,County
+Air Markets,1,0,Infrastructure,Energy,Air Markets Program Data ,EPA,2020,County
+Renewable Energy,-1,0,Infrastructure,Energy,Renewable Energy,Policy Map,2019,County
+Retail Food,-1,1,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
+Unbanked Households,1,1,Infrastructure,Financial Services,Percent of Unbanked Households,Policy Map,2015-2019,State
+Payday lending,1,1,Infrastructure,Financial Services,Payday lending/ Pawn shops,Center for Responsible Lending,2010,State
+Housing Built Past v.s. Now,1,1,Infrastructure,Financial Services,"Redlining, Percent of Housing Units Built Between 1940-1969 as of 2015-2019",Policy Map,2015-2019,Census Tract
+Nursing Homes,-1,0,Infrastructure,Dependent Care,Senior/ Disability Care Deserts,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,
+Real Estate Taxes,-1,1,Infrastructure,Governance,Tax Base: Median Real Estate Taxes Paid,Policy Map,2015-2019,Census Tract
+Voter Turnout,-1,1,Infrastructure,Governance,Voter Turnout (2020 Presidential),Policy Map,2020,State
+Public Libraries,-1,0,Infrastructure,Government Services,Public Library Locations,Policy Map,2020,Point
+Risk-Screening Environmental Indicators (RSEI) ,1,0,Environment,Toxic Releases,Risk-Screening Environmental Indicators (RSEI) ,EASYRSEI,2019,Census Tract
+Landfills,1,0,Environment,Toxic Releases,EPA FRS,EPA Landfill Methane Outreach Program,As of Sept 2021,Point
+TSCA Facilities,1,0,Environment,Toxic Releases,TSCA Facilities ,"Jennifer McPartland, EDF",2015-2019,
+Brownfield,1,0,Environment,Toxic Releases,Environmental Risk Model for Revitalization,Community Lattice,,State
+CO2 emissions,1,1,Environment,Criteria Air Pollutants,State energy-related carbon dioxide emissions by year,U.S. Energy Information Administration (EIA),1990-2017,State 
+Superfund Sites,1,0,Environment,Pollutant Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level
+Regulated Facilities and Sites,1,0,Environment,Pollutant Sources,Geospatial Data for EPA Regulated Facilities and Sites,EPA Facility Registry Service,2020,Facility Level
+Ports,1,0,Environment,Transportation,Waterborne Shipping,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point
+Parks and Greenspace,-1,0,Environment,Land Use,Parks/Green Spaces,National Neighborhood Data Archive (NaNDA),2018,Census Tract
+Tribal Lands,1,0,Environment,Land Use,Native American Lands,USGS,2014,"USGS 1:1,000,000-Scale Indian Lands of the United States 201412 Shapefile"
+Temperature-related mortality.2,1,1,CC: Health,Temperature-related mortality,Temperature-related mortality,EPA CIRA,2021,Census Tract
+Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related mortality,Air Pollution-related health endpoints (PM2.5 mortality - CVD),EPA CIRA,2021,Census Tract
+New Incidence of Asthma Associated with PM2.5 Exposure in Children Age 0 to 17,1,1,CC: Health,Air pollution-related illnesses,Air Pollution-related health endpoints (asthma incidence).,EPA CIRA,2021,Census Tract
+Asthma Related ED Visits Associated with PM2.5 Exposure in Children Age 0 to 18,1,1,CC: Health,Air pollution-related illnesses,Air Pollution-related health endpoints (asthma ER visits).,EPA CIRA,2021,Census Tract
+Premature Mortality Associated with Ozone Exposure Across All Ages,1,1,CC: Health,Air pollution-related mortality,Air Pollution-related health endpoints (Ozone mortality).,EPA CIRA,2021,Census Tract
+Agriculture.2,1,0,CC: Economic,Sectors Vulnerable to Disruption,Agriculture,Policy Map,2015,County
+Property Crimes,1,1,CC: Economic,Costs of Climate Disasters,Property Crimes (% change),Hsiang et al. ,2017,County Level
+Violent Crimes,1,1,CC: Economic,Costs of Climate Disasters,Violent Crimes (% change),Hsiang et al. ,2017,County Level
+Change in Residential Energy,1,1,CC: Economic,Costs of Climate Disasters,% Change in Residential Energy Expenditures [% change],Hsiang et al. ,2017,County Level
+Job Productivity,-1,1,CC: Economic,Costs of Climate Disasters,High-Risk Jobs Productivity [% Change] (there is also Low-risk jobs i.e. indoor and total categories if desired),Hsiang et al. ,2017,County Level
+Yields,-1,1,CC: Economic,Costs of Climate Disasters,Yields [% change],Hsiang et al. ,2017,County Level
+Flooding risk to properties,1,0,CC: Economic,Costs of Climate Disasters,"Change in percent of properties at risk of flooding under100 year flood probabilities, between 2050 and 2020, across four major flood types: rain, riverine, tidal events, and storm surge, ",First Street Foundation Flood Model,2020,County Level
+Flooding risk to properties,1,0,CC: Economic,Costs of Climate Disasters,"Change in percent of properties at risk of flooding under100 year flood probabilities, between 2050 and 2020, across four major flood types: rain, riverine, tidal events, and storm surge, ",First Street Foundation Flood Model,2020,County Level
+Expected Annual Loss - Agriculture Value - Composite,1,0,CC: Economic,Costs of Climate Disasters,,FEMA National Risk Index,2021,Tract Level
+Expected Annual Loss - Building Value - Composite,1,0,CC: Economic,Costs of Climate Disasters,,FEMA National Risk Index,2021,Tract Level
+Expected Annual Loss - Population Equivalence - Composite,1,0,CC: Economic,Costs of Climate Disasters,,FEMA National Risk Index,2022,Tract Level
+Cold Wave,1,1,CC: Extreme Events,Temperature,Cold Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Hurricanes,1,1,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Tornadoes,1,1,CC: Extreme Events,Storms,Tornado - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Winter Weather,1,1,CC: Extreme Events,Storms,Winter Weather - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Wildfires,1,1,CC: Extreme Events,Wildfires,Wildfire - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Drought,1,1,CC: Extreme Events,Droughts,Drought - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+CDD: Consecutive Dry Days (unit = days),1,1,CC: Extreme Events,Droughts,CDD: Consecutive Dry Days (unit = days),IPCC AR6,2021,Tract Level processed from rasters
+TX35: Days with maximum temperature (TX) above 35 C (units = days),1,1,CC: Extreme Events,Temperature,TX35: Days with maximum temperature (TX) above 35 C (units = days),IPCC AR6,2021,Tract Level processed from rasters
+TX40: Days with TX above 40C (units= days),1,1,CC: Extreme Events,Temperature,TX40: Days with TX above 40C (units= days),IPCC AR6,2021,Tract Level processed from rasters
+FD: Frost Days (units = days),-1,1,CC: Extreme Events,Temperature,FD: Frost Days (units = days),IPCC AR6,2021,Tract Level processed from rasters
+TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,TXx: Maximum of maximum temperatures (unit = degrees C),IPCC AR6,2021,Tract Level processed from rasters
+T: Mean temperature (unit = degree C),1,1,CC: Extreme Events,Temperature,T: Mean temperature (unit = degree C),IPCC AR6,2021,Tract Level processed from rasters
+PM25: Surface PM2.5 (unit = ug/m^3),1,1,CC: Extreme Events,Wildfires,PM25: Surface PM2.5 (unit = ug/m^3),IPCC AR6,2021,Tract Level processed from rasters
+SLR: Sea Level Rise  (unit = meters),1,1,CC: Extreme Events,Flooding,SLR: Sea Level Rise  (unit = meters),IPCC AR6,2021,Tract Level processed from rasters
+Snowfall: Snowfall (mm/day),1,1,CC: Extreme Events,Precipitation,Snowfall: Snowfall (mm/day),IPCC AR6,2021,Tract Level processed from rasters
+SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),1,1,CC: Extreme Events,Precipitation,SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),IPCC AR6,2021,Tract Level processed from rasters
+PR: Total Precipitation (mm/day),1,1,CC: Extreme Events,Precipitation,PR: Total Precipitation (mm/day),IPCC AR6,2021,Tract Level processed from rasters

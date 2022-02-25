@@ -39,6 +39,7 @@ checkdatrow <- function(jrow) {
   if (fname.exists) {
     tmp <- fread(fname,
                  keepLeadingZeros = TRUE)
+    print(names(tmp))
     cat("****GEOID Column Name ",cvi.master$`GEOID Column Name`[j],
         cvi.master$`GEOID Column Name`[j] %in% names(tmp),"\n")
     if (!is.na(cvi.master$`Subset Column Name`[j])) {
@@ -59,6 +60,8 @@ checkdatrow <- function(jrow) {
     tmp <- tmp[,..cols]
     if (class(tmp[[2]]) == "character") {
       tmp[[2]][tmp[[2]]=="N/A"] <- NA
+      tmp[[2]][tmp[[2]]=="Missing"] <- NA
+      tmp[[2]] <- gsub("%","",tmp[[2]]) # get rid of % sign
       tmp[[2]] <- as.numeric(tmp[[2]])
     }
     tmp[[2]][tmp[[2]]==-999] <- NA
@@ -74,8 +77,13 @@ checkdatrow <- function(jrow) {
     y <- tmp[[2]]
     y <- y[!is.na(y)]
     if (length(grep("change",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
-        length(grep("additional",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1) {
+        length(grep("additional",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
+        cvi.master$`Data Column Name`[j] != "CCI_EE_FDmean_days") {
       y <- y[y>=0]
+    }
+    if (max(y)<=0) {
+      vartext <- paste0("-",vartext)
+      y <- -y
     }
     qqnorm(y,main=vartext,pch=15,cex=0.2); qqline(y);
     qqnorm(log(y[y>0]),main=paste("Log",vartext),pch=15,cex=0.2); qqline(log(y[y>0]));
@@ -92,6 +100,7 @@ checkdatrow <- function(jrow) {
 }
 
 pdf("CheckDist.pdf")
+options(width=200)
 capture.output( {
 for (j in 1:nrow(cvi.master)) {
   print(paste("-----",j))
@@ -114,9 +123,15 @@ for (j in 1:nrow(cvi.master)) {
     }
     print(head(tmp.df))
   }
+  if ("GEOID.State" %in% names(tmp.df)) {
+    print(paste("******",j,"Verified ******"))
+  } else {
+    print(paste("!!!!!!",j,"Not processed !!!!!!"))
+  }
   cat("\n\n")
 }
 },file="Checkoutput.txt")
+options(width=80)
 dev.off()
 icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
 indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:6)])
