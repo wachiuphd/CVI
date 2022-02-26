@@ -32,7 +32,7 @@ Household Composition & Disability,1,1,Social,Housing Composition & Disability,H
 Minority Status & Language,1,1,Social,Minority Status & Language,Minority Status and language,ASTDR,2018,Census Tract
 Housing Type & Transportation,1,1,Social,Housing & Transportation,Housing and Transportation,ASTDR,2018,Census Tract
 Foreclosure Rate,1,1,Social,HUD Foreclosure,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract
-Power Grid Generation,-1,1,Infrastructure,Energy,Power Grid Resilience- Generation,Policy Map,2019,County
+Power Grid Generation,-1,0,Infrastructure,Energy,Power Grid Resilience- Generation,Policy Map,2019,County
 Air Markets,1,0,Infrastructure,Energy,Air Markets Program Data ,EPA,2020,County
 Renewable Energy,-1,0,Infrastructure,Energy,Renewable Energy,Policy Map,2019,County
 Retail Food,-1,1,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
@@ -63,14 +63,13 @@ Property Crimes,1,1,CC: Economic,Costs of Climate Disasters,Property Crimes (% c
 Violent Crimes,1,1,CC: Economic,Costs of Climate Disasters,Violent Crimes (% change),Hsiang et al. ,2017,County Level
 Change in Residential Energy,1,1,CC: Economic,Costs of Climate Disasters,% Change in Residential Energy Expenditures [% change],Hsiang et al. ,2017,County Level
 Job Productivity,-1,1,CC: Economic,Costs of Climate Disasters,High-Risk Jobs Productivity [% Change] (there is also Low-risk jobs i.e. indoor and total categories if desired),Hsiang et al. ,2017,County Level
-Yields,-1,1,CC: Economic,Costs of Climate Disasters,Yields [% change],Hsiang et al. ,2017,County Level
-Flooding risk to properties,1,0,CC: Economic,Costs of Climate Disasters,"Change in percent of properties at risk of flooding under100 year flood probabilities, between 2050 and 2020, across four major flood types: rain, riverine, tidal events, and storm surge, ",First Street Foundation Flood Model,2020,County Level
+Yields,-1,0,CC: Economic,Costs of Climate Disasters,Yields [% change],Hsiang et al. ,2017,County Level
 Flooding risk to properties,1,0,CC: Economic,Costs of Climate Disasters,"Change in percent of properties at risk of flooding under100 year flood probabilities, between 2050 and 2020, across four major flood types: rain, riverine, tidal events, and storm surge, ",First Street Foundation Flood Model,2020,County Level
 Expected Annual Loss - Agriculture Value - Composite,1,0,CC: Economic,Costs of Climate Disasters,,FEMA National Risk Index,2021,Tract Level
 Expected Annual Loss - Building Value - Composite,1,0,CC: Economic,Costs of Climate Disasters,,FEMA National Risk Index,2021,Tract Level
 Expected Annual Loss - Population Equivalence - Composite,1,0,CC: Economic,Costs of Climate Disasters,,FEMA National Risk Index,2022,Tract Level
 Cold Wave,1,1,CC: Extreme Events,Temperature,Cold Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-Hurricanes,1,1,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Hurricanes,1,0,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 Tornadoes,1,1,CC: Extreme Events,Storms,Tornado - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 Winter Weather,1,1,CC: Extreme Events,Storms,Winter Weather - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 Wildfires,1,1,CC: Extreme Events,Wildfires,Wildfire - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
@@ -82,7 +81,7 @@ FD: Frost Days (units = days),-1,1,CC: Extreme Events,Temperature,FD: Frost Days
 TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,TXx: Maximum of maximum temperatures (unit = degrees C),IPCC AR6,2021,Tract Level processed from rasters
 T: Mean temperature (unit = degree C),1,1,CC: Extreme Events,Temperature,T: Mean temperature (unit = degree C),IPCC AR6,2021,Tract Level processed from rasters
 PM25: Surface PM2.5 (unit = ug/m^3),1,1,CC: Extreme Events,Wildfires,PM25: Surface PM2.5 (unit = ug/m^3),IPCC AR6,2021,Tract Level processed from rasters
-SLR: Sea Level Rise  (unit = meters),1,1,CC: Extreme Events,Flooding,SLR: Sea Level Rise  (unit = meters),IPCC AR6,2021,Tract Level processed from rasters
+SLR: Sea Level Rise  (unit = meters),1,0,CC: Extreme Events,Flooding,SLR: Sea Level Rise  (unit = meters),IPCC AR6,2021,Tract Level processed from rasters
 Snowfall: Snowfall (mm/day),1,1,CC: Extreme Events,Precipitation,Snowfall: Snowfall (mm/day),IPCC AR6,2021,Tract Level processed from rasters
 SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),1,1,CC: Extreme Events,Precipitation,SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),IPCC AR6,2021,Tract Level processed from rasters
 PR: Total Precipitation (mm/day),1,1,CC: Extreme Events,Precipitation,PR: Total Precipitation (mm/day),IPCC AR6,2021,Tract Level processed from rasters

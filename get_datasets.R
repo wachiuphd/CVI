@@ -2,7 +2,6 @@ library(data.table)
 library(stringr)
 library(dplyr)
 library(naniar)
-#library(openxlsx)
 library(readxl)
 datafolder <- "Data"
 
@@ -22,6 +21,7 @@ tracts <- tractsraw[,c("STATE","County_Name","NAMELSAD10")]
 tracts$GEOID.State <- tractsraw$STATEFP10
 tracts$GEOID.County <- tractsraw$FIPS
 tracts$GEOID.Tract <- tractsraw$GEOID10
+tracts <- tracts[order(tracts$GEOID.Tract),]
 
 ### Get master sheet
 
@@ -72,27 +72,9 @@ checkdatrow <- function(jrow) {
 #    tmp$Category <- cvi.master$`Baseline Vulnerability`[j]
 #    tmp$Subcategory <- cvi.master$Subcategory[j]
     print(head(tmp))
-    vartext <- abbreviate(cols[2],minlength = 20)
-    par(mfrow=c(2,2))
-    y <- tmp[[2]]
-    y <- y[!is.na(y)]
-    if (length(grep("change",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
-        length(grep("additional",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
-        cvi.master$`Data Column Name`[j] != "CCI_EE_FDmean_days") {
-      y <- y[y>=0]
-    }
-    if (max(y)<=0) {
-      vartext <- paste0("-",vartext)
-      y <- -y
-    }
-    qqnorm(y,main=vartext,pch=15,cex=0.2); qqline(y);
-    qqnorm(log(y[y>0]),main=paste("Log",vartext),pch=15,cex=0.2); qqline(log(y[y>0]));
-    hist(y,main="",xlab=vartext);
-    hist(log(y[y>0]),main="",xlab=paste("Log",vartext));
-    mtext(paste("Row",jrow),outer=TRUE,line=-1)
     cat("-------------------------------\n\n")
   }
-  if (nrow(tmp)>0 & ncol(tmp)==2) {
+  if (nrow(tmp)>0 & ncol(tmp)==2 & sum(!is.na(tmp[[2]])>0)) {
     return(tmp)
   } else {
     return(NA)
@@ -125,6 +107,26 @@ for (j in 1:nrow(cvi.master)) {
   }
   if ("GEOID.State" %in% names(tmp.df)) {
     print(paste("******",j,"Verified ******"))
+    vartext <- abbreviate(names(tmp.df)[2],minlength = 20)
+    par(mfrow=c(2,2))
+    y <- tmp.df[[2]]
+    y <- y[!is.na(y)]
+    if (length(y)>0) {
+      if (length(grep("change",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
+          length(grep("additional",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
+          cvi.master$`Data Column Name`[j] != "CCI_EE_FDmean_days") {
+        y <- y[y>=0]
+      }
+      if (max(y)<=0) {
+        vartext <- paste0("-",vartext)
+        y <- -y
+      }
+      qqnorm(y,main="",pch=15,cex=0.2); qqline(y);
+      qqnorm(log(y[y>0]),main="",pch=15,cex=0.2); qqline(log(y[y>0]));
+      hist(y,main="",xlab=vartext);
+      hist(log(y[y>0]),main="",xlab=paste("Log",vartext));
+      mtext(paste("Row",j,"\n",names(tmp.df)[2]),outer=TRUE,line=-2,cex=0.75)
+    }
   } else {
     print(paste("!!!!!!",j,"Not processed !!!!!!"))
   }
@@ -139,3 +141,4 @@ indicators.df <- left_join(indicators.df,as.data.table(cvi.master)[,..icols])
 indicators.df$`Adverse Direction`<-as.numeric(indicators.df$`Adverse Direction`)
 fwrite(tracts,"CVI_data_current.csv")
 fwrite(indicators.df,"CVI_indicators_current.csv")
+print(as.numeric((apply(tracts,2,FUN=function(x) {sum(!is.na(x))}))))
