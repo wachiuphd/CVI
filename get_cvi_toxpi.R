@@ -35,6 +35,15 @@ cvi.df[, (na0cols) := lapply(.SD, function(x) nafill(x, type = "const", fill = 0
        , .SDcols = na0cols]
 print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))))
 
+cvi.dat.df <- cvi.df[,-(1:6)]
+
+# idcols for use in GUI
+idcols_gui.df <- data.table(
+  `row#` = 1:nrow(cvi.df),
+  LatLong=cvi.df$LatLong,
+  STATE=cvi.df$STATE,
+  FIPS=cvi.df$GEOID.Tract
+)
 
 ## Rank correlations
 pdf("CVI-corr.pdf")
@@ -47,27 +56,27 @@ dev.off()
 
 # 
 # # Standardize to 0-1 without transformations
-cvi.scale.df<-sweep(cvi.df[,-(1:6)],2,indicators.df$`Adverse Direction`,"*") # multiple by adverse direction
-cvi.scale.df<-scale(cvi.scale.df,center=apply(cvi.scale.df,2,min),
-                    scale=apply(cvi.scale.df,2,FUN=function(x){diff(range(x))})) 
-cvi.scale.df<-cbind(cvi.df[,1:6],cvi.scale.df) # reattach geoids
-fwrite(cvi.scale.df,"CVI_data_scale.csv")
+cvi.scale.df<-sweep(cvi.dat.df,2,indicators.df$`Adverse Direction`,"*") # multiple by adverse direction
+cvi.scale.df<-as.data.frame(scale(cvi.scale.df,center=apply(cvi.scale.df,2,min),
+                    scale=apply(cvi.scale.df,2,FUN=function(x){diff(range(x))})))
 pdf("CVI-scale.pdf",height=10,width=7)
-boxplot(as.list(cvi.scale.df[,-(1:6)]),
+boxplot(as.list(cvi.scale.df),
         horizontal = TRUE,pars=list(outpch=15,cex=0.3))
 dev.off()
+cvi.scale.df<-cbind(idcols_gui.df,cvi.scale.df) # save for use by ToxPi GUI
+fwrite(cvi.scale.df,"CVI_data_scale.csv",quote=TRUE)
 
 # Standardize to percentile from 0 to 1
 # ToxPi will treat NA as zero by default
-cvi.pct.df<-sweep(cvi.df[,-(1:6)],2,indicators.df$`Adverse Direction`,"*") # multiple by adverse direction
-cvi.pct.df<-apply(cvi.pct.df,2,rank,ties.method="min",na.last="keep") # rank
+cvi.pct.df<-sweep(cvi.dat.df,2,indicators.df$`Adverse Direction`,"*") # multiple by adverse direction
+cvi.pct.df<-as.data.frame(apply(cvi.pct.df,2,rank,ties.method="min",na.last="keep")) # rank
 cvi.pct.df<-sweep(cvi.pct.df-1,2,apply(cvi.pct.df,2,max,na.rm=T)-1,"/") # turn into percentile 0-1
-cvi.pct.df<-cbind(cvi.df[,1:6], cvi.pct.df) #reattach geoids
-fwrite(cvi.pct.df,"CVI_data_pct.csv")
 pdf("CVI-pct.pdf",height=10,width=7)
-boxplot(as.list(cvi.pct.df[,-(1:6)]),
+boxplot(as.list(cvi.pct.df),
         horizontal = TRUE,pars=list(outpch=15,cex=0.3))
 dev.off()
+cvi.pct.df<-cbind(idcols_gui.df, cvi.pct.df) # save for use by ToxPi GUI
+fwrite(cvi.pct.df,"CVI_data_pct.csv",quote=TRUE)
 
 # Simple ToxPi - by Category only - all indicators equal weights, each category equal weight
 categories <- unique(indicators.df$`Baseline Vulnerability`)
@@ -98,12 +107,12 @@ f.model <-TxpModel(txpSlices = f.slices)
 ## Scale results
 f.scale.results <- txpCalculateScores(model=f.model,
                                 input=cvi.scale.df,
-                                id.var="GEOID.Tract")
+                                id.var="FIPS")
 indx <- txpRanks(f.scale.results)<=10 |
   txpRanks(f.scale.results)>=(max(txpRanks(f.scale.results))-9)
-cvi.scale.toxpi <- cbind(cvi.scale.df[,1:6],
+cvi.scale.toxpi <- cbind(idcols_gui.df, # reattach geoids
                        data.table(ToxPiScore=f.scale.results@txpScores),
-                       data.table(f.scale.results@txpSliceScores))
+                       data.table(f.scale.results@txpSliceScores)) 
 fwrite(cvi.scale.toxpi,"CVI-scale-allinone.csv")
 
 pdf("ToxPi-scale-allinone.pdf",height=8,width=10)
@@ -119,10 +128,10 @@ dev.off()
 ## Pct results
 f.pct.results <- txpCalculateScores(model=f.model,
                                       input=cvi.pct.df,
-                                      id.var="GEOID.Tract")
+                                      id.var="FIPS")
 indx <- txpRanks(f.pct.results)<=10 |
   txpRanks(f.pct.results)>=(max(txpRanks(f.pct.results))-9)
-cvi.pct.toxpi <- cbind(cvi.pct.df[,1:6],
+cvi.pct.toxpi <- cbind(idcols_gui.df, # reattach geoids
                          data.table(ToxPiScore=f.pct.results@txpScores),
                          data.table(f.pct.results@txpSliceScores))
 fwrite(cvi.pct.toxpi,"CVI-pct-allinone.csv")
@@ -175,7 +184,7 @@ for (i in 1:length(categories)) {
   ## Scale
   fcat.scale.results <- txpCalculateScores(model=fcat.model,
                                          input=cvi.scale.df,
-                                         id.var="GEOID.Tract")
+                                         id.var="FIPS")
   indx.scale <- txpRanks(fcat.scale.results)<=10 |
     txpRanks(fcat.scale.results)>=(max(txpRanks(fcat.scale.results))-9)
   plot(fcat.scale.results[indx.scale,],name=onecat)
@@ -193,7 +202,7 @@ for (i in 1:length(categories)) {
   f.slices.list[[i]]<-fcat.slices
   f.model.list[[i]]<-fcat.model
   f.scale.results.list[[i]]<-fcat.scale.results
-  cvi.scale.toxpi.cat <- cbind(cvi.scale.df[,1:6],
+  cvi.scale.toxpi.cat <- cbind(idcols_gui.df, # reattach geoids
                          data.table(ToxPiScore=fcat.scale.results@txpScores),
                          data.table(fcat.scale.results@txpSliceScores))
   fwrite(cvi.scale.toxpi.cat,paste0("CVI-scale-cat-",
@@ -201,7 +210,7 @@ for (i in 1:length(categories)) {
   ## pct
   fcat.pct.results <- txpCalculateScores(model=fcat.model,
                                            input=cvi.pct.df,
-                                           id.var="GEOID.Tract")
+                                           id.var="FIPS")
   indx.pct <- txpRanks(fcat.pct.results)<=10 |
     txpRanks(fcat.pct.results)>=(max(txpRanks(fcat.pct.results))-9)
   plot(fcat.pct.results[indx.pct,],name=onecat)
@@ -219,7 +228,7 @@ for (i in 1:length(categories)) {
   f.slices.list[[i]]<-fcat.slices
   f.model.list[[i]]<-fcat.model
   f.pct.results.list[[i]]<-fcat.pct.results
-  cvi.pct.toxpi.cat <- cbind(cvi.pct.df[,1:6],
+  cvi.pct.toxpi.cat <- cbind(idcols_gui.df, # reattach geoids
                                data.table(ToxPiScore=fcat.pct.results@txpScores),
                                data.table(fcat.pct.results@txpSliceScores))
   fwrite(cvi.pct.toxpi.cat,paste0("CVI-pct-cat-",
@@ -246,18 +255,18 @@ fcomb.model <-TxpModel(txpSlices = fcomb.slices)
 
 pdf("ToxPi-subcat-comb.pdf",height=8,width=10)
 ## Scale
-cvi.scale.cat.scores <- cvi.scale.df[,1:6]
+cvi.scale.cat.scores <- idcols_gui.df
 for (i in 1:length(categories)) {
   cvi.scale.cat.scores <- cbind(cvi.scale.cat.scores,f.scale.results.list[[i]]@txpScores)
 }
-names(cvi.scale.cat.scores) <- c(names(cvi.scale.cat.scores)[1:6],categories)
+names(cvi.scale.cat.scores) <- c(names(idcols_gui.df),categories)
 fcomb.scale.results <- txpCalculateScores(model=fcomb.model,
                                         input=cvi.scale.cat.scores,
-                                        id.var="GEOID.Tract")
+                                        id.var="FIPS")
 indx.scale <- txpRanks(fcomb.scale.results)<=10 |
   txpRanks(fcomb.scale.results)>=(max(txpRanks(fcomb.scale.results))-9)
 
-cvi.scale.comb.toxpi <- cbind(cvi.scale.df[,1:6],
+cvi.scale.comb.toxpi <- cbind(idcols_gui.df, # reattach geoids
                             data.table(ToxPiScore=fcomb.scale.results@txpScores),
                             data.table(fcomb.scale.results@txpSliceScores))
 fwrite(cvi.scale.comb.toxpi,paste0("CVI-scale-comb.csv"))
@@ -271,18 +280,18 @@ pp<-ggpairs(slice_sample(as.data.table(fcomb.scale.results@txpSliceScores),
 print(pp)
 
 ## Pct
-cvi.pct.cat.scores <- cvi.pct.df[,1:6]
+cvi.pct.cat.scores <- idcols_gui.df
 for (i in 1:length(categories)) {
   cvi.pct.cat.scores <- cbind(cvi.pct.cat.scores,f.pct.results.list[[i]]@txpScores)
 }
-names(cvi.pct.cat.scores) <- c(names(cvi.pct.cat.scores)[1:6],categories)
+names(cvi.pct.cat.scores) <- c(names(idcols_gui.df),categories)
 fcomb.pct.results <- txpCalculateScores(model=fcomb.model,
                                 input=cvi.pct.cat.scores,
-                                id.var="GEOID.Tract")
+                                id.var="FIPS")
 indx.pct <- txpRanks(fcomb.pct.results)<=10 |
   txpRanks(fcomb.pct.results)>=(max(txpRanks(fcomb.pct.results))-9)
 
-cvi.pct.comb.toxpi <- cbind(cvi.pct.df[,1:6],
+cvi.pct.comb.toxpi <- cbind(idcols_gui.df, # reattach geoids
                        data.table(ToxPiScore=fcomb.pct.results@txpScores),
                        data.table(fcomb.pct.results@txpSliceScores))
 fwrite(cvi.pct.comb.toxpi,paste0("CVI-pct-comb.csv"))

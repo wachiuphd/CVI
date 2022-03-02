@@ -5,29 +5,31 @@ library(naniar)
 library(readxl)
 datafolder <- "Data"
 
-# ### Get census tracts from 2019 Census Tract Gazetteer File
-# ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2019_Gazetteer/2019_Gaz_tracts_national.zip
-# tracts <- fread(file.path(datafolder,"2019_Gaz_tracts_national.txt"),
-#                 keepLeadingZeros = TRUE)
-# tracts[, c("ALAND","AWATER","ALAND_SQMI","AWATER_SQMI","INTPTLAT","INTPTLONG"):=NULL]
-# tracts$GEOID.Tract <- tracts$GEOID
-# tracts$GEOID.State <- substring(tracts$GEOID,1,2)
-# tracts$GEOID.County <- substring(tracts$GEOID,1,5)
-
 # Census tracts from 22-02_CVI_state_county_tract.xlsx
 tractsraw <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/Other/22-02_CVI_state_county_tract.xlsx",
   sheet="Tract")
-tracts <- tractsraw[,c("STATE","County_Name","NAMELSAD10")]
+tracts <- tractsraw[,c("STATE","County_Name")]
 tracts$GEOID.State <- tractsraw$STATEFP10
 tracts$GEOID.County <- tractsraw$FIPS
 tracts$GEOID.Tract <- tractsraw$GEOID10
 tracts <- tracts[order(tracts$GEOID.Tract),]
 
+# ### Get census tracts from 2019 Census Tract Gazetteer File - has lat long
+# ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2019_Gazetteer/2019_Gaz_tracts_national.zip
+tracts_latlong <- fread(file.path(datafolder,"2019_Gaz_tracts_national.txt"),
+                        keepLeadingZeros = TRUE)
+tracts_latlong[, c("USPS","ALAND","AWATER","ALAND_SQMI","AWATER_SQMI"):=NULL]
+setnames(tracts_latlong,"GEOID","GEOID.Tract")
+tracts_latlong$LatLong <- paste0(tracts_latlong$INTPTLAT,",",tracts_latlong$INTPTLONG)
+tracts_latlong[, c("INTPTLAT","INTPTLONG"):=NULL]
+
+# Join lat long to tracts
+tracts <- left_join(tracts,tracts_latlong)
+
 ### Get master sheet
 
 cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 02.23.22.xlsx",
                         sheet="Subcategories (In Progress)",trim_ws = FALSE)
-
 
 checkdatrow <- function(jrow) {
   j<-jrow
