@@ -12,6 +12,13 @@ for (i in 1:length(categories)) {
   will.il.cvi.pct.toxpi.cat <- cvi.pct.toxpi.cat[indx.will.il,]
   fwrite(will.il.cvi.pct.toxpi.cat,
          paste0("Will.IL.","CVI-pct-cat-",gsub(": ","-",onecat),".csv"))
+  
+  cvi.pct.toxpi.cat.gis<-fread(paste0("CVI-pct-cat-",gsub(": ","-",onecat),".gis.csv"),
+                           keepLeadingZeros = TRUE)
+  will.il.cvi.pct.toxpi.cat.gis <- cvi.pct.toxpi.cat.gis[indx.will.il,]
+  fwrite(will.il.cvi.pct.toxpi.cat.gis,
+         paste0("Will.IL.","CVI-pct-cat-",gsub(": ","-",onecat),".gis.csv"))
+  
 }
 
 cvi.pct.toxpi <- fread("CVI-pct-comb.csv",
@@ -19,3 +26,9 @@ cvi.pct.toxpi <- fread("CVI-pct-comb.csv",
 will.il.cvi.pct.toxpi <- cvi.pct.toxpi[indx.will.il,]
 fwrite(will.il.cvi.pct.toxpi,
        paste0("Will.IL.","CVI-pct-comb.csv"))
+
+cvi.pct.toxpi.gis <- fread("CVI-pct-comb.gis.csv",
+                       keepLeadingZeros = TRUE)
+will.il.cvi.pct.toxpi.gis <- cvi.pct.toxpi.gis[indx.will.il,]
+fwrite(will.il.cvi.pct.toxpi.gis,
+       paste0("Will.IL.","CVI-pct-comb.gis.csv"))
