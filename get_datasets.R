@@ -91,7 +91,17 @@ for (j in 1:nrow(cvi.master)) {
   tmp.df <- try(checkdatrow(j))
   if (is.data.frame(tmp.df)) {
     if (length(unique(str_length(tmp.df$GEOID)))==1) {
-      if (str_length(tmp.df$GEOID[1]) == 11) {
+      if (str_length(tmp.df$GEOID[1]) == 12) { 
+        # Block Groups - convert to median of tract
+        tmp.df$GEOID.Tract <- substr(tmp.df$GEOID,1,11)
+        catname <- names(tmp.df)[2]
+        names(tmp.df)[2] <- "value"
+        tmp.df <- tmp.df[,.(y = median(value,na.rm=TRUE)), by = GEOID.Tract]
+        names(tmp.df)[2] <- catname  
+        tmp.df$GEOID.County <- substr(tmp.df$GEOID.Tract,1,5)
+        tmp.df$GEOID.State <- substr(tmp.df$GEOID.Tract,1,2)
+        tracts <- left_join(tracts,tmp.df)
+      } else if (str_length(tmp.df$GEOID[1]) == 11) {
         tmp.df$GEOID.County <- substr(tmp.df$GEOID,1,5)
         tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
         names(tmp.df)[1] <- "GEOID.Tract"
@@ -141,6 +151,9 @@ icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseli
 indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:6)])
 indicators.df <- left_join(indicators.df,as.data.table(cvi.master)[,..icols])
 indicators.df$`Adverse Direction`<-as.numeric(indicators.df$`Adverse Direction`)
+# replace "n/a" with 0
+indicators.df$`Replace NA with median`<-as.numeric(indicators.df$`Replace NA with median`)
+indicators.df$`Replace NA with median`[is.na(indicators.df$`Replace NA with median`)]<-0
 fwrite(tracts,"CVI_data_current.csv")
 fwrite(indicators.df,"CVI_indicators_current.csv")
 print(as.numeric((apply(tracts,2,FUN=function(x) {sum(!is.na(x))}))))
