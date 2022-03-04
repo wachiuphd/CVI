@@ -90,6 +90,8 @@ for (j in 1:nrow(cvi.master)) {
   print(paste("-----",j))
   tmp.df <- try(checkdatrow(j))
   if (is.data.frame(tmp.df)) {
+    tmp.df$GEOID <- as.character(tmp.df$GEOID)
+    tmp.df <- unique(tmp.df) # removed duplicated rows
     if (length(unique(str_length(tmp.df$GEOID)))==1) {
       if (str_length(tmp.df$GEOID[1]) == 12) { 
         # Block Groups - convert to median of tract
@@ -114,6 +116,30 @@ for (j in 1:nrow(cvi.master)) {
         names(tmp.df)[1] <- "GEOID.State"
         tracts <- left_join(tracts,tmp.df)
       } 
+    } else if (length(unique(str_length(tmp.df$GEOID)))==2) {
+      geoidlengths <- sort(unique(str_length(tmp.df$GEOID)))
+      if (sum(geoidlengths==c(10,11)) == 2) { 
+        # tracts, missing leading zeros
+        indx10 <- str_length(tmp.df$GEOID)==10
+        tmp.df$GEOID[indx10] <- paste0("0",tmp.df$GEOID[indx10])
+        tmp.df$GEOID.County <- substr(tmp.df$GEOID,1,5)
+        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+        names(tmp.df)[1] <- "GEOID.Tract"
+        tracts <- left_join(tracts,tmp.df)
+      } else if (sum(geoidlengths==c(4,5)) == 2) {
+        # counties, missing leading zeros
+        indx4 <- str_length(tmp.df$GEOID)==4
+        tmp.df$GEOID[indx4] <- paste0("0",tmp.df$GEOID[indx4])
+        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+        names(tmp.df)[1] <- "GEOID.County"
+        tracts <- left_join(tracts,tmp.df)
+      } else if (sum(geoidlengths==c(1,2)) == 2) {
+        # states, missing leading zeros
+        indx1 <- str_length(tmp.df$GEOID)==1
+        tmp.df$GEOID[indx1] <- paste0("0",tmp.df$GEOID[indx1])
+        names(tmp.df)[1] <- "GEOID.State"
+        tracts <- left_join(tracts,tmp.df)
+      }
     }
     print(head(tmp.df))
   }

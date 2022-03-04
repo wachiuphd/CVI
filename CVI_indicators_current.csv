@@ -26,11 +26,14 @@ Infant Mortality,1,1,Health,Child Health,Infant Mortality,Policy Map,2017,County
 Low Birthweight,1,1,Health,Child Health,Low birthweight,Policy Map,2018,County
 Pre-term Birth,1,1,Health,Child Health,Pre-term birth,March of Dimes,2014,State
 Childhood Asthma,1,1,Health,Child Health,Childhood Asthma,CDC EPH Tracking,2018,State
+Covid vaccination rates,-1,0,Health,Access to Care,Covid-19 Vaccination Rates,John Hopkins,2022,State
 Socioeconomic,1,1,Social,Socioeconomic Status,Socioeconomic theme,ASTDR,2018,Census Tract
 Household Composition & Disability,1,1,Social,Housing Composition & Disability,Household Composition and Disability,ASTDR,2018,Census Tract
 Minority Status & Language,1,1,Social,Minority Status & Language,Minority Status and language,ASTDR,2018,Census Tract
 Housing Type & Transportation,1,1,Social,Housing & Transportation,Housing and Transportation,ASTDR,2018,Census Tract
 Foreclosure Rate,1,0,Social,HUD Foreclosure,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract
+Cellular Coverage,-1,0,Infrastructure,Communications,Percent of household with smartphone but no other device.,National Environmental Public Health Tracking Network,2013-2017,Census Tract
+Residential Energy Cost Burden,1,0,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
 Power Grid Generation,-1,0,Infrastructure,Energy,Power Grid Resilience- Generation,Policy Map,2019,County
 Air Markets,1,0,Infrastructure,Energy,Air Markets Program Data ,EPA,2020,County
 Renewable Energy,-1,0,Infrastructure,Energy,Renewable Energy,Policy Map,2019,County
@@ -51,6 +54,7 @@ Landfills,1,0,Environment,Toxic Releases,EPA FRS,EPA Landfill Methane Outreach P
 TSCA Facilities,1,0,Environment,Toxic Releases,TSCA Facilities ,"Jennifer McPartland, EDF",2015-2019,
 Proximity to Risk Management Plan (RMP) facilities,1,0,Environment,Toxic Releases,Risk Management Plan,EJ Screen ,2020,Census Tract
 Brownfield,1,0,Environment,Toxic Releases,Environmental Risk Model for Revitalization,Community Lattice,,State
+PM 2.5 concentration,1,0,Environment,Criteria Air Pollutants,PM 2.5: CMAQ and satellite,"Data from Harvard team, processed by JP@edf",2018,Census Tract
 CO2 emissions,1,1,Environment,Criteria Air Pollutants,State energy-related carbon dioxide emissions by year,U.S. Energy Information Administration (EIA),1990-2017,State 
 % pre-1960 housing (lead paint indicator),1,0,Environment,Air pollutant,Lead Paint: Housing units built before 1960 (percent),EJ Screen ,2020,Census Tract
 Superfund Sites,1,0,Environment,Pollutant Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level
@@ -58,6 +62,8 @@ Regulated Facilities and Sites,1,0,Environment,Pollutant Sources,Geospatial Data
 Traffic proximity and volume,1,0,Environment,Transportation,Proximity and volume,EJ Screen ,2020,Census Tract
 Ports,1,0,Environment,Transportation,Waterborne Shipping,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point
 Parks and Greenspace,-1,0,Environment,Land Use,Parks/Green Spaces,National Neighborhood Data Archive (NaNDA),2018,Census Tract
+Impermeable Surfaces,1,0,Environment,Land Use,Impermeable Surfaces,CDC: National Environmental Public Health Tracking,2021,Census Tract
+Forest Land Cover,-1,0,Environment,Land Use,Forest Land Cover,CDC: National Environmental Public Health Tracking,2021,Census Tract
 Tribal Lands,1,0,Environment,Land Use,Native American Lands,USGS,2014,"USGS 1:1,000,000-Scale Indian Lands of the United States 201412 Shapefile"
 Temperature-related mortality.2,1,1,CC: Health,Temperature-related mortality,Temperature-related mortality,EPA CIRA,2021,Census Tract
 Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related mortality,Air Pollution-related health endpoints (PM2.5 mortality - CVD),EPA CIRA,2021,Census Tract
