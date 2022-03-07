@@ -62,6 +62,15 @@ pp<-ggcorr(data=slice_sample(cvi.abbr,n=7000),
 print(pp)
 dev.off()
 
+# Absolute value when adverse direction is absolute value
+na_adverse <- which(is.na(indicators.df$`Adverse Direction`))
+if (length(na_adverse) > 0) {
+  cvi.dat.df <- as.data.frame(cvi.dat.df)
+  cvi.dat.df[,na_adverse] <- abs(cvi.dat.df[,na_adverse])
+  cvi.dat.df <- as.data.table(cvi.dat.df)
+  indicators.df$`Adverse Direction`[na_adverse] <- 1
+}
+
 # 
 # # Standardize to 0-1 without transformations
 cvi.scale.df<-sweep(cvi.dat.df,2,indicators.df$`Adverse Direction`,"*") # multiple by adverse direction
