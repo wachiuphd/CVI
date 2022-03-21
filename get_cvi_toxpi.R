@@ -12,6 +12,18 @@ Tol_muted <- tolower(c('88CCEE', '44AA99', '117733', '332288', 'DDCC77', '999933
 indicators.df<-fread("CVI_indicators_current.csv")
 cvi.df<-fread("CVI_data_current.csv",
               keepLeadingZeros = TRUE)
+pdf("CheckDist.pdf")
+for (j in 1:nrow(indicators.df)) {
+  par(mfcol=c(2,2))
+  y <- cvi.df[[j+6]]
+  y <- y[!is.na(y)]
+  try({qqnorm(y,main="",pch=15,cex=0.2); qqline(y);})
+  try(hist(y,main="",xlab="Value"))
+  try({qqnorm(log(y[y>0]),main="",pch=15,cex=0.2); qqline(log(y[y>0]));})
+  try(hist(log(y[y>0]),main="",xlab="Log Value [positive only]"))
+  mtext(paste("Row",j,"\n",indicators.df$`Indicator Name`[j]),outer=TRUE,line=-2,cex=0.75)
+}
+dev.off()
 
 nareplcols <- indicators.df$`Indicator Name`[indicators.df$`Replace NA with median`==1]
 # View((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols])

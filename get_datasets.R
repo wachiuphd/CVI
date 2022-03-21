@@ -28,7 +28,7 @@ tracts <- left_join(tracts,tracts_latlong)
 
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 02.23.22.xlsx",
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 03.04.22.xlsx",
                         sheet="Subcategories (In Progress)",trim_ws = FALSE)
 
 checkdatrow <- function(jrow) {
@@ -83,7 +83,6 @@ checkdatrow <- function(jrow) {
   }
 }
 
-pdf("CheckDist.pdf")
 options(width=200)
 capture.output( {
 for (j in 1:nrow(cvi.master)) {
@@ -145,26 +144,6 @@ for (j in 1:nrow(cvi.master)) {
   }
   if ("GEOID.State" %in% names(tmp.df)) {
     print(paste("******",j,"Verified ******"))
-    vartext <- abbreviate(names(tmp.df)[2],minlength = 20)
-    par(mfrow=c(2,2))
-    y <- tmp.df[[2]]
-    y <- y[!is.na(y)]
-    if (length(y)>0) {
-      if (length(grep("change",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
-          length(grep("additional",cvi.master$`Data Column Name`[j],ignore.case = TRUE)) < 1 &
-          cvi.master$`Data Column Name`[j] != "CCI_EE_FDmean_days") {
-        y <- y[y>=0]
-      }
-      if (max(y)<=0) {
-        vartext <- paste0("-",vartext)
-        y <- -y
-      }
-      qqnorm(y,main="",pch=15,cex=0.2); qqline(y);
-      qqnorm(log(y[y>0]),main="",pch=15,cex=0.2); qqline(log(y[y>0]));
-      hist(y,main="",xlab=vartext);
-      hist(log(y[y>0]),main="",xlab=paste("Log",vartext));
-      mtext(paste("Row",j,"\n",names(tmp.df)[2]),outer=TRUE,line=-2,cex=0.75)
-    }
   } else {
     print(paste("!!!!!!",j,"Not processed !!!!!!"))
   }
@@ -172,7 +151,7 @@ for (j in 1:nrow(cvi.master)) {
 }
 },file="Checkoutput.txt")
 options(width=80)
-dev.off()
+
 icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
 indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:6)])
 indicators.df <- left_join(indicators.df,as.data.table(cvi.master)[,..icols])
