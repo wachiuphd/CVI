@@ -14,9 +14,9 @@ tracts$GEOID.County <- tractsraw$FIPS
 tracts$GEOID.Tract <- tractsraw$GEOID10
 tracts <- tracts[order(tracts$GEOID.Tract),]
 
-# ### Get census tracts from 2019 Census Tract Gazetteer File - has lat long
-# ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2019_Gazetteer/2019_Gaz_tracts_national.zip
-tracts_latlong <- fread(file.path(datafolder,"2019_Gaz_tracts_national.txt"),
+# ### Get census tracts from 2014 Census Tract Gazetteer File - has lat long
+# ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2014_Gazetteer/2014_Gaz_tracts_national.zip
+tracts_latlong <- fread(file.path(datafolder,"2014_Gaz_tracts_national.txt"),
                         keepLeadingZeros = TRUE)
 tracts_latlong[, c("USPS","ALAND","AWATER","ALAND_SQMI","AWATER_SQMI"):=NULL]
 setnames(tracts_latlong,"GEOID","GEOID.Tract")
