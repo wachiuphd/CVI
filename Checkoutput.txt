@@ -207,7 +207,7 @@ number of na rows:  0  or  0
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/PLACES__Local_Data_for_Better_Health__Census_Tract_Data_2021_release.CSV  exists?  TRUE 
  [1] "Year"                       "StateAbbr"                  "StateDesc"                  "CountyName"                 "CountyFIPS"                 "LocationName"              
  [7] "DataSource"                 "Category"                   "Measure"                    "Data_Value_Unit"            "Data_Value_Type"            "Data_Value"                
-[13] "Data_Value_Footnote_Symbol" "Data_Value_Footnote"        "Low_Confidence_Limit"       "High_Confidence_Limit"      "TotalPopulation"            "Geolocation"               
+[13] "Data_Value_Footnote_Symbol" "Data_Value_Footnote"        "Low_Confidence_Limit"       cols "TotalPopulation"            "Geolocation"               
 [19] "LocationID"                 "CategoryID"                 "MeasureId"                  "DataValueTypeID"            "Short_Question_Text"       
 ****GEOID Column Name  LocationName TRUE 
 ****Indicator subset  Stroke among adults aged >=18 years TRUE 
@@ -358,7 +358,7 @@ number of na rows:  0  or  0
  [1] "Year"                       "StateAbbr"                  "StateDesc"                  "CountyName"                 "CountyFIPS"                 "LocationName"              
  [7] "DataSource"                 "Category"                   "Measure"                    "Data_Value_Unit"            "Data_Value_Type"            "Data_Value"                
 [13] "Data_Value_Footnote_Symbol" "Data_Value_Footnote"        "Low_Confidence_Limit"       "High_Confidence_Limit"      "TotalPopulation"            "Geolocation"               
-[19] "LocationID"                 "CategoryID"                 "MeasureId"                  "DataValueTypeID"            "Short_Question_Text"       
+[19] "LocationID"                 "CategoryID"                 cols "DataValueTypeID"            "Short_Question_Text"       
 ****GEOID Column Name  LocationName TRUE 
 ****Indicator subset  High cholesterol among adults aged >=18 years who have been screened in the past 5 years TRUE 
 ****Data Column Name  Data_Value TRUE 

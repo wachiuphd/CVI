@@ -12,6 +12,27 @@ tracts <- tractsraw[,c("STATE","County_Name")]
 tracts$GEOID.State <- tractsraw$STATEFP10
 tracts$GEOID.County <- tractsraw$FIPS
 tracts$GEOID.Tract <- tractsraw$GEOID10
+tracts$LatLong <- paste0(tractsraw$INTPTLAT10,",",tractsraw$INTPTLON10)
+tracts <- tracts[order(tracts$GEOID.Tract),]
+
+toxpiboundaries <- fread(file.path(datafolder,"Boundaries_v2.csv"),keepLeadingZeros = TRUE)
+toxpiboundaries$GEOID.Tract <- toxpiboundaries$GEOID10
+tracts_boundaries <- left_join(tracts,toxpiboundaries)
+
+tracts_latlong <- tracts_boundaries[,c("STATE","County_Name","GEOID.State","GEOID.County","GEOID.Tract","INTPTLAT10","INTPTLON10")]
+
+fwrite(tracts_latlong,file.path(datafolder,"Tracts_merged_LatLong.csv"),quote=TRUE)
+fwrite(subset(tracts_latlong,is.na(INTPTLAT10)),file.path(datafolder,"Tracts_merged_LatLong_missing.csv"),quote=TRUE)
+
+
+
+# Census tracts from 22-02_CVI_state_county_tract.xlsx
+tractsraw <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/Other/22-02_CVI_state_county_tract.xlsx",
+                       sheet="Tract")
+tracts <- tractsraw[,c("STATE","County_Name")]
+tracts$GEOID.State <- tractsraw$STATEFP10
+tracts$GEOID.County <- tractsraw$FIPS
+tracts$GEOID.Tract <- tractsraw$GEOID10
 tracts <- tracts[order(tracts$GEOID.Tract),]
 
 tracts_latlong2014 <- fread(file.path(datafolder,"2014_Gaz_tracts_national.txt"),

@@ -12,19 +12,20 @@ tracts <- tractsraw[,c("STATE","County_Name")]
 tracts$GEOID.State <- tractsraw$STATEFP10
 tracts$GEOID.County <- tractsraw$FIPS
 tracts$GEOID.Tract <- tractsraw$GEOID10
+tracts$LatLong <- paste0(tractsraw$INTPTLAT10,",",tractsraw$INTPTLON10)
 tracts <- tracts[order(tracts$GEOID.Tract),]
 
-# ### Get census tracts from 2014 Census Tract Gazetteer File - has lat long
-# ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2014_Gazetteer/2014_Gaz_tracts_national.zip
-tracts_latlong <- fread(file.path(datafolder,"2014_Gaz_tracts_national.txt"),
-                        keepLeadingZeros = TRUE)
-tracts_latlong[, c("USPS","ALAND","AWATER","ALAND_SQMI","AWATER_SQMI"):=NULL]
-setnames(tracts_latlong,"GEOID","GEOID.Tract")
-tracts_latlong$LatLong <- paste0(tracts_latlong$INTPTLAT,",",tracts_latlong$INTPTLONG)
-tracts_latlong[, c("INTPTLAT","INTPTLONG"):=NULL]
+# # ### Get census tracts from 2014 Census Tract Gazetteer File - has lat long
+# # ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2014_Gazetteer/2014_Gaz_tracts_national.zip
+# tracts_latlong <- fread(file.path(datafolder,"2014_Gaz_tracts_national.txt"),
+#                         keepLeadingZeros = TRUE)
+# tracts_latlong[, c("USPS","ALAND","AWATER","ALAND_SQMI","AWATER_SQMI"):=NULL]
+# setnames(tracts_latlong,"GEOID","GEOID.Tract")
+# tracts_latlong$LatLong <- paste0(tracts_latlong$INTPTLAT,",",tracts_latlong$INTPTLONG)
+# tracts_latlong[, c("INTPTLAT","INTPTLONG"):=NULL]
 
-# Join lat long to tracts
-tracts <- left_join(tracts,tracts_latlong)
+# # Join lat long to tracts
+# tracts <- left_join(tracts,tracts_latlong)
 
 ### Get master sheet
 
