@@ -29,8 +29,9 @@ tracts <- tracts[order(tracts$GEOID.Tract),]
 
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 03.04.22.xlsx",
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 04.14.22.xlsx",
                         sheet="Subcategories (In Progress)",trim_ws = FALSE)
+indicator.verified <- rep(FALSE,nrow(cvi.master))
 
 checkdatrow <- function(jrow) {
   j<-jrow
@@ -92,59 +93,64 @@ for (j in 1:nrow(cvi.master)) {
   if (is.data.frame(tmp.df)) {
     tmp.df$GEOID <- as.character(tmp.df$GEOID)
     tmp.df <- unique(tmp.df) # removed duplicated rows
-    if (length(unique(str_length(tmp.df$GEOID)))==1) {
-      if (str_length(tmp.df$GEOID[1]) == 12) { 
-        # Block Groups - convert to median of tract
-        tmp.df$GEOID.Tract <- substr(tmp.df$GEOID,1,11)
-        catname <- names(tmp.df)[2]
-        names(tmp.df)[2] <- "value"
-        tmp.df <- tmp.df[,.(y = median(value,na.rm=TRUE)), by = GEOID.Tract]
-        names(tmp.df)[2] <- catname  
-        tmp.df$GEOID.County <- substr(tmp.df$GEOID.Tract,1,5)
-        tmp.df$GEOID.State <- substr(tmp.df$GEOID.Tract,1,2)
-        tracts <- left_join(tracts,tmp.df)
-      } else if (str_length(tmp.df$GEOID[1]) == 11) {
-        tmp.df$GEOID.County <- substr(tmp.df$GEOID,1,5)
-        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
-        names(tmp.df)[1] <- "GEOID.Tract"
-        tracts <- left_join(tracts,tmp.df)
-      } else if (str_length(tmp.df$GEOID[1]) == 5) {
-        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
-        names(tmp.df)[1] <- "GEOID.County"
-        tracts <- left_join(tracts,tmp.df)
-      } else if (str_length(tmp.df$GEOID[1]) == 2) {
-        names(tmp.df)[1] <- "GEOID.State"
-        tracts <- left_join(tracts,tmp.df)
-      } 
-    } else if (length(unique(str_length(tmp.df$GEOID)))==2) {
-      geoidlengths <- sort(unique(str_length(tmp.df$GEOID)))
-      if (sum(geoidlengths==c(10,11)) == 2) { 
-        # tracts, missing leading zeros
-        indx10 <- str_length(tmp.df$GEOID)==10
-        tmp.df$GEOID[indx10] <- paste0("0",tmp.df$GEOID[indx10])
-        tmp.df$GEOID.County <- substr(tmp.df$GEOID,1,5)
-        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
-        names(tmp.df)[1] <- "GEOID.Tract"
-        tracts <- left_join(tracts,tmp.df)
-      } else if (sum(geoidlengths==c(4,5)) == 2) {
-        # counties, missing leading zeros
-        indx4 <- str_length(tmp.df$GEOID)==4
-        tmp.df$GEOID[indx4] <- paste0("0",tmp.df$GEOID[indx4])
-        tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
-        names(tmp.df)[1] <- "GEOID.County"
-        tracts <- left_join(tracts,tmp.df)
-      } else if (sum(geoidlengths==c(1,2)) == 2) {
-        # states, missing leading zeros
-        indx1 <- str_length(tmp.df$GEOID)==1
-        tmp.df$GEOID[indx1] <- paste0("0",tmp.df$GEOID[indx1])
-        names(tmp.df)[1] <- "GEOID.State"
-        tracts <- left_join(tracts,tmp.df)
+    if (sum(duplicated(tmp.df$GEOID))==0) { # No duplicated GEOIDs
+      if (length(unique(str_length(tmp.df$GEOID)))==1) {
+        if (str_length(tmp.df$GEOID[1]) == 12) { 
+          # Block Groups - convert to median of tract
+          tmp.df$GEOID.Tract <- substr(tmp.df$GEOID,1,11)
+          catname <- names(tmp.df)[2]
+          names(tmp.df)[2] <- "value"
+          tmp.df <- tmp.df[,.(y = median(value,na.rm=TRUE)), by = GEOID.Tract]
+          names(tmp.df)[2] <- catname  
+          tmp.df$GEOID.County <- substr(tmp.df$GEOID.Tract,1,5)
+          tmp.df$GEOID.State <- substr(tmp.df$GEOID.Tract,1,2)
+          tracts <- left_join(tracts,tmp.df)
+        } else if (str_length(tmp.df$GEOID[1]) == 11) {
+          tmp.df$GEOID.County <- substr(tmp.df$GEOID,1,5)
+          tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+          names(tmp.df)[1] <- "GEOID.Tract"
+          tracts <- left_join(tracts,tmp.df)
+        } else if (str_length(tmp.df$GEOID[1]) == 5) {
+          tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+          names(tmp.df)[1] <- "GEOID.County"
+          tracts <- left_join(tracts,tmp.df)
+        } else if (str_length(tmp.df$GEOID[1]) == 2) {
+          names(tmp.df)[1] <- "GEOID.State"
+          tracts <- left_join(tracts,tmp.df)
+        } 
+      } else if (length(unique(str_length(tmp.df$GEOID)))==2) {
+        geoidlengths <- sort(unique(str_length(tmp.df$GEOID)))
+        if (sum(geoidlengths==c(10,11)) == 2) { 
+          # tracts, missing leading zeros
+          indx10 <- str_length(tmp.df$GEOID)==10
+          tmp.df$GEOID[indx10] <- paste0("0",tmp.df$GEOID[indx10])
+          tmp.df$GEOID.County <- substr(tmp.df$GEOID,1,5)
+          tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+          names(tmp.df)[1] <- "GEOID.Tract"
+          tracts <- left_join(tracts,tmp.df)
+        } else if (sum(geoidlengths==c(4,5)) == 2) {
+          # counties, missing leading zeros
+          indx4 <- str_length(tmp.df$GEOID)==4
+          tmp.df$GEOID[indx4] <- paste0("0",tmp.df$GEOID[indx4])
+          tmp.df$GEOID.State <- substr(tmp.df$GEOID,1,2)
+          names(tmp.df)[1] <- "GEOID.County"
+          tracts <- left_join(tracts,tmp.df)
+        } else if (sum(geoidlengths==c(1,2)) == 2) {
+          # states, missing leading zeros
+          indx1 <- str_length(tmp.df$GEOID)==1
+          tmp.df$GEOID[indx1] <- paste0("0",tmp.df$GEOID[indx1])
+          names(tmp.df)[1] <- "GEOID.State"
+          tracts <- left_join(tracts,tmp.df)
+        }
       }
+    } else {
+      print("!!!!!!!!!Non-unique GEOIDs")
     }
     print(head(tmp.df))
   }
   if ("GEOID.State" %in% names(tmp.df)) {
     print(paste("******",j,"Verified ******"))
+    indicator.verified[j] <- TRUE
   } else {
     print(paste("!!!!!!",j,"Not processed !!!!!!"))
   }
@@ -152,6 +158,8 @@ for (j in 1:nrow(cvi.master)) {
 }
 },file="Checkoutput.txt")
 options(width=80)
+cvi.master$verified <- indicator.verified
+fwrite(cvi.master,"CVI_master.csv")
 
 icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
 indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:6)])
