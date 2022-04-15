@@ -1841,23 +1841,23 @@ number of na rows:  186739  or  NA
 ****Data Column Name  Combination VMT per Capita TRUE 
 number of rows:  337656 
 number of na rows:  186739  or  NA 
-        GEOID Combination VMT
-1: 1001020100            0.00
-2: 1001020100              NA
-3: 1001020100              NA
-4: 1001020100            0.06
-5: 1001020200              NA
-6: 1001020200              NA
+        GEOID Combination VMT.1
+1: 1001020100              0.00
+2: 1001020100                NA
+3: 1001020100                NA
+4: 1001020100              0.06
+5: 1001020200                NA
+6: 1001020200                NA
 -------------------------------
 
 [1] "!!!!!!!!!Non-unique GEOIDs"
-        GEOID Combination VMT
-1: 1001020100            0.00
-2: 1001020100              NA
-3: 1001020100            0.06
-4: 1001020200              NA
-5: 1001020200            0.08
-6: 1001020300              NA
+        GEOID Combination VMT.1
+1: 1001020100              0.00
+2: 1001020100                NA
+3: 1001020100              0.06
+4: 1001020200                NA
+5: 1001020200              0.08
+6: 1001020300                NA
 [1] "!!!!!! 61 Not processed !!!!!!"
 
 
@@ -1869,23 +1869,23 @@ number of na rows:  186739  or  NA
 ****Data Column Name  Lane Mile per Capita TRUE 
 number of rows:  337656 
 number of na rows:  186739  or  NA 
-        GEOID Lane Mile per Capita
-1: 1001020100                    0
-2: 1001020100                   NA
-3: 1001020100                   NA
-4: 1001020100                    0
-5: 1001020200                   NA
-6: 1001020200                   NA
+        GEOID Lane Mile per Capita.1
+1: 1001020100                      0
+2: 1001020100                     NA
+3: 1001020100                     NA
+4: 1001020100                      0
+5: 1001020200                     NA
+6: 1001020200                     NA
 -------------------------------
 
 [1] "!!!!!!!!!Non-unique GEOIDs"
-        GEOID Lane Mile per Capita
-1: 1001020100                    0
-2: 1001020100                   NA
-3: 1001020200                   NA
-4: 1001020200                    0
-5: 1001020300                   NA
-6: 1001020300                    0
+        GEOID Lane Mile per Capita.1
+1: 1001020100                      0
+2: 1001020100                     NA
+3: 1001020200                     NA
+4: 1001020200                      0
+5: 1001020300                     NA
+6: 1001020300                      0
 [1] "!!!!!! 62 Not processed !!!!!!"
 
 
@@ -1952,22 +1952,22 @@ number of na rows:  566  or  NA
 ****Data Column Name  Combination VMT per Capita - HDV TRUE 
 number of rows:  84414 
 number of na rows:  4894  or  NA 
-        GEOID Combination VMT
-1: 6037237102               0
-2: 6037575201               0
-3: 6037670102               0
-4: 6037139506               0
-5: 6037139505               0
-6: 6037267405               0
+        GEOID Combination VMT.2
+1: 6037237102                 0
+2: 6037575201                 0
+3: 6037670102                 0
+4: 6037139506                 0
+5: 6037139505                 0
+6: 6037267405                 0
 -------------------------------
 
-   GEOID.Tract Combination VMT GEOID.County GEOID.State
-1: 06037237102               0        06037          06
-2: 06037575201               0        06037          06
-3: 06037670102               0        06037          06
-4: 06037139506               0        06037          06
-5: 06037139505               0        06037          06
-6: 06037267405               0        06037          06
+   GEOID.Tract Combination VMT.2 GEOID.County GEOID.State
+1: 06037237102                 0        06037          06
+2: 06037575201                 0        06037          06
+3: 06037670102                 0        06037          06
+4: 06037139506                 0        06037          06
+5: 06037139505                 0        06037          06
+6: 06037267405                 0        06037          06
 [1] "****** 65 Verified ******"
 
 
@@ -1979,22 +1979,22 @@ number of na rows:  4894  or  NA
 ****Data Column Name  Lane Mile per Capita TRUE 
 number of rows:  84414 
 number of na rows:  4894  or  NA 
-        GEOID Lane Mile per Capita
-1: 6037237102                    0
-2: 6037575201                    0
-3: 6037670102                    0
-4: 6037139506                    0
-5: 6037139505                    0
-6: 6037267405                    0
+        GEOID Lane Mile per Capita.2
+1: 6037237102                      0
+2: 6037575201                      0
+3: 6037670102                      0
+4: 6037139506                      0
+5: 6037139505                      0
+6: 6037267405                      0
 -------------------------------
 
-   GEOID.Tract Lane Mile per Capita GEOID.County GEOID.State
-1: 06037237102                    0        06037          06
-2: 06037575201                    0        06037          06
-3: 06037670102                    0        06037          06
-4: 06037139506                    0        06037          06
-5: 06037139505                    0        06037          06
-6: 06037267405                    0        06037          06
+   GEOID.Tract Lane Mile per Capita.2 GEOID.County GEOID.State
+1: 06037237102                      0        06037          06
+2: 06037575201                      0        06037          06
+3: 06037670102                      0        06037          06
+4: 06037139506                      0        06037          06
+5: 06037139505                      0        06037          06
+6: 06037267405                      0        06037          06
 [1] "****** 66 Verified ******"
 
 

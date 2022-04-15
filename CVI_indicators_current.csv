@@ -54,10 +54,8 @@ Congestion,1,0,Infrastructure,Transportation,Delay (congestion) per capita/censu
 Flooded roads,1,0,Infrastructure,Transportation,Flooding risk to roads,,,Already at CST level
 Proximity to Hospitals,1,0,Infrastructure,Transportation,Access to hospitals ,,,Already at CST level
 Passenger Lane Miles,1,0,Infrastructure,Transportation,Total lane miles per capita/census tract (by functional class),,,Already at CST level
-Combination VMT,1,0,Infrastructure,Transportation,Passenger VMT per capita/census tract,,,Already at CST level
-Combination VMT,1,0,Infrastructure,Transportation,Total lane miles per capita/census tract (by functional class),,,Already at CST level
-Lane Mile per Capita,-1,0,Infrastructure,Transportation,Passenger VMT per capita/census tract,,,Already at CST level
-Lane Mile per Capita,-1,0,Infrastructure,Transportation,Total lane miles per capita/census tract (by functional class),,,Already at CST level
+Combination VMT.2,1,0,Infrastructure,Transportation,Total lane miles per capita/census tract (by functional class),,,Already at CST level
+Lane Mile per Capita.2,-1,0,Infrastructure,Transportation,Total lane miles per capita/census tract (by functional class),,,Already at CST level
 Truck Lane Miles,1,0,Infrastructure,Transportation,Total lane miles per capita/census tract (by functional class),,,Already at CST level
 Transit Performance Score,-1,0,Infrastructure,Transportation,Public Transit,,,Already at CST level
 Bridge Quality,1,0,Infrastructure,Transportation,Bridge Quality/Maintenance,,,Already at CST level
