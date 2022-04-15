@@ -31,7 +31,7 @@ In ArcGIS Pro:\
 \ls1\ilvl2\cf0 	[CVI-pct-comb.gis.csv]\
 	Col2=FIPS Text\
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Join Field\
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Join Field (This takes a long time for the whole US ~ 12 hrs)\
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
 \ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Input Table: Boundaries\
 {\listtext	\uc0\u8259 	}Input Join Field: GEOID10\
@@ -55,6 +55,7 @@ In ArcGIS Pro:\
 \ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Rename Field aliases for slices to remove the everything from the \'93!\'94 Onwards \
 {\listtext	\uc0\u8259 	}Set Number Format for ToxPi Score and Slices to round to 3 decimals\
 {\listtext	\uc0\u8259 	}Attribute Table: Hide everything except \'93Shape\'94 \'93Name10\'94 \'93Name\'94 \'93ToxPi Score\'94 and individual slice scores\
+{\listtext	\uc0\u8259 	}Reorder so Name comes before ToxPi Score\
 {\listtext	\uc0\u8259 	}Primary Symbology \
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Unclassed Colors\
@@ -72,13 +73,15 @@ In ArcGIS Pro:\
 {\listtext	\uc0\u8259 	}Baseline Environment - Purples\
 {\listtext	\uc0\u8259 	}Climate Change Health - Oranges\
 {\listtext	\uc0\u8259 	}Climate Change Economic - Yellow Green\
-{\listtext	\uc0\u8259 	}Climate Change Extreme Events - Red Purpose\
+{\listtext	\uc0\u8259 	}Climate Change Extreme Events - Red Purples\
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
 \ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Share as web map\
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
 \ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Analyze\
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Will get error - Correct by updating coordinate system to match basemap\
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Will get error - Correct by selecting\
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Update Map to Use Basemap\'92s Coordinate System \
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
 \ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Share\
 }
