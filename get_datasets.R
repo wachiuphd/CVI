@@ -6,7 +6,7 @@ library(readxl)
 datafolder <- "Data"
 
 # Census tracts from 22-02_CVI_state_county_tract.xlsx
-tractsraw <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/Other/22-02_CVI_state_county_tract.xlsx",
+tractsraw <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/Other/22-02_CVI_state_county_tract_updated.xlsx",
   sheet="Tract")
 tracts <- tractsraw[,c("STATE","County_Name")]
 tracts$GEOID.State <- tractsraw$STATEFP10
