@@ -400,3 +400,10 @@ plot(fcomb.pct.results@txpScores,fcomb.scale.results@txpScores)
 plot(fcomb.pct.results@txpRanks,fcomb.scale.results@txpRanks)
 cor(fcomb.pct.results@txpScores,fcomb.scale.results@txpScores)
 cor(fcomb.pct.results@txpScores,fcomb.scale.results@txpScores,method = "spearman")
+
+
+## Percentile file for GIS
+cvi.pct.df.namesfixed <- cvi.pct.df
+names(cvi.pct.df.namesfixed)<-gsub(",","",names(cvi.pct.df.namesfixed))
+names(cvi.pct.df.namesfixed)<-gsub("\"","",names(cvi.pct.df.namesfixed))
+fwrite(cvi.pct.df.namesfixed,"CVI_data_pct.gis.csv")
