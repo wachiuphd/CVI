@@ -21,11 +21,11 @@ for (j in 1:nrow(indicators.df)) {
   try(hist(y,main="",xlab="Value"))
   try({qqnorm(log(y[y>0]),main="",pch=15,cex=0.2); qqline(log(y[y>0]));})
   try(hist(log(y[y>0]),main="",xlab="Log Value [positive only]"))
-  mtext(paste("Row",j,"\n",indicators.df$`Indicator Name`[j]),outer=TRUE,line=-2,cex=0.75)
+  mtext(paste("Row",j,"\n",indicators.df$Parameters[j]),outer=TRUE,line=-2,cex=0.75)
 }
 dev.off()
 
-nareplcols <- indicators.df$`Indicator Name`[indicators.df$`Replace NA with median`==1]
+nareplcols <- indicators.df$Parameters[indicators.df$`Replace NA with median`==1]
 # View((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols])
 print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 # Replace NA by county median
@@ -43,7 +43,7 @@ cvi.df[, (nareplcols) := lapply(.SD, function(x) nafill(x, type = "const", fill 
        , .SDcols = nareplcols]
 print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 
-na0cols <- indicators.df$`Indicator Name`[indicators.df$`Replace NA with median`==0]
+na0cols <- indicators.df$Parameters[indicators.df$`Replace NA with median`==0]
 
 # other columns replace NA with 0
 cvi.df[, (na0cols) := lapply(.SD, function(x) nafill(x, type = "const", fill = 0))
@@ -112,7 +112,7 @@ categories <- unique(indicators.df$`Baseline Vulnerability`)
 indicators.bycat <- list()
 for (i in 1:length(categories)) {
   onecat <- categories[i]
-  indicators.bycat[[i]] <- indicators.df$`Indicator Name`[
+  indicators.bycat[[i]] <- indicators.df$Parameters[
     indicators.df$`Baseline Vulnerability`==onecat
   ]
 }
@@ -218,7 +218,7 @@ for (i in 1:length(categories)) {
   indicators.bysubcat <- list()
   for (j in 1:length(subcategories)) {
     onesubcat <- subcategories[j]
-    indicators.bysubcat[[j]] <- indicators.df$`Indicator Name`[
+    indicators.bysubcat[[j]] <- indicators.df$Parameters[
       indicators.df$`Baseline Vulnerability`==onecat &
         indicators.df$Subcategory==onesubcat
     ]
