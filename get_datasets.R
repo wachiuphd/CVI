@@ -5,7 +5,8 @@ library(naniar)
 library(readxl)
 datafolder <- "Data"
 
-# Census tracts from 22-02_CVI_state_county_tract.xlsx
+# Census tracts from 22-02_CVI_state_county_tract_updated.xlsx
+# Nine census tracts internal points moved to be internal to tract boundary
 tractsraw <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/Other/22-02_CVI_state_county_tract_updated.xlsx",
   sheet="Tract")
 tracts <- tractsraw[,c("STATE","County_Name")]
@@ -15,22 +16,10 @@ tracts$GEOID.Tract <- tractsraw$GEOID10
 tracts$LatLong <- paste0(tractsraw$INTPTLAT10,",",tractsraw$INTPTLON10)
 tracts <- tracts[order(tracts$GEOID.Tract),]
 
-# # ### Get census tracts from 2014 Census Tract Gazetteer File - has lat long
-# # ### https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2014_Gazetteer/2014_Gaz_tracts_national.zip
-# tracts_latlong <- fread(file.path(datafolder,"2014_Gaz_tracts_national.txt"),
-#                         keepLeadingZeros = TRUE)
-# tracts_latlong[, c("USPS","ALAND","AWATER","ALAND_SQMI","AWATER_SQMI"):=NULL]
-# setnames(tracts_latlong,"GEOID","GEOID.Tract")
-# tracts_latlong$LatLong <- paste0(tracts_latlong$INTPTLAT,",",tracts_latlong$INTPTLONG)
-# tracts_latlong[, c("INTPTLAT","INTPTLONG"):=NULL]
-
-# # Join lat long to tracts
-# tracts <- left_join(tracts,tracts_latlong)
-
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CurrentCVIIndicatorsDoc - 04.14.22.xlsx",
-                        sheet="Subcategories (In Progress)",trim_ws = FALSE)
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForAlpha.xlsx",
+                        sheet="Alpha Indicators",trim_ws = FALSE)
 indicator.verified <- rep(FALSE,nrow(cvi.master))
 
 checkdatrow <- function(jrow) {
@@ -73,6 +62,7 @@ checkdatrow <- function(jrow) {
     tmp <- subset(tmp,GEOID != "") # Remove row without GEOID
     cat("number of rows: ",nrow(tmp),"\n")
     cat("number of na rows: ",sum(is.na(tmp[,2]))," or ",sum(tmp[,2]<0),"\n")
+    names(tmp)[2] <- cvi.master$Parameters[j]
 #    tmp$Category <- cvi.master$`Baseline Vulnerability`[j]
 #    tmp$Subcategory <- cvi.master$Subcategory[j]
     print(head(tmp))
@@ -162,8 +152,7 @@ cvi.master$verified <- indicator.verified
 fwrite(cvi.master,"CVI_master.csv")
 
 icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
-indicators.df <- data.table(`Indicator Name`=names(tracts)[-(1:6)])
-indicators.df <- left_join(indicators.df,as.data.table(cvi.master)[,..icols])
+indicators.df <- as.data.table(subset(cvi.master,verified==TRUE))[,..icols]
 indicators.df$`Adverse Direction`<-as.numeric(indicators.df$`Adverse Direction`)
 # replace "n/a" with 0
 indicators.df$`Replace NA with median`<-as.numeric(indicators.df$`Replace NA with median`)
