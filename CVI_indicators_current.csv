@@ -64,11 +64,12 @@ No Broadband Access,1,0,Infrastructure,Communications,Percent of Household with 
 Cellular Coverage,1,0,Infrastructure,Communications,Percent of household with smartphone but no other device.,National Environmental Public Health Tracking Network,2013-2017,Census Tract
 Residential Energy Cost Burden,1,0,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
 Air Markets,1,0,Infrastructure,Energy,Proximinty to facilities participating in air markets,EPA,2020,County
+Fossil Fuel Generation,1,1,Infrastructure,Energy,Share of energy from fossil fuels,Policy Map,2019,County
 Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
 Municipal wastewater,-1,0,Infrastructure,"Food, Water, and Waste Management",Municipal Wastewater,EPA CWNS,2012,
 Indoor plumbing,-1,0,Infrastructure,"Food, Water, and Waste Management",Indoor Plumbing,Census Bureau: ACS,2019,County
 Unbanked Households,1,0,Infrastructure,Financial Services,Percent of Unbanked Households,Policy Map,2015-2019,State
-Payday lending,1,0,Infrastructure,Financial Services,Payday lending/ Pawn shops,Center for Responsible Lending,2010,State
+Payday lending,1,0,Infrastructure,Financial Services,Payday lending/Pawn shops,Center for Responsible Lending,2010,State
 Housing Built Past v.s. Now,1,0,Infrastructure,Financial Services,Percent of Housing Units Built Between 1940-1969 as of 2015-2019,Policy Map,2015-2019,Census Tract
 Nursing Homes,-1,0,Infrastructure,Dependent Care,Senior/Disability Care Deserts,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,
 Real Estate Taxes,-1,0,Infrastructure,Governance,Tax Base: Median Real Estate Taxes Paid,Policy Map,2015-2019,Census Tract
@@ -86,6 +87,7 @@ PM 2.5 concentration,1,0,Environment,Criteria Air Pollutants,PM 2.5: CMAQ and sa
 NO2 concentration,1,0,Environment,Criteria Air Pollutants,NO2: CMAQ and satellite,GWU Data ,2019,
 Ozone concentration,1,0,Environment,Criteria Air Pollutants,OZONE: CMAQ and satellite,EPA Fused Air Quality Surface Using Downscaling (FAQSD) Files,2018,Census Tract
 CO2 emissions,1,0,Environment,Criteria Air Pollutants,State energy-related carbon dioxide emissions by year,U.S. Energy Information Administration (EIA),1990-2017,State 
+Black Carbon,1,1,Environment,Air pollutant,Black Carbon=Elemental Carbon,Randall Martin's group at Washington University,2021," Nationally, 1km x1km grid cells"
 % pre-1960 housing (lead paint indicator),1,0,Environment,Air pollutant,Lead Paint: Housing units built before 1960 (percent),EJ Screen ,2020,Census Tract
 Superfund Sites,1,0,Environment,Pollutant Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level
 Proximity to Brownfields,1,0,Environment,Pollutant Sources,Brownfields,EPA Facility Registry Service,2020,Facility Level
@@ -108,8 +110,10 @@ Change in Residential Energy,1,1,CC: Economic,Costs of Climate Disasters,Residen
 Job Productivity,-1,1,CC: Economic,Costs of Climate Disasters,High-Risk Jobs Productivity (% Change),Hsiang et al. ,2017,County Level
 Yields,-1,0,CC: Economic,Costs of Climate Disasters,Yields (% change),Hsiang et al. ,2017,County Level
 Flooding risk to properties,1,0,CC: Economic,Costs of Climate Disasters,Flooding risk to properties,First Street Foundation Flood Model,2020,County Level
+Percent Property Tax at Risk from Flooding,1,0,CC: Economic,Costs of Climate Disasters,Property taxes expected to be lost by 2045 due to chronic inundation ,UCS Underwater Report,2020,County
 Outdoor workers,1,0,CC: Economic,Costs of Climate Disasters,Outdoor workers - work days at risk per year,Licker et al. 2021 (UCS scientists),2021,County Level
 Cost of Historical Climate Disasters 1980-present,1,0,CC: Economic,Costs of Climate Disasters,Cost of climate disasters,NOAA  ,2021,State level - point
+Deaths from Historical Climate Disasters 1980-present,1,0,CC: Economic,Costs of Climate Disasters,Deaths from climate disasters,NOAA  ,2021,State level - point
 Expected Annual Loss - Agriculture Value - Composite,1,0,CC: Economic,Costs of Climate Disasters,Expected Annual Loss - Agriculture Value,FEMA National Risk Index,2021,Tract Level
 Expected Annual Loss - Building Value - Composite,1,0,CC: Economic,Costs of Climate Disasters,Expected Annual Loss - Building Value,FEMA National Risk Index,2021,Tract Level
 Expected Annual Loss - Population Equivalence - Composite,1,0,CC: Economic,Costs of Climate Disasters,Expected Annual Loss - Population Equivalence ,FEMA National Risk Index,2022,Tract Level

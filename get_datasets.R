@@ -19,7 +19,7 @@ tracts <- tracts[order(tracts$GEOID.Tract),]
 ### Get master sheet
 
 cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForAlpha.xlsx",
-                        sheet="Alpha Indicators",trim_ws = FALSE)
+                        sheet="Alpha Version Indicators",trim_ws = FALSE)
 indicator.verified <- rep(FALSE,nrow(cvi.master))
 
 checkdatrow <- function(jrow) {
