@@ -151,7 +151,7 @@ options(width=80)
 cvi.master$verified <- indicator.verified
 fwrite(cvi.master,"CVI_master.csv")
 
-icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability ","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
+icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level")
 indicators.df <- as.data.table(subset(cvi.master,verified==TRUE))[,..icols]
 indicators.df$`Adverse Direction`<-as.numeric(indicators.df$`Adverse Direction`)
 # replace "n/a" with 0
