@@ -1,4 +1,4 @@
-Indicator Name,Adverse Direction,Replace NA with median,Baseline Vulnerability ,Subcategory,Parameters,Agency or data source,Year of data release,Geographic Level
+Indicator Name,Adverse Direction,Replace NA with median,Baseline Vulnerability,Subcategory,Parameters,Agency or data source,Year of data release,Geographic Level
 Life Expectancy,-1,1,Health,Overall Physical Health,Life Expectancy,Policy Map,2010-2015,Census Tract
 Physical health not good for >=14 days among adults aged >=18 years,1,1,Health,Overall Physical Health,Self-Reported Physical Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 Mental health not good for >=14 days among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Self-Reported Mental Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
