@@ -50,35 +50,37 @@ No Vehicle,1,1,Social,Housing & Transportation,No Vehicle,ASTDR,2018,Census Trac
 Group Quarters,1,1,Social,Housing & Transportation,Group Quarters,ASTDR,2018,Census Tract
 Foreclosure Rate,1,0,Social,HUD Foreclosure,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract
 Unauthorized immigrants,1,0,Social,Undocumented population,Undocumented Population,Migration Policy Institute,2015-18,County Level
-Congestion,1,0,Infrastructure,Transportation,Delay (congestion) per capita/census tract,,,Already at CST level
-Flooded roads,1,0,Infrastructure,Transportation,Flooding risk to roads,,,Already at CST level
+Payday lending,1,0,Infrastructure,Financial Services,Payday lending/Pawn shops,Center for Responsible Lending,2010,State
+Unbanked Households,1,0,Infrastructure,Financial Services,Percent of Unbanked Households,Policy Map,2015-2019,State
+Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
+Voter Turnout,-1,0,Infrastructure,Governance,Voter Turnout (2020 Presidential),Policy Map,2020,State
+Congestion,,0,Infrastructure,Transportation,Delay (congestion) per capita/census tract,,,Already at CST level
+Flooded roads,,0,Infrastructure,Transportation,Flooding risk to roads,,,Already at CST level
 Proximity to Hospitals,-1,0,Infrastructure,Transportation,Access to hospitals ,,,Already at CST level
 Total VMT,1,0,Infrastructure,Transportation,Total lane miles per capita,,,Already at CST level
 Passenger Lane Miles,1,0,Infrastructure,Transportation,Passenger lane miles per capita,,,Already at CST level
 Combination VMT.2,1,0,Infrastructure,Transportation,Heavy Duty Vehicle lane miles per capita,,,Already at CST level
-Lane Mile per Capita.2,-1,0,Infrastructure,Transportation,Lane miles per capita,,,Already at CST level
+Lane Mile per Capita.2,1,0,Infrastructure,Transportation,Lane miles per capita,,,Already at CST level
 Truck Lane Miles,1,0,Infrastructure,Transportation,Truck lane miles per capita,,,Already at CST level
-Transit Performance Score,-1,0,Infrastructure,Transportation,Public Transit,,,Already at CST level
+Transit Performance Score,1,0,Infrastructure,Transportation,Public Transit,,,Already at CST level
 Bridge Quality,-1,0,Infrastructure,Transportation,Bridge Quality/Maintenance,,,Already at CST level
 No Broadband Access,1,0,Infrastructure,Communications,Percent of Household with no internet access,National Environmental Public Health Tracking Network,2013-2017,Census Tract
 Cellular Coverage,1,0,Infrastructure,Communications,Percent of household with smartphone but no other device.,National Environmental Public Health Tracking Network,2013-2017,Census Tract
 Residential Energy Cost Burden,1,0,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
 Air Markets,1,0,Infrastructure,Energy,Proximinty to facilities participating in air markets,EPA,2020,County
 Fossil Fuel Generation,1,1,Infrastructure,Energy,Share of energy from fossil fuels,Policy Map,2019,County
-Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
 Municipal wastewater,-1,0,Infrastructure,"Food, Water, and Waste Management",Municipal Wastewater,EPA CWNS,2012,
 Indoor plumbing,-1,0,Infrastructure,"Food, Water, and Waste Management",Indoor Plumbing,Census Bureau: ACS,2019,County
-Unbanked Households,1,0,Infrastructure,Financial Services,Percent of Unbanked Households,Policy Map,2015-2019,State
-Payday lending,1,0,Infrastructure,Financial Services,Payday lending/Pawn shops,Center for Responsible Lending,2010,State
 Housing Built Past v.s. Now,1,0,Infrastructure,Financial Services,Percent of Housing Units Built Between 1940-1969 as of 2015-2019,Policy Map,2015-2019,Census Tract
 Nursing Homes,-1,0,Infrastructure,Dependent Care,Senior/Disability Care Deserts,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,
 Real Estate Taxes,-1,0,Infrastructure,Governance,Tax Base: Median Real Estate Taxes Paid,Policy Map,2015-2019,Census Tract
-Voter Turnout,-1,0,Infrastructure,Governance,Voter Turnout (2020 Presidential),Policy Map,2020,State
 Public Libraries,-1,0,Infrastructure,Government Services,Public Library Locations,Policy Map,2020,Point
 Risk-Screening Environmental Indicators (RSEI) ,1,0,Environment,Toxic Releases,Risk-Screening Environmental Indicators (RSEI) ,EASYRSEI,2019,Census Tract
 Major direct dischargers to water,1,0,Environment,Toxic Releases,Stream Toxicity Risk-Screening Environmental Indicators (RSEI),EJ Screen ,2020,Census Tract
 Proximity to National Priorities List (NPL) sites,1,0,Environment,Toxic Releases,NPL sites,EJ Screen ,2020,Census Tract
 Proximity to Treatment Storage and Disposal (TSDF) facilities,1,0,Environment,Toxic Releases,Hazardous Waste Management Facilities (TSDFs) ,EJ Screen ,2020,Census Tract
+Proximity to Hazardous Waste Generators,1,0,Environment,Toxic Releases,Hazardous Waste Generator/Incinerators,EPA,2022,Point
+Proximity to Facility with Enforcement/Violation,1,0,Environment,Toxic Releases,ECHO Database,EPA ECHO,44662,Point 
 Proximity to Landfills,1,0,Environment,Toxic Releases,Landfills,EPA Landfill Methane Outreach Program,As of Sept 2021,Point
 Proximity to TSCA Facilities,1,0,Environment,Toxic Releases,TSCA Facilities ,"Jennifer McPartland, EDF",2015-2019,
 Proximity to Risk Management Plan (RMP) facilities,1,0,Environment,Toxic Releases,Risk Management Plan,EJ Screen ,2020,Census Tract
@@ -91,13 +93,11 @@ Black Carbon,1,1,Environment,Air pollutant,Black Carbon=Elemental Carbon,Randall
 % pre-1960 housing (lead paint indicator),1,0,Environment,Air pollutant,Lead Paint: Housing units built before 1960 (percent),EJ Screen ,2020,Census Tract
 Superfund Sites,1,0,Environment,Pollutant Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level
 Proximity to Brownfields,1,0,Environment,Pollutant Sources,Brownfields,EPA Facility Registry Service,2020,Facility Level
-Traffic proximity and volume,1,0,Environment,Transportation,Traffic Proximity and Volume,EJ Screen ,2020,Census Tract
-Ports,1,0,Environment,Transportation,Proximity to Ports,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point
+Ports,1,0,Environment,Ports,Proximity to Ports,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point
 Parks and Greenspace,-1,0,Environment,Land Use,Parks/Green Spaces,National Neighborhood Data Archive (NaNDA),2018,Census Tract
 Impermeable Surfaces,1,0,Environment,Land Use,Impermeable Surfaces,CDC: National Environmental Public Health Tracking,2021,Census Tract
 Forest Land Cover,-1,0,Environment,Land Use,Forest Land Cover,CDC: National Environmental Public Health Tracking,2021,Census Tract
 Tribal Lands,1,0,Environment,Land Use,Native American Lands,USGS,2014,"USGS 1:1,000,000-Scale Indian Lands of the United States 201412 Shapefile"
-"Petrochem, metal recyclers, etc facilities",1,0,Environment,Land Use,Chemical Manufacturers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.
 Temperature-related mortality,1,1,CC: Health,Temperature-related mortality,Temperature-related mortality,Hsiang et al. ,2017,County
 Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related mortality,PM2.5 mortality - CVD (ages 65+),EPA CIRA,2021,Census Tract
 New Incidence of Asthma Associated with PM2.5 Exposure in Children Age 0 to 17,1,1,CC: Health,Air pollution-related illnesses,Childhood asthma incidence,EPA CIRA,2021,Census Tract
