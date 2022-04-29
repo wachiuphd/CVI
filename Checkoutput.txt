@@ -1065,6 +1065,273 @@ number of na rows:  0  or  0
 
 
 [1] "----- 35"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/MedicallyUnderserved.csv  exists?  TRUE 
+[1] "Census Tract"                                   "State"                                          "FIPS Code"                                      "Formatted FIPS"                                
+[5] "Medically Underserved Areas (MUA), as of 2020." "Category CVI"                                   "V7"                                             "V8"                                            
+****GEOID Column Name  FIPS Code TRUE 
+****Data Column Name  Category CVI TRUE 
+number of rows:  74134 
+number of na rows:  0  or  0 
+        GEOID Medically Underserved Areas
+1: 2020000101                           1
+2: 2020000102                           1
+3: 2020000201                           1
+4: 2020000202                           1
+5: 2020000203                           1
+6: 2020000204                           1
+-------------------------------
+
+   GEOID.Tract Medically Underserved Areas GEOID.County GEOID.State
+1: 02020000101                           1        02020          02
+2: 02020000102                           1        02020          02
+3: 02020000201                           1        02020          02
+4: 02020000202                           1        02020          02
+5: 02020000203                           1        02020          02
+6: 02020000204                           1        02020          02
+[1] "****** 35 Verified ******"
+
+
+[1] "----- 36"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/EPA AirToxScreen Cancer.csv  exists?  TRUE 
+ [1] "State"                                                                "EPA Region"                                                          
+ [3] "County"                                                               "FIPs"                                                                
+ [5] "Tract"                                                                "Population"                                                          
+ [7] "Total Cancer Risk (per million)"                                      "PT-StationaryPoint Cancer Risk (per million)"                        
+ [9] "OR-LightDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-LightDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[11] "OR-HeavyDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-HeavyDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[13] "OR-LightDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-LightDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[15] "OR-HeavyDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-HeavyDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[17] "OR-Refueling Cancer Risk (per million)"                               "OR-HeavyDuty-Hoteling Cancer Risk (per million)"                     
+[19] "NR-Recreational-inc-PleasureCraft Cancer Risk (per million)"          "NR-Construction Cancer Risk (per million)"                           
+[21] "NR-CommercialLawnGarden Cancer Risk (per million)"                    "NR-ResidentialLawnGarden Cancer Risk (per million)"                  
+[23] "NR-Agriculture Cancer Risk (per million)"                             "NR-CommercialEquipment Cancer Risk (per million)"                    
+[25] "NR-AllOther Cancer Risk (per million)"                                "NR-CMV_C1C2_ports Cancer Risk (per million)"                         
+[27] "NR-CMV_C3_ports Cancer Risk (per million)"                            "NR-CMV_C1C2C3_underway Cancer Risk (per million)"                    
+[29] "NR-Locomotives Cancer Risk (per million)"                             "NR-Point-Airports Cancer Risk (per million)"                         
+[31] "NR- Point-Railyards Cancer Risk (per million)"                        "NP-industrial Cancer Risk (per million)"                             
+[33] "NP-CommercialCooking Cancer Risk (per million)"                       "NP-OilGas Cancer Risk (per million)"                                 
+[35] "NP-SolventsCoatings Cancer Risk (per million)"                        "NP-StorageTransfer_BulkTerminals_GasStage1 Cancer Risk (per million)"
+[37] "NP-MiscellaneousNonindustrial Cancer Risk (per million)"              "NP-FuelCombustion_not_RWC Cancer Risk (per million)"                 
+[39] "NP-ResidentialWoodCombustionRWC Cancer Risk (per million)"            "NP-WasteDisposal Cancer Risk (per million)"                          
+[41] "NP-AgricultureLivestock Cancer Risk (per million)"                    "FIRE Cancer Risk (per million)"                                      
+[43] "BIOGENICS Cancer Risk (per million)"                                  "SECONDARY Cancer Risk (per million)"                                 
+[45] "BACKGROUND Cancer Risk (per million)"                                
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  NR-CMV_C1C2_ports Cancer Risk (per million) TRUE 
+number of rows:  76726 
+number of na rows:  0  or  0 
+         GEOID       Ports
+1: 00000000000 0.002320919
+2: 01000000000 0.000692028
+3: 01001000000 0.000000000
+4: 01001020100 0.000000000
+5: 01001020200 0.000000000
+6: 01001020300 0.000000000
+-------------------------------
+
+   GEOID.Tract       Ports GEOID.County GEOID.State
+1: 00000000000 0.002320919        00000          00
+2: 01000000000 0.000692028        01000          01
+3: 01001000000 0.000000000        01001          01
+4: 01001020100 0.000000000        01001          01
+5: 01001020200 0.000000000        01001          01
+6: 01001020300 0.000000000        01001          01
+[1] "****** 36 Verified ******"
+
+
+[1] "----- 37"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/EPA AirToxScreen Cancer.csv  exists?  TRUE 
+ [1] "State"                                                                "EPA Region"                                                          
+ [3] "County"                                                               "FIPs"                                                                
+ [5] "Tract"                                                                "Population"                                                          
+ [7] "Total Cancer Risk (per million)"                                      "PT-StationaryPoint Cancer Risk (per million)"                        
+ [9] "OR-LightDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-LightDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[11] "OR-HeavyDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-HeavyDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[13] "OR-LightDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-LightDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[15] "OR-HeavyDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-HeavyDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[17] "OR-Refueling Cancer Risk (per million)"                               "OR-HeavyDuty-Hoteling Cancer Risk (per million)"                     
+[19] "NR-Recreational-inc-PleasureCraft Cancer Risk (per million)"          "NR-Construction Cancer Risk (per million)"                           
+[21] "NR-CommercialLawnGarden Cancer Risk (per million)"                    "NR-ResidentialLawnGarden Cancer Risk (per million)"                  
+[23] "NR-Agriculture Cancer Risk (per million)"                             "NR-CommercialEquipment Cancer Risk (per million)"                    
+[25] "NR-AllOther Cancer Risk (per million)"                                "NR-CMV_C1C2_ports Cancer Risk (per million)"                         
+[27] "NR-CMV_C3_ports Cancer Risk (per million)"                            "NR-CMV_C1C2C3_underway Cancer Risk (per million)"                    
+[29] "NR-Locomotives Cancer Risk (per million)"                             "NR-Point-Airports Cancer Risk (per million)"                         
+[31] "NR- Point-Railyards Cancer Risk (per million)"                        "NP-industrial Cancer Risk (per million)"                             
+[33] "NP-CommercialCooking Cancer Risk (per million)"                       "NP-OilGas Cancer Risk (per million)"                                 
+[35] "NP-SolventsCoatings Cancer Risk (per million)"                        "NP-StorageTransfer_BulkTerminals_GasStage1 Cancer Risk (per million)"
+[37] "NP-MiscellaneousNonindustrial Cancer Risk (per million)"              "NP-FuelCombustion_not_RWC Cancer Risk (per million)"                 
+[39] "NP-ResidentialWoodCombustionRWC Cancer Risk (per million)"            "NP-WasteDisposal Cancer Risk (per million)"                          
+[41] "NP-AgricultureLivestock Cancer Risk (per million)"                    "FIRE Cancer Risk (per million)"                                      
+[43] "BIOGENICS Cancer Risk (per million)"                                  "SECONDARY Cancer Risk (per million)"                                 
+[45] "BACKGROUND Cancer Risk (per million)"                                
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  NR-CMV_C3_ports Cancer Risk (per million) TRUE 
+number of rows:  76726 
+number of na rows:  0  or  0 
+         GEOID       Ports
+1: 00000000000 0.004834218
+2: 01000000000 0.001786922
+3: 01001000000 0.000000000
+4: 01001020100 0.000000000
+5: 01001020200 0.000000000
+6: 01001020300 0.000000000
+-------------------------------
+
+   GEOID.Tract       Ports GEOID.County GEOID.State
+1: 00000000000 0.004834218        00000          00
+2: 01000000000 0.001786922        01000          01
+3: 01001000000 0.000000000        01001          01
+4: 01001020100 0.000000000        01001          01
+5: 01001020200 0.000000000        01001          01
+6: 01001020300 0.000000000        01001          01
+[1] "****** 37 Verified ******"
+
+
+[1] "----- 38"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/EPA AirToxScreen Cancer.csv  exists?  TRUE 
+ [1] "State"                                                                "EPA Region"                                                          
+ [3] "County"                                                               "FIPs"                                                                
+ [5] "Tract"                                                                "Population"                                                          
+ [7] "Total Cancer Risk (per million)"                                      "PT-StationaryPoint Cancer Risk (per million)"                        
+ [9] "OR-LightDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-LightDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[11] "OR-HeavyDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-HeavyDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[13] "OR-LightDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-LightDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[15] "OR-HeavyDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-HeavyDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[17] "OR-Refueling Cancer Risk (per million)"                               "OR-HeavyDuty-Hoteling Cancer Risk (per million)"                     
+[19] "NR-Recreational-inc-PleasureCraft Cancer Risk (per million)"          "NR-Construction Cancer Risk (per million)"                           
+[21] "NR-CommercialLawnGarden Cancer Risk (per million)"                    "NR-ResidentialLawnGarden Cancer Risk (per million)"                  
+[23] "NR-Agriculture Cancer Risk (per million)"                             "NR-CommercialEquipment Cancer Risk (per million)"                    
+[25] "NR-AllOther Cancer Risk (per million)"                                "NR-CMV_C1C2_ports Cancer Risk (per million)"                         
+[27] "NR-CMV_C3_ports Cancer Risk (per million)"                            "NR-CMV_C1C2C3_underway Cancer Risk (per million)"                    
+[29] "NR-Locomotives Cancer Risk (per million)"                             "NR-Point-Airports Cancer Risk (per million)"                         
+[31] "NR- Point-Railyards Cancer Risk (per million)"                        "NP-industrial Cancer Risk (per million)"                             
+[33] "NP-CommercialCooking Cancer Risk (per million)"                       "NP-OilGas Cancer Risk (per million)"                                 
+[35] "NP-SolventsCoatings Cancer Risk (per million)"                        "NP-StorageTransfer_BulkTerminals_GasStage1 Cancer Risk (per million)"
+[37] "NP-MiscellaneousNonindustrial Cancer Risk (per million)"              "NP-FuelCombustion_not_RWC Cancer Risk (per million)"                 
+[39] "NP-ResidentialWoodCombustionRWC Cancer Risk (per million)"            "NP-WasteDisposal Cancer Risk (per million)"                          
+[41] "NP-AgricultureLivestock Cancer Risk (per million)"                    "FIRE Cancer Risk (per million)"                                      
+[43] "BIOGENICS Cancer Risk (per million)"                                  "SECONDARY Cancer Risk (per million)"                                 
+[45] "BACKGROUND Cancer Risk (per million)"                                
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  NR-Locomotives Cancer Risk (per million) TRUE 
+number of rows:  76726 
+number of na rows:  0  or  0 
+         GEOID Locomotive
+1: 00000000000 0.11736734
+2: 01000000000 0.11107438
+3: 01001000000 0.09276783
+4: 01001020100 0.08066127
+5: 01001020200 0.07879937
+6: 01001020300 0.07734045
+-------------------------------
+
+   GEOID.Tract Locomotive GEOID.County GEOID.State
+1: 00000000000 0.11736734        00000          00
+2: 01000000000 0.11107438        01000          01
+3: 01001000000 0.09276783        01001          01
+4: 01001020100 0.08066127        01001          01
+5: 01001020200 0.07879937        01001          01
+6: 01001020300 0.07734045        01001          01
+[1] "****** 38 Verified ******"
+
+
+[1] "----- 39"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/EPA AirToxScreen Cancer.csv  exists?  TRUE 
+ [1] "State"                                                                "EPA Region"                                                          
+ [3] "County"                                                               "FIPs"                                                                
+ [5] "Tract"                                                                "Population"                                                          
+ [7] "Total Cancer Risk (per million)"                                      "PT-StationaryPoint Cancer Risk (per million)"                        
+ [9] "OR-LightDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-LightDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[11] "OR-HeavyDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-HeavyDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[13] "OR-LightDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-LightDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[15] "OR-HeavyDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-HeavyDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[17] "OR-Refueling Cancer Risk (per million)"                               "OR-HeavyDuty-Hoteling Cancer Risk (per million)"                     
+[19] "NR-Recreational-inc-PleasureCraft Cancer Risk (per million)"          "NR-Construction Cancer Risk (per million)"                           
+[21] "NR-CommercialLawnGarden Cancer Risk (per million)"                    "NR-ResidentialLawnGarden Cancer Risk (per million)"                  
+[23] "NR-Agriculture Cancer Risk (per million)"                             "NR-CommercialEquipment Cancer Risk (per million)"                    
+[25] "NR-AllOther Cancer Risk (per million)"                                "NR-CMV_C1C2_ports Cancer Risk (per million)"                         
+[27] "NR-CMV_C3_ports Cancer Risk (per million)"                            "NR-CMV_C1C2C3_underway Cancer Risk (per million)"                    
+[29] "NR-Locomotives Cancer Risk (per million)"                             "NR-Point-Airports Cancer Risk (per million)"                         
+[31] "NR- Point-Railyards Cancer Risk (per million)"                        "NP-industrial Cancer Risk (per million)"                             
+[33] "NP-CommercialCooking Cancer Risk (per million)"                       "NP-OilGas Cancer Risk (per million)"                                 
+[35] "NP-SolventsCoatings Cancer Risk (per million)"                        "NP-StorageTransfer_BulkTerminals_GasStage1 Cancer Risk (per million)"
+[37] "NP-MiscellaneousNonindustrial Cancer Risk (per million)"              "NP-FuelCombustion_not_RWC Cancer Risk (per million)"                 
+[39] "NP-ResidentialWoodCombustionRWC Cancer Risk (per million)"            "NP-WasteDisposal Cancer Risk (per million)"                          
+[41] "NP-AgricultureLivestock Cancer Risk (per million)"                    "FIRE Cancer Risk (per million)"                                      
+[43] "BIOGENICS Cancer Risk (per million)"                                  "SECONDARY Cancer Risk (per million)"                                 
+[45] "BACKGROUND Cancer Risk (per million)"                                
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  NR- Point-Railyards Cancer Risk (per million) TRUE 
+number of rows:  76726 
+number of na rows:  0  or  0 
+         GEOID      Rail  
+1: 00000000000 0.016510837
+2: 01000000000 0.012517079
+3: 01001000000 0.001466406
+4: 01001020100 0.001329397
+5: 01001020200 0.001427592
+6: 01001020300 0.001370964
+-------------------------------
+
+   GEOID.Tract      Rail   GEOID.County GEOID.State
+1: 00000000000 0.016510837        00000          00
+2: 01000000000 0.012517079        01000          01
+3: 01001000000 0.001466406        01001          01
+4: 01001020100 0.001329397        01001          01
+5: 01001020200 0.001427592        01001          01
+6: 01001020300 0.001370964        01001          01
+[1] "****** 39 Verified ******"
+
+
+[1] "----- 40"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/EPA AirToxScreen Cancer.csv  exists?  TRUE 
+ [1] "State"                                                                "EPA Region"                                                          
+ [3] "County"                                                               "FIPs"                                                                
+ [5] "Tract"                                                                "Population"                                                          
+ [7] "Total Cancer Risk (per million)"                                      "PT-StationaryPoint Cancer Risk (per million)"                        
+ [9] "OR-LightDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-LightDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[11] "OR-HeavyDuty-OffNetwork-Gas Cancer Risk (per million)"                "OR-HeavyDuty-OffNetwork-Diesel Cancer Risk (per million)"            
+[13] "OR-LightDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-LightDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[15] "OR-HeavyDuty-OnNetwork-Gas Cancer Risk (per million)"                 "OR-HeavyDuty-OnNetwork-Diesel Cancer Risk (per million)"             
+[17] "OR-Refueling Cancer Risk (per million)"                               "OR-HeavyDuty-Hoteling Cancer Risk (per million)"                     
+[19] "NR-Recreational-inc-PleasureCraft Cancer Risk (per million)"          "NR-Construction Cancer Risk (per million)"                           
+[21] "NR-CommercialLawnGarden Cancer Risk (per million)"                    "NR-ResidentialLawnGarden Cancer Risk (per million)"                  
+[23] "NR-Agriculture Cancer Risk (per million)"                             "NR-CommercialEquipment Cancer Risk (per million)"                    
+[25] "NR-AllOther Cancer Risk (per million)"                                "NR-CMV_C1C2_ports Cancer Risk (per million)"                         
+[27] "NR-CMV_C3_ports Cancer Risk (per million)"                            "NR-CMV_C1C2C3_underway Cancer Risk (per million)"                    
+[29] "NR-Locomotives Cancer Risk (per million)"                             "NR-Point-Airports Cancer Risk (per million)"                         
+[31] "NR- Point-Railyards Cancer Risk (per million)"                        "NP-industrial Cancer Risk (per million)"                             
+[33] "NP-CommercialCooking Cancer Risk (per million)"                       "NP-OilGas Cancer Risk (per million)"                                 
+[35] "NP-SolventsCoatings Cancer Risk (per million)"                        "NP-StorageTransfer_BulkTerminals_GasStage1 Cancer Risk (per million)"
+[37] "NP-MiscellaneousNonindustrial Cancer Risk (per million)"              "NP-FuelCombustion_not_RWC Cancer Risk (per million)"                 
+[39] "NP-ResidentialWoodCombustionRWC Cancer Risk (per million)"            "NP-WasteDisposal Cancer Risk (per million)"                          
+[41] "NP-AgricultureLivestock Cancer Risk (per million)"                    "FIRE Cancer Risk (per million)"                                      
+[43] "BIOGENICS Cancer Risk (per million)"                                  "SECONDARY Cancer Risk (per million)"                                 
+[45] "BACKGROUND Cancer Risk (per million)"                                
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  OR-HeavyDuty-Hoteling Cancer Risk (per million) TRUE 
+number of rows:  76726 
+number of na rows:  0  or  0 
+         GEOID   Shipping
+1: 00000000000 0.08725373
+2: 01000000000 0.04776760
+3: 01001000000 0.10343184
+4: 01001020100 0.04967241
+5: 01001020200 0.06919747
+6: 01001020300 0.12014089
+-------------------------------
+
+   GEOID.Tract   Shipping GEOID.County GEOID.State
+1: 00000000000 0.08725373        00000          00
+2: 01000000000 0.04776760        01000          01
+3: 01001000000 0.10343184        01001          01
+4: 01001020100 0.04967241        01001          01
+5: 01001020200 0.06919747        01001          01
+6: 01001020300 0.12014089        01001          01
+[1] "****** 40 Verified ******"
+
+
+[1] "----- 41"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1095,10 +1362,10 @@ number of na rows:  582  or  NA
 4: 01097003605            NA        01097          01
 5: 01097990000            NA        01097          01
 6: 01117980000            NA        01117          01
-[1] "****** 35 Verified ******"
+[1] "****** 41 Verified ******"
 
 
-[1] "----- 36"
+[1] "----- 42"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1129,10 +1396,10 @@ number of na rows:  546  or  NA
 4: 01097003605     0.8412        01097          01
 5: 01097990000         NA        01097          01
 6: 01117980000         NA        01117          01
-[1] "****** 36 Verified ******"
+[1] "****** 42 Verified ******"
 
 
-[1] "----- 37"
+[1] "----- 43"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1163,10 +1430,10 @@ number of na rows:  481  or  NA
 4: 01097003605 0.9992        01097          01
 5: 01097990000     NA        01097          01
 6: 01117980000     NA        01117          01
-[1] "****** 37 Verified ******"
+[1] "****** 43 Verified ******"
 
 
-[1] "----- 38"
+[1] "----- 44"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1197,10 +1464,10 @@ number of na rows:  437  or  NA
 4: 01097003605                     NA        01097          01
 5: 01097990000                     NA        01097          01
 6: 01117980000                     NA        01117          01
-[1] "****** 38 Verified ******"
+[1] "****** 44 Verified ******"
 
 
-[1] "----- 39"
+[1] "----- 45"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1231,10 +1498,10 @@ number of na rows:  426  or  NA
 4: 01097003605                0        01097          01
 5: 01097990000               NA        01097          01
 6: 01117980000               NA        01117          01
-[1] "****** 39 Verified ******"
+[1] "****** 45 Verified ******"
 
 
-[1] "----- 40"
+[1] "----- 46"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1265,10 +1532,10 @@ number of na rows:  426  or  NA
 4: 01097003605             0.0104        01097          01
 5: 01097990000                 NA        01097          01
 6: 01117980000                 NA        01117          01
-[1] "****** 40 Verified ******"
+[1] "****** 46 Verified ******"
 
 
-[1] "----- 41"
+[1] "----- 47"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1299,10 +1566,10 @@ number of na rows:  534  or  NA
 4: 01097003605                     0.0279        01097          01
 5: 01097990000                         NA        01097          01
 6: 01117980000                         NA        01117          01
-[1] "****** 41 Verified ******"
+[1] "****** 47 Verified ******"
 
 
-[1] "----- 42"
+[1] "----- 48"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1333,10 +1600,10 @@ number of na rows:  426  or  NA
 4: 01097003605                        0        01097          01
 5: 01097990000                       NA        01097          01
 6: 01117980000                       NA        01117          01
-[1] "****** 42 Verified ******"
+[1] "****** 48 Verified ******"
 
 
-[1] "----- 43"
+[1] "----- 49"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1367,10 +1634,10 @@ number of na rows:  426  or  NA
 4: 01097003605    0.573        01097          01
 5: 01097990000       NA        01097          01
 6: 01117980000       NA        01117          01
-[1] "****** 43 Verified ******"
+[1] "****** 49 Verified ******"
 
 
-[1] "----- 44"
+[1] "----- 50"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1401,10 +1668,10 @@ number of na rows:  426  or  NA
 4: 01097003605                               0        01097          01
 5: 01097990000                              NA        01097          01
 6: 01117980000                              NA        01117          01
-[1] "****** 44 Verified ******"
+[1] "****** 50 Verified ******"
 
 
-[1] "----- 45"
+[1] "----- 51"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1435,10 +1702,10 @@ number of na rows:  426  or  NA
 4: 01097003605                     0        01097          01
 5: 01097990000                    NA        01097          01
 6: 01117980000                    NA        01117          01
-[1] "****** 45 Verified ******"
+[1] "****** 51 Verified ******"
 
 
-[1] "----- 46"
+[1] "----- 52"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1469,10 +1736,10 @@ number of na rows:  599  or  NA
 4: 01097003605           NA        01097          01
 5: 01097990000           NA        01097          01
 6: 01117980000           NA        01117          01
-[1] "****** 46 Verified ******"
+[1] "****** 52 Verified ******"
 
 
-[1] "----- 47"
+[1] "----- 53"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1503,10 +1770,10 @@ number of na rows:  426  or  NA
 4: 01097003605        0        01097          01
 5: 01097990000       NA        01097          01
 6: 01117980000       NA        01117          01
-[1] "****** 47 Verified ******"
+[1] "****** 53 Verified ******"
 
 
-[1] "----- 48"
+[1] "----- 54"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1537,10 +1804,10 @@ number of na rows:  609  or  NA
 4: 01097003605         NA        01097          01
 5: 01097990000         NA        01097          01
 6: 01117980000         NA        01117          01
-[1] "****** 48 Verified ******"
+[1] "****** 54 Verified ******"
 
 
-[1] "----- 49"
+[1] "----- 55"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/SVI2018_US.csv  exists?  TRUE 
   [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
@@ -1571,10 +1838,10 @@ number of na rows:  426  or  NA
 4: 01097003605         0.9975        01097          01
 5: 01097990000             NA        01097          01
 6: 01117980000             NA        01117          01
-[1] "****** 49 Verified ******"
+[1] "****** 55 Verified ******"
 
 
-[1] "----- 50"
+[1] "----- 56"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/NSP2 - US Total.csv  exists?  TRUE 
  [1] "geoid"              "sta"                "cntyname"           "nforeclose"         "nvacancy"           "fordq_num"          "fordq_rate"         "vac_rate"           "num_mort_tract"    
 [10] "pct_lchl"           "pct_hcll"           "pct_hchl"           "ofheo_price_change" "pct_unem_2008"      "unem_ch0708"       
@@ -1598,10 +1865,10 @@ number of na rows:  0  or  0
 4: 01001020400                      6.2        01001          01
 5: 01001020500                      3.9        01001          01
 6: 01001020600                      6.5        01001          01
-[1] "****** 50 Verified ******"
+[1] "****** 56 Verified ******"
 
 
-[1] "----- 51"
+[1] "----- 57"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/Unauthorized Profiles_ACS 2015-19_State-County-Topline Estimates_Comms.csv  exists?  TRUE 
 [1] "State"                                                      "GEOID"                                                      "Number of Unauthorized Immigrants"                         
 [4] "State Share of the Total Unauthorized Immigrant Population"
@@ -1625,11 +1892,11 @@ number of na rows:  0  or  0
 4:          05                     0.5
 5:          06                    24.8
 6:          08                     1.5
-[1] "****** 51 Verified ******"
+[1] "****** 57 Verified ******"
 
 
-[1] "----- 52"
-~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/Payday lending_CLEAN.csv  exists?  TRUE 
+[1] "----- 58"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/Payday lending_CLEAN.csv  exists?  TRUE 
 [1] "State"                                   " stusps"                                 "State Code"                              "County"                                 
 [5] "GEOID"                                   "Payday Loan Shops Per 10,000 Households" "Ranking Category"                       
 ****GEOID Column Name  State Code TRUE 
@@ -1652,11 +1919,11 @@ number of na rows:  1  or  NA
 4:          05                         0
 5:          06                         2
 6:          08                         2
-[1] "****** 52 Verified ******"
+[1] "****** 58 Verified ******"
 
 
-[1] "----- 53"
-~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/UnbankedHouseholds_CLEAN.csv  exists?  TRUE 
+[1] "----- 59"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/UnbankedHouseholds_CLEAN.csv  exists?  TRUE 
 [1] "State"                                                           " stusps"                                                        
 [3] "State Code"                                                      "County"                                                         
 [5] "GEOID"                                                           "Percent of family households that are unbanked as of 2015-2019."
@@ -1680,11 +1947,11 @@ number of na rows:  0  or  0
 4:          05                            7.3
 5:          06                            6.3
 6:          08                            3.6
-[1] "****** 53 Verified ******"
+[1] "****** 59 Verified ******"
 
 
-[1] "----- 54"
-~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/MRFEIData_CLEAN.csv  exists?  TRUE 
+[1] "----- 60"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/MRFEIData_CLEAN.csv  exists?  TRUE 
 [1] "state" "GEOID" "mrfei"
 ****GEOID Column Name  GEOID TRUE 
 ****Data Column Name  mrfei TRUE 
@@ -1706,11 +1973,11 @@ number of na rows:  1245  or  NA
 4: 01001020400                                     13        01001          01
 5: 01001020500                                      6        01001          01
 6: 01001020600                                     20        01001          01
-[1] "****** 54 Verified ******"
+[1] "****** 60 Verified ******"
 
 
-[1] "----- 55"
-~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/VoterTurnoutPresidential_CLEAN.csv  exists?  TRUE 
+[1] "----- 61"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/VoterTurnoutPresidential_CLEAN.csv  exists?  TRUE 
 [1] "State"                                                                           " stusps"                                                                        
 [3] "State Code"                                                                      "County"                                                                         
 [5] "GEOID"                                                                           "Turnout rate among voting eligible population in the 2020 presidential election"
@@ -1735,10 +2002,37 @@ number of na rows:  0  or  0
 4:          05                              55.9
 5:          06                              67.4
 6:          08                              75.5
-[1] "****** 55 Verified ******"
+[1] "****** 61 Verified ******"
 
 
-[1] "----- 56"
+[1] "----- 62"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social/Social/Hate Crimes_State_clean.csv  exists?  TRUE 
+[1] "Participating state/Federal"             " stusps"                                 "State Code"                              "Number of\nparticipating\nagencies"     
+[5] "Population\ncovered"                     "Agencies\nsubmitting\nincident\nreports" "Total number of incidents reported"      "Incidence per 100000"                   
+****GEOID Column Name  State Code TRUE 
+****Data Column Name  Incidence per 100000 TRUE 
+number of rows:  51 
+number of na rows:  0  or  0 
+   GEOID Hate Crimes
+1:     1        0.00
+2:     2        1.51
+3:     4        3.27
+4:     5        0.32
+5:     6        2.57
+6:     8        3.68
+-------------------------------
+
+   GEOID.State Hate Crimes
+1:          01        0.00
+2:          02        1.51
+3:          04        3.27
+4:          05        0.32
+5:          06        2.57
+6:          08        3.68
+[1] "****** 62 Verified ******"
+
+
+[1] "----- 63"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_Congestion.csv  exists?  TRUE 
 [1] "Census Tract ID"                                           "2020 Population (person)"                                  "2020 Commuter (person)"                                   
 [4] "Weighted Yearly Avg Commute Delay (hr/commuter) -Option 3"
@@ -1762,10 +2056,10 @@ number of na rows:  0  or  0
 4: 06077005124                                         37        06077          06
 5: 06077001700                                         34        06077          06
 6: 06077000401                                         34        06077          06
-[1] "****** 56 Verified ******"
+[1] "****** 63 Verified ******"
 
 
-[1] "----- 57"
+[1] "----- 64"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_Flood.csv  exists?  TRUE 
 [1] "Census Tract ID"          "Flood Risk Score_Average"
 ****GEOID Column Name  Census Tract ID TRUE 
@@ -1788,10 +2082,10 @@ number of na rows:  376  or  NA
 4: 56025001401                   1.79        56025          56
 5: 56025000700                   1.79        56025          56
 6: 56025000300                   1.79        56025          56
-[1] "****** 57 Verified ******"
+[1] "****** 64 Verified ******"
 
 
-[1] "----- 58"
+[1] "----- 65"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_Hospital Proximity.csv  exists?  TRUE 
 [1] "Census Tract ID"                       "Distance to the Nearest Hospital (mi)" "Hospitals within 5mi"                 
 ****GEOID Column Name  Census Tract ID TRUE 
@@ -1814,10 +2108,10 @@ number of na rows:  15109  or  NA
 4: 06037320300                 0.99        06037          06
 5: 06037301501                 3.27        06037          06
 6: 06037301502                 3.05        06037          06
-[1] "****** 58 Verified ******"
+[1] "****** 65 Verified ******"
 
 
-[1] "----- 59"
+[1] "----- 66"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_VMT Lane MIles Overall.csv  exists?  TRUE 
 [1] "Census Tract ID"                        "2020 Population (person)"               "2020 Area (sqmi)"                       "Total VMT per Capita"                  
 [5] "Passenger VMT per Capita"               "Combination VMT per Capita - HDV"       "Single unit truck VMT per Capita - MDV" "Lane Mile per Capita"                  
@@ -1841,10 +2135,10 @@ number of na rows:  4894  or  NA
 4: 06037139506                           0        06037          06
 5: 06037139505                           0        06037          06
 6: 06037267405                           0        06037          06
-[1] "****** 59 Verified ******"
+[1] "****** 66 Verified ******"
 
 
-[1] "----- 60"
+[1] "----- 67"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_VMT Lane MIles Overall.csv  exists?  TRUE 
 [1] "Census Tract ID"                        "2020 Population (person)"               "2020 Area (sqmi)"                       "Total VMT per Capita"                  
 [5] "Passenger VMT per Capita"               "Combination VMT per Capita - HDV"       "Single unit truck VMT per Capita - MDV" "Lane Mile per Capita"                  
@@ -1868,10 +2162,10 @@ number of na rows:  566  or  NA
 4: 06037139506                               0        06037          06
 5: 06037139505                               0        06037          06
 6: 06037267405                               0        06037          06
-[1] "****** 60 Verified ******"
+[1] "****** 67 Verified ******"
 
 
-[1] "----- 61"
+[1] "----- 68"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_VMT Lane MIles Overall.csv  exists?  TRUE 
 [1] "Census Tract ID"                        "2020 Population (person)"               "2020 Area (sqmi)"                       "Total VMT per Capita"                  
 [5] "Passenger VMT per Capita"               "Combination VMT per Capita - HDV"       "Single unit truck VMT per Capita - MDV" "Lane Mile per Capita"                  
@@ -1895,10 +2189,10 @@ number of na rows:  4894  or  NA
 4: 06037139506                                        0        06037          06
 5: 06037139505                                        0        06037          06
 6: 06037267405                                        0        06037          06
-[1] "****** 61 Verified ******"
+[1] "****** 68 Verified ******"
 
 
-[1] "----- 62"
+[1] "----- 69"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_VMT Lane MIles Overall.csv  exists?  TRUE 
 [1] "Census Tract ID"                        "2020 Population (person)"               "2020 Area (sqmi)"                       "Total VMT per Capita"                  
 [5] "Passenger VMT per Capita"               "Combination VMT per Capita - HDV"       "Single unit truck VMT per Capita - MDV" "Lane Mile per Capita"                  
@@ -1922,10 +2216,10 @@ number of na rows:  4894  or  NA
 4: 06037139506                     0        06037          06
 5: 06037139505                     0        06037          06
 6: 06037267405                     0        06037          06
-[1] "****** 62 Verified ******"
+[1] "****** 69 Verified ******"
 
 
-[1] "----- 63"
+[1] "----- 70"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/TTI_InitialResult_VMT Lane MIles Overall.csv  exists?  TRUE 
 [1] "Census Tract ID"                        "2020 Population (person)"               "2020 Area (sqmi)"                       "Total VMT per Capita"                  
 [5] "Passenger VMT per Capita"               "Combination VMT per Capita - HDV"       "Single unit truck VMT per Capita - MDV" "Lane Mile per Capita"                  
@@ -1949,10 +2243,10 @@ number of na rows:  4894  or  NA
 4: 06037139506                           0        06037          06
 5: 06037139505                           0        06037          06
 6: 06037267405                           0        06037          06
-[1] "****** 63 Verified ******"
+[1] "****** 70 Verified ******"
 
 
-[1] "----- 64"
+[1] "----- 71"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/Transit Data_TTI.csv  exists?  TRUE 
 [1] "Census Tract ID"                        "Transit Performance Score (AllTransit)"
 ****GEOID Column Name  Census Tract ID TRUE 
@@ -1975,10 +2269,10 @@ number of na rows:  0  or  0
 4: 06037320300            7.8        06037          06
 5: 06037301501            6.9        06037          06
 6: 06037301502            6.9        06037          06
-[1] "****** 64 Verified ******"
+[1] "****** 71 Verified ******"
 
 
-[1] "----- 65"
+[1] "----- 72"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/TTI Indicators/Bridge Data_TTI.csv  exists?  TRUE 
 [1] "Census Tract ID"         "Percent of Poor Bridges"
 ****GEOID Column Name  Census Tract ID TRUE 
@@ -2001,10 +2295,10 @@ number of na rows:  25459  or  NA
 4: 06037320300                         NA        06037          06
 5: 06037301501                         NA        06037          06
 6: 06037301502                         NA        06037          06
-[1] "****** 65 Verified ******"
+[1] "****** 72 Verified ******"
 
 
-[1] "----- 66"
+[1] "----- 73"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/BroadbandAcess_PercentHousehold_nointernet_allstates.csv  exists?  TRUE 
 [1] "V1"           "StateFIPS"    "State"        "CensusTract"  "Census.Tract" "Year"         "Value"        "Data.Comment"
 ****GEOID Column Name  CensusTract TRUE 
@@ -2027,10 +2321,10 @@ number of na rows:  0  or  0
 4: 01001020400                                         20.5        01001          01
 5: 01001020500                                          7.9        01001          01
 6: 01001020600                                         15.9        01001          01
-[1] "****** 66 Verified ******"
+[1] "****** 73 Verified ******"
 
 
-[1] "----- 67"
+[1] "----- 74"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/CellularAcess_All.csv  exists?  TRUE 
 [1] "V1"           "StateFIPS"    "State"        "CensusTract"  "Census.Tract" "Year"         "Value"        "Data.Comment" "X"           
 ****GEOID Column Name  CensusTract TRUE 
@@ -2053,10 +2347,10 @@ number of na rows:  741  or  NA
 4: 01001020400                                                       3.4        01001          01
 5: 01001020500                                                       2.3        01001          01
 6: 01001020600                                                       5.1        01001          01
-[1] "****** 67 Verified ******"
+[1] "****** 74 Verified ******"
 
 
-[1] "----- 68"
+[1] "----- 75"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/Lead_energy_all_updated.csv  exists?  TRUE 
 [1] "V1"                          "Geography ID"                "Name"                        "County"                      "Tribal Areas"                "Avg Energy Burden By Income"
 ****GEOID Column Name  Geography ID TRUE 
@@ -2079,10 +2373,10 @@ number of na rows:  0  or  0
 4: 01125010101                              2        01125          01
 5: 01125010102                              4        01125          01
 6: 01125010103                              4        01125          01
-[1] "****** 68 Verified ******"
+[1] "****** 75 Verified ******"
 
 
-[1] "----- 69"
+[1] "----- 76"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2108,10 +2402,10 @@ number of na rows:  58633  or  NA
 4: 01001020400                                              8.459358        01001          01
 5: 01001020500                                              8.288418        01001          01
 6: 01001020600                                             41.570003        01001          01
-[1] "****** 69 Verified ******"
+[1] "****** 76 Verified ******"
 
 
-[1] "----- 70"
+[1] "----- 77"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/Energy_generation.csv  exists?  TRUE 
 [1] "GEOID"            "share_fossil"     "share_non_fossil" "share_renewable" 
 ****GEOID Column Name  GEOID TRUE 
@@ -2134,10 +2428,10 @@ number of na rows:  0  or  0
 4:        01019                             0.000          01
 5:        01021                             0.000          01
 6:        01023                             0.000          01
-[1] "****** 70 Verified ******"
+[1] "****** 77 Verified ******"
 
 
-[1] "----- 71"
+[1] "----- 78"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2163,10 +2457,10 @@ number of na rows:  0  or  0
 4: 01001020400                    0        01001          01
 5: 01001020500                    0        01001          01
 6: 01001020600                    0        01001          01
-[1] "****** 71 Verified ******"
+[1] "****** 78 Verified ******"
 
 
-[1] "----- 72"
+[1] "----- 79"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/Indoor Plumbing_Edited_Percent.csv  exists?  TRUE 
 [1] "GEO_ID"                                                        "County FIPS"                                                   "NAME"                                                         
 [4] "Estimated Total Housing Units"                                 "Occupied housing units lacking complete plumbing facilities"   "% Occupied housing units lacking complete plumbing facilities"
@@ -2190,10 +2484,10 @@ number of na rows:  2  or  NA
 4:        01049          0.0000          01
 5:        01051          0.0000          01
 6:        01055          0.2631          01
-[1] "****** 72 Verified ******"
+[1] "****** 79 Verified ******"
 
 
-[1] "----- 73"
+[1] "----- 80"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/PercentHousing1940-1969.csv  exists?  TRUE 
 [1] "Census Tract"                                                     "State"                                                           
 [3] "FIPS Code"                                                        "Formatted FIPS"                                                  
@@ -2218,10 +2512,10 @@ number of na rows:  1080  or  NA
 4: 01001020400                                                            47.18        01001          01
 5: 01001020500                                                             3.46        01001          01
 6: 01001020600                                                            22.84        01001          01
-[1] "****** 73 Verified ******"
+[1] "****** 80 Verified ******"
 
 
-[1] "----- 74"
+[1] "----- 81"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2247,10 +2541,10 @@ number of na rows:  4872  or  NA
 4: 01001020400                      3.7213946        01001          01
 5: 01001020500                      2.6343716        01001          01
 6: 01001020600                      0.7063062        01001          01
-[1] "****** 74 Verified ******"
+[1] "****** 81 Verified ******"
 
 
-[1] "----- 75"
+[1] "----- 82"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/MedianRealEstateTaxesPaid.csv  exists?  TRUE 
 [1] "Census Tract"                                                      "State"                                                            
 [3] "FIPS Code"                                                         "Formatted FIPS"                                                   
@@ -2275,10 +2569,10 @@ number of na rows:  2770  or  NA
 4: 01001020400                                     488        01001          01
 5: 01001020500                                     569        01001          01
 6: 01001020600                                     353        01001          01
-[1] "****** 75 Verified ******"
+[1] "****** 82 Verified ******"
 
 
-[1] "----- 76"
+[1] "----- 83"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2304,10 +2598,146 @@ number of na rows:  25172  or  NA
 4: 01001020400                0.5980228        01001          01
 5: 01001020500                0.2620116        01001          01
 6: 01001020600                0.7995421        01001          01
-[1] "****** 76 Verified ******"
+[1] "****** 83 Verified ******"
 
 
-[1] "----- 77"
+[1] "----- 84"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/CHAS Data Table 8.csv  exists?  TRUE 
+[1] "GEOID"                                                                      "name"                                                                      
+[3] "st"                                                                         "cnty"                                                                      
+[5] "tract"                                                                      "Owner occupied and household income is less than or equal to 30% of HAMFI" 
+[7] "Rental occupied and household income is less than or equal to 30% of HAMFI"
+****GEOID Column Name  GEOID TRUE 
+****Data Column Name  Rental occupied and household income is less than or equal to 30% of HAMFI TRUE 
+number of rows:  74001 
+number of na rows:  0  or  0 
+        GEOID Housing Affordability.1
+1: 1001020100                      45
+2: 1001020200                      70
+3: 1001020300                      35
+4: 1001020400                      30
+5: 1001020500                     225
+6: 1001020600                      65
+-------------------------------
+
+   GEOID.Tract Housing Affordability.1 GEOID.County GEOID.State
+1: 01001020100                      45        01001          01
+2: 01001020200                      70        01001          01
+3: 01001020300                      35        01001          01
+4: 01001020400                      30        01001          01
+5: 01001020500                     225        01001          01
+6: 01001020600                      65        01001          01
+[1] "****** 84 Verified ******"
+
+
+[1] "----- 85"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/CHAS Data Table 8.csv  exists?  TRUE 
+[1] "GEOID"                                                                      "name"                                                                      
+[3] "st"                                                                         "cnty"                                                                      
+[5] "tract"                                                                      "Owner occupied and household income is less than or equal to 30% of HAMFI" 
+[7] "Rental occupied and household income is less than or equal to 30% of HAMFI"
+****GEOID Column Name  GEOID TRUE 
+****Data Column Name  Owner occupied and household income is less than or equal to 30% of HAMFI TRUE 
+number of rows:  74001 
+number of na rows:  0  or  0 
+        GEOID Housing Affordability.2
+1: 1001020100                      25
+2: 1001020200                      50
+3: 1001020300                      25
+4: 1001020400                       0
+5: 1001020500                     140
+6: 1001020600                      25
+-------------------------------
+
+   GEOID.Tract Housing Affordability.2 GEOID.County GEOID.State
+1: 01001020100                      25        01001          01
+2: 01001020200                      50        01001          01
+3: 01001020300                      25        01001          01
+4: 01001020400                       0        01001          01
+5: 01001020500                     140        01001          01
+6: 01001020600                      25        01001          01
+[1] "****** 85 Verified ******"
+
+
+[1] "----- 86"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/HUD_housingunits/HUD_housingbytract.csv  exists?  TRUE 
+[1] "FIPS"               "Sum of Total_Units"
+****GEOID Column Name  FIPS TRUE 
+****Data Column Name  Sum of Total_Units TRUE 
+number of rows:  3143 
+number of na rows:  1451  or  NA 
+   GEOID HUD Public Housing
+1:  1001                106
+2:  1003                194
+3:  1005                417
+4:  1007                 69
+5:  1009                254
+6:  1011                 NA
+-------------------------------
+
+   GEOID.County HUD Public Housing GEOID.State
+1:        01001                106          01
+2:        01003                194          01
+3:        01005                417          01
+4:        01007                 69          01
+5:        01009                254          01
+6:        01011                 NA          01
+[1] "****** 86 Verified ******"
+
+
+[1] "----- 87"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/Lead in Drinking Water By County.csv  exists?  TRUE 
+ [1] "GEOID"      "Name"       "NumSysAll"  "NumViolAll" "PopServAll" "NumSysHB"   "NumViolHB"  "PopServHB"  "NumSysALE"  "PopServALE"
+****GEOID Column Name  GEOID TRUE 
+****Data Column Name  NumSysALE TRUE 
+number of rows:  3208 
+number of na rows:  0  or  0 
+   GEOID Lead in drinking water/ service lines
+1:  1001                                     0
+2:  1003                                     0
+3:  1005                                     1
+4:  1007                                     0
+5:  1009                                     0
+6:  1011                                     0
+-------------------------------
+
+   GEOID.County Lead in drinking water/ service lines GEOID.State
+1:        01001                                     0          01
+2:        01003                                     0          01
+3:        01005                                     1          01
+4:        01007                                     0          01
+5:        01009                                     0          01
+6:        01011                                     0          01
+[1] "****** 87 Verified ******"
+
+
+[1] "----- 88"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Infrastructure/Infrastructure/Evchargingprocessed.csv  exists?  TRUE 
+[1] "STATEFP10"       "COUNTYFP10"      "TRACTCE10"       "GEOID10"         "BV_I_Evcharging"
+****GEOID Column Name  GEOID10 TRUE 
+****Data Column Name  BV_I_Evcharging TRUE 
+number of rows:  73057 
+number of na rows:  12266  or  NA 
+         GEOID EV Charging Stations
+1: 56025000502            1.8106884
+2: 56025001000            0.2191837
+3: 56025000902            0.5660609
+4: 56025001401            0.7909031
+5: 56025000700            1.5917665
+6: 56025000300            2.4034202
+-------------------------------
+
+   GEOID.Tract EV Charging Stations GEOID.County GEOID.State
+1: 56025000502            1.8106884        56025          56
+2: 56025001000            0.2191837        56025          56
+3: 56025000902            0.5660609        56025          56
+4: 56025001401            0.7909031        56025          56
+5: 56025000700            1.5917665        56025          56
+6: 56025000300            2.4034202        56025          56
+[1] "****** 88 Verified ******"
+
+
+[1] "----- 89"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/RSEI/CensusMicroTracts2019_2019_aggregated.csv  exists?  TRUE 
  [1] "GEOID10_bad"                    "GEOID10"                        "FacilityCount"                  "ReleaseCount"                   "ChemicalsCount"                
  [6] "ToxConcentration(avg,weighted)" "Score"                          "Pop"                            "Csscore"                        "NCSscore"                      
@@ -2331,10 +2761,226 @@ number of na rows:  0  or  0
 4: 01001020400                                            2810        01001          01
 5: 01001020500                                            7760        01001          01
 6: 01001020600                                            5240        01001          01
-[1] "****** 77 Verified ******"
+[1] "****** 89 Verified ******"
 
 
-[1] "----- 78"
+[1] "----- 90"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Respiratory HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Respiratory
+1: 01001000000         0.5
+2: 01001020100         0.5
+3: 01001020200         0.5
+4: 01001020300         0.5
+5: 01001020400         0.5
+6: 01001020500         0.5
+-------------------------------
+
+   GEOID.Tract Respiratory GEOID.County GEOID.State
+1: 01001000000         0.5        01001          01
+2: 01001020100         0.5        01001          01
+3: 01001020200         0.5        01001          01
+4: 01001020300         0.5        01001          01
+5: 01001020400         0.5        01001          01
+6: 01001020500         0.5        01001          01
+[1] "****** 90 Verified ******"
+
+
+[1] "----- 91"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Neurological HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Neurological
+1: 01001000000         0.03
+2: 01001020100         0.03
+3: 01001020200         0.03
+4: 01001020300         0.03
+5: 01001020400         0.03
+6: 01001020500         0.03
+-------------------------------
+
+   GEOID.Tract Neurological GEOID.County GEOID.State
+1: 01001000000         0.03        01001          01
+2: 01001020100         0.03        01001          01
+3: 01001020200         0.03        01001          01
+4: 01001020300         0.03        01001          01
+5: 01001020400         0.03        01001          01
+6: 01001020500         0.03        01001          01
+[1] "****** 91 Verified ******"
+
+
+[1] "----- 92"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Liver HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Liver
+1: 01001000000 0.009
+2: 01001020100 0.009
+3: 01001020200 0.010
+4: 01001020300 0.009
+5: 01001020400 0.009
+6: 01001020500 0.009
+-------------------------------
+
+   GEOID.Tract Liver GEOID.County GEOID.State
+1: 01001000000 0.009        01001          01
+2: 01001020100 0.009        01001          01
+3: 01001020200 0.010        01001          01
+4: 01001020300 0.009        01001          01
+5: 01001020400 0.009        01001          01
+6: 01001020500 0.009        01001          01
+[1] "****** 92 Verified ******"
+
+
+[1] "----- 93"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Developmental HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Developmental
+1: 01001000000          0.04
+2: 01001020100          0.04
+3: 01001020200          0.04
+4: 01001020300          0.04
+5: 01001020400          0.05
+6: 01001020500          0.05
+-------------------------------
+
+   GEOID.Tract Developmental GEOID.County GEOID.State
+1: 01001000000          0.04        01001          01
+2: 01001020100          0.04        01001          01
+3: 01001020200          0.04        01001          01
+4: 01001020300          0.04        01001          01
+5: 01001020400          0.05        01001          01
+6: 01001020500          0.05        01001          01
+[1] "****** 93 Verified ******"
+
+
+[1] "----- 94"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Reproductive HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Reproductive
+1: 01001000000         0.05
+2: 01001020100         0.05
+3: 01001020200         0.06
+4: 01001020300         0.06
+5: 01001020400         0.06
+6: 01001020500         0.06
+-------------------------------
+
+   GEOID.Tract Reproductive GEOID.County GEOID.State
+1: 01001000000         0.05        01001          01
+2: 01001020100         0.05        01001          01
+3: 01001020200         0.06        01001          01
+4: 01001020300         0.06        01001          01
+5: 01001020400         0.06        01001          01
+6: 01001020500         0.06        01001          01
+[1] "****** 94 Verified ******"
+
+
+[1] "----- 95"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Kidney HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Kidney
+1: 01001000000  0.003
+2: 01001020100  0.003
+3: 01001020200  0.004
+4: 01001020300  0.003
+5: 01001020400  0.003
+6: 01001020500  0.003
+-------------------------------
+
+   GEOID.Tract Kidney GEOID.County GEOID.State
+1: 01001000000  0.003        01001          01
+2: 01001020100  0.003        01001          01
+3: 01001020200  0.004        01001          01
+4: 01001020300  0.003        01001          01
+5: 01001020400  0.003        01001          01
+6: 01001020500  0.003        01001          01
+[1] "****** 95 Verified ******"
+
+
+[1] "----- 96"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Whole Body HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Whole Body
+1: 01001000000      1e-04
+2: 01001020100      1e-04
+3: 01001020200      1e-04
+4: 01001020300      1e-04
+5: 01001020400      1e-04
+6: 01001020500      1e-04
+-------------------------------
+
+   GEOID.Tract Whole Body GEOID.County GEOID.State
+1: 01001000000      1e-04        01001          01
+2: 01001020100      1e-04        01001          01
+3: 01001020200      1e-04        01001          01
+4: 01001020300      1e-04        01001          01
+5: 01001020400      1e-04        01001          01
+6: 01001020500      1e-04        01001          01
+[1] "****** 96 Verified ******"
+
+
+[1] "----- 97"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EPA AirToxScreen_Noncancer.csv  exists?  TRUE 
+ [1] "State"            "EPA Region"       "County"           "FIPs"             "Tract"            "Population"       "Respiratory HI"   "Neurological HI"  "Liver HI"         "Developmental HI"
+[11] "Reproductive HI"  "Kidney HI"        "Ocular HI"        "Endocrine HI"     "Hematological HI" "Immunological HI" "Skeletal HI"      "Spleen HI"        "Thyroid HI"       "Whole Body HI"   
+****GEOID Column Name  Tract TRUE 
+****Data Column Name  Whole Body HI TRUE 
+number of rows:  76699 
+number of na rows:  0  or  0 
+         GEOID Whole Body
+1: 01001000000      1e-04
+2: 01001020100      1e-04
+3: 01001020200      1e-04
+4: 01001020300      1e-04
+5: 01001020400      1e-04
+6: 01001020500      1e-04
+-------------------------------
+
+   GEOID.Tract Whole Body GEOID.County GEOID.State
+1: 01001000000      1e-04        01001          01
+2: 01001020100      1e-04        01001          01
+3: 01001020200      1e-04        01001          01
+4: 01001020300      1e-04        01001          01
+5: 01001020400      1e-04        01001          01
+6: 01001020500      1e-04        01001          01
+[1] "****** 97 Verified ******"
+
+
+[1] "----- 98"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EJScreen-2020-data files/EJSCREEN_2020_USPR.CSV  exists?  TRUE 
   [1] "OBJECTID"     "ID"           "ACSTOTPOP"    "ACSIPOVBAS"   "ACSEDUCBAS"   "ACSTOTHH"     "ACSTOTHU"     "MINORPOP"     "MINORPCT"     "LOWINCOME"    "LOWINCPCT"    "LESSHS"       "LESSHSPCT"   
  [14] "LINGISO"      "LINGISOPCT"   "UNDER5"       "UNDER5PCT"    "OVER64"       "OVER64PCT"    "PRE1960"      "PRE1960PCT"   "VULEOPCT"     "VULEO"        "DISPEO"       "DSLPM"        "CANCER"      
@@ -2367,10 +3013,10 @@ number of na rows:  71620  or  NA
 4: 01001020400                                                             NA        01001          01
 5: 01001020500                                                   1.140067e-05        01001          01
 6: 01001020600                                                   2.407209e-01        01001          01
-[1] "****** 78 Verified ******"
+[1] "****** 98 Verified ******"
 
 
-[1] "----- 79"
+[1] "----- 99"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EJScreen-2020-data files/EJSCREEN_2020_USPR.CSV  exists?  TRUE 
   [1] "OBJECTID"     "ID"           "ACSTOTPOP"    "ACSIPOVBAS"   "ACSEDUCBAS"   "ACSTOTHH"     "ACSTOTHU"     "MINORPOP"     "MINORPCT"     "LOWINCOME"    "LOWINCPCT"    "LESSHS"       "LESSHSPCT"   
  [14] "LINGISO"      "LINGISOPCT"   "UNDER5"       "UNDER5PCT"    "OVER64"       "OVER64PCT"    "PRE1960"      "PRE1960PCT"   "VULEOPCT"     "VULEO"        "DISPEO"       "DSLPM"        "CANCER"      
@@ -2403,10 +3049,10 @@ number of na rows:  0  or  0
 4: 01001020400 0.08564631        01001          01
 5: 01001020500 0.10311489        01001          01
 6: 01001020600 0.08462843        01001          01
-[1] "****** 79 Verified ******"
+[1] "****** 99 Verified ******"
 
 
-[1] "----- 80"
+[1] "----- 100"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EJScreen-2020-data files/EJSCREEN_2020_USPR.CSV  exists?  TRUE 
   [1] "OBJECTID"     "ID"           "ACSTOTPOP"    "ACSIPOVBAS"   "ACSEDUCBAS"   "ACSTOTHH"     "ACSTOTHU"     "MINORPOP"     "MINORPCT"     "LOWINCOME"    "LOWINCPCT"    "LESSHS"       "LESSHSPCT"   
  [14] "LINGISO"      "LINGISOPCT"   "UNDER5"       "UNDER5PCT"    "OVER64"       "OVER64PCT"    "PRE1960"      "PRE1960PCT"   "VULEOPCT"     "VULEO"        "DISPEO"       "DSLPM"        "CANCER"      
@@ -2439,10 +3085,10 @@ number of na rows:  0  or  0
 4: 01001020400                                      2.4431485        01001          01
 5: 01001020500                                      1.6583540        01001          01
 6: 01001020600                                      0.5919161        01001          01
-[1] "****** 80 Verified ******"
+[1] "****** 100 Verified ******"
 
 
-[1] "----- 81"
+[1] "----- 101"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/HWGprocessed.CSV  exists?  TRUE 
 [1] "STATEFP10"  "COUNTYFP10" "TRACTCE10"  "GEOID10"    "BV_E_HWG"  
 ****GEOID Column Name  GEOID10 TRUE 
@@ -2465,10 +3111,10 @@ number of na rows:  70500  or  NA
 4: 56025001401                                     NA        56025          56
 5: 56025000700                                     NA        56025          56
 6: 56025000300                                     NA        56025          56
-[1] "****** 81 Verified ******"
+[1] "****** 101 Verified ******"
 
 
-[1] "----- 82"
+[1] "----- 102"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/ECHO Data/ECHOprocessed.csv  exists?  TRUE 
 [1] "STATEFP10"     "COUNTYFP10"    "TRACTCE10"     "GEOID10"       "BV_E_Echomean"
 ****GEOID Column Name  GEOID10 TRUE 
@@ -2491,10 +3137,10 @@ number of na rows:  2548  or  NA
 4: 01001020400     1.4704142        01001          01
 5: 01001020500     1.8992928        01001          01
 6: 01001020600     0.5146302        01001          01
-[1] "****** 82 Verified ******"
+[1] "****** 102 Verified ******"
 
 
-[1] "----- 83"
+[1] "----- 103"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2520,10 +3166,10 @@ number of na rows:  56450  or  NA
 4: 01001020400        NA        01001          01
 5: 01001020500        NA        01001          01
 6: 01001020600        NA        01001          01
-[1] "****** 83 Verified ******"
+[1] "****** 103 Verified ******"
 
 
-[1] "----- 84"
+[1] "----- 104"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2549,10 +3195,10 @@ number of na rows:  49200  or  NA
 4: 01001020400       0.12796354        01001          01
 5: 01001020500       0.10143109        01001          01
 6: 01001020600       0.68739041        01001          01
-[1] "****** 84 Verified ******"
+[1] "****** 104 Verified ******"
 
 
-[1] "----- 85"
+[1] "----- 105"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EJScreen-2020-data files/EJSCREEN_2020_USPR.CSV  exists?  TRUE 
   [1] "OBJECTID"     "ID"           "ACSTOTPOP"    "ACSIPOVBAS"   "ACSEDUCBAS"   "ACSTOTHH"     "ACSTOTHU"     "MINORPOP"     "MINORPCT"     "LOWINCOME"    "LOWINCPCT"    "LESSHS"       "LESSHSPCT"   
  [14] "LINGISO"      "LINGISOPCT"   "UNDER5"       "UNDER5PCT"    "OVER64"       "OVER64PCT"    "PRE1960"      "PRE1960PCT"   "VULEOPCT"     "VULEO"        "DISPEO"       "DSLPM"        "CANCER"      
@@ -2585,10 +3231,10 @@ number of na rows:  0  or  0
 4: 01001020400           0.08896292        01001          01
 5: 01001020500           0.10224225        01001          01
 6: 01001020600           0.11063668        01001          01
-[1] "****** 85 Verified ******"
+[1] "****** 105 Verified ******"
 
 
-[1] "----- 86"
+[1] "----- 106"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EstimatedAnnual/Pesticides.csv  exists?  TRUE 
 [1] "GEOID"                    "Sum of EPEST_LOW_KG"      "Average of EPEST_LOW_KG2"
 ****GEOID Column Name  GEOID TRUE 
@@ -2611,10 +3257,10 @@ number of na rows:  0  or  0
 4:        01007                 21421.1          01
 5:        01009                128014.5          01
 6:        01011                 32984.2          01
-[1] "****** 86 Verified ******"
+[1] "****** 106 Verified ******"
 
 
-[1] "----- 87"
+[1] "----- 107"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/PM_2014to2016avg.CSV  exists?  TRUE 
 [1] "V1"                "geoid"             "2014"              "2015"              "2016"              "PM_Avg_2014to2016"
 ****GEOID Column Name  geoid TRUE 
@@ -2637,10 +3283,10 @@ number of na rows:  5  or  NA
 4: 01093964300                   8.013390        01093          01
 5: 01093964000                   7.658173        01093          01
 6: 01093964500                   8.270513        01093          01
-[1] "****** 87 Verified ******"
+[1] "****** 107 Verified ******"
 
 
-[1] "----- 88"
+[1] "----- 108"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/NO2/no2.csv  exists?  TRUE 
 [1] "GEOID"      "TROPOMINO2"
 ****GEOID Column Name  GEOID TRUE 
@@ -2663,10 +3309,10 @@ number of na rows:  1463  or  NA
 4: 01055001700                   1.586        01055          01
 5: 01055010501                   1.553        01055          01
 6: 01055010300                   1.521        01055          01
-[1] "****** 88 Verified ******"
+[1] "****** 108 Verified ******"
 
 
-[1] "----- 89"
+[1] "----- 109"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/Ozone/o3_2016.CSV  exists?  TRUE 
 [1] "STATEFP"  "COUNTYFP" "TRACTCE"  "GEOID"    "O3"      
 ****GEOID Column Name  GEOID TRUE 
@@ -2689,10 +3335,10 @@ number of na rows:  3  or  NA
 4: 01001020400                     39.61        01001          01
 5: 01001020500                     39.87        01001          01
 6: 01001020600                     39.60        01001          01
-[1] "****** 89 Verified ******"
+[1] "****** 109 Verified ******"
 
 
-[1] "----- 90"
+[1] "----- 110"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EIA energy-related CO2 emissions - processed.csv  exists?  TRUE 
  [1] "State"             " stusps"           "State Code"        "GEOID"             "2010"              "2011"              "2012"              "2013"              "2014"             
 [10] "2015"              "2016"              "2017"              "avgCO2_2015_17"    "CO2percap_2015_17" "Pop 2017"         
@@ -2716,10 +3362,10 @@ number of na rows:  0  or  0
 4:          05                                                 20.62
 5:          06                                                  9.10
 6:          08                                                 15.77
-[1] "****** 90 Verified ******"
+[1] "****** 110 Verified ******"
 
 
-[1] "----- 91"
+[1] "----- 111"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/Black Carbon/blackcarbon_mean.csv  exists?  TRUE 
 [1] "GEOID" "_mean"
 ****GEOID Column Name  GEOID TRUE 
@@ -2742,10 +3388,10 @@ number of na rows:  24  or  NA
 4:        01007                      9.097275          01
 5:        01009                      9.388080          01
 6:        01011                      8.629257          01
-[1] "****** 91 Verified ******"
+[1] "****** 111 Verified ******"
 
 
-[1] "----- 92"
+[1] "----- 112"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/EJScreen-2020-data files/EJSCREEN_2020_USPR.CSV  exists?  TRUE 
   [1] "OBJECTID"     "ID"           "ACSTOTPOP"    "ACSIPOVBAS"   "ACSEDUCBAS"   "ACSTOTHH"     "ACSTOTHU"     "MINORPOP"     "MINORPCT"     "LOWINCOME"    "LOWINCPCT"    "LESSHS"       "LESSHSPCT"   
  [14] "LINGISO"      "LINGISOPCT"   "UNDER5"       "UNDER5PCT"    "OVER64"       "OVER64PCT"    "PRE1960"      "PRE1960PCT"   "VULEOPCT"     "VULEO"        "DISPEO"       "DSLPM"        "CANCER"      
@@ -2778,10 +3424,10 @@ number of na rows:  2623  or  NA
 4: 01001020400                                              44.50807        01001          01
 5: 01001020500                                              62.80074        01001          01
 6: 01001020600                                              55.01698        01001          01
-[1] "****** 92 Verified ******"
+[1] "****** 112 Verified ******"
 
 
-[1] "----- 93"
+[1] "----- 113"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2807,10 +3453,10 @@ number of na rows:  53677  or  NA
 4: 01001020400              NA        01001          01
 5: 01001020500              NA        01001          01
 6: 01001020600              NA        01001          01
-[1] "****** 93 Verified ******"
+[1] "****** 113 Verified ******"
 
 
-[1] "----- 94"
+[1] "----- 114"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2836,10 +3482,10 @@ number of na rows:  63525  or  NA
 4: 01001020400          NA        01001          01
 5: 01001020500          NA        01001          01
 6: 01001020600          NA        01001          01
-[1] "****** 94 Verified ******"
+[1] "****** 114 Verified ******"
 
 
-[1] "----- 95"
+[1] "----- 115"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2865,10 +3511,10 @@ number of na rows:  70559  or  NA
 4: 01001020400                 NA        01001          01
 5: 01001020500                 NA        01001          01
 6: 01001020600                 NA        01001          01
-[1] "****** 95 Verified ******"
+[1] "****** 115 Verified ******"
 
 
-[1] "----- 96"
+[1] "----- 116"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/parks and green space/nanda_parks_tract_2018_01P_csv_with_readme/nanda_parks_tract_2018_01P.csv  exists?  TRUE 
  [1] "tract_fips10"          "any_open_park"         "count_open_parks"      "count_open_parks_tc10" "count_open_parks_tc5"  "count_open_parks_tc3"  "tract_area"            "tract_area_sqmiles"   
  [9] "tot_park_area"         "tot_park_area_sqmiles" "prop_park_area_tract" 
@@ -2892,10 +3538,10 @@ number of na rows:  0  or  0
 4: 01001020400                  2        01001          01
 5: 01001020500                  2        01001          01
 6: 01001020600                  1        01001          01
-[1] "****** 96 Verified ******"
+[1] "****** 116 Verified ******"
 
 
-[1] "----- 97"
+[1] "----- 117"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/ImpermeableSurfaces_48State_except_AK_HI.csv  exists?  TRUE 
 [1] "V1"           "StateFIPS"    "State"        "CensusTract"  "Census.Tract" "Year"         "Value"        "Data.Comment" "X"           
 ****GEOID Column Name  CensusTract TRUE 
@@ -2918,10 +3564,10 @@ number of na rows:  0  or  0
 4: 28001000400                 32.3        28001          28
 5: 28001000500                  6.3        28001          28
 6: 28001000600                 22.1        28001          28
-[1] "****** 97 Verified ******"
+[1] "****** 117 Verified ******"
 
 
-[1] "----- 98"
+[1] "----- 118"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/Forest_48states_except_AK_HI.csv  exists?  TRUE 
 [1] "V1"           "StateFIPS"    "State"        "CensusTract"  "Census.Tract" "Year"         "Value"        "Data.Comment" "X"           
 ****GEOID Column Name  CensusTract TRUE 
@@ -2944,10 +3590,10 @@ number of na rows:  0  or  0
 4: 54001965800              74.3        54001          54
 5: 54003971101              31.5        54003          54
 6: 54003971102              28.3        54003          54
-[1] "****** 98 Verified ******"
+[1] "****** 118 Verified ******"
 
 
-[1] "----- 99"
+[1] "----- 119"
 ~/Dropbox/Climate Health Vulnerability Index//Other/GISconversions.csv  exists?  TRUE 
  [1] "fid"                       "OBJECTID"                  "STATEFP10"                 "COUNTYFP10"                "TRACTCE10"                 "GEOID10"                   "NAME10"                   
  [8] "NAMELSAD10"                "ALAND10"                   "AWATER10"                  "Shape_Length"              "Shape_Area"                "BV_E_Brownfields_mean"     "BV_E_Superfund_mean"      
@@ -2973,10 +3619,116 @@ number of na rows:  1114  or  NA
 4: 01001020400                     0        01001          01
 5: 01001020500                     0        01001          01
 6: 01001020600                     0        01001          01
-[1] "****** 99 Verified ******"
+[1] "****** 119 Verified ******"
 
 
-[1] "----- 100"
+[1] "----- 120"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/FRS_processed.csv  exists?  TRUE 
+[1] "GEOID10"       "BV_E_FRS_mean"
+****GEOID Column Name  GEOID10 TRUE 
+****Data Column Name  BV_E_FRS_mean TRUE 
+number of rows:  73057 
+number of na rows:  19995  or  NA 
+         GEOID Chemical Manufacturers
+1: 56025000502              2.6588609
+2: 56025001000              0.7369018
+3: 56025000902              0.4124016
+4: 56025001401              0.9285379
+5: 56025000700              1.1292543
+6: 56025000300              1.2476961
+-------------------------------
+
+   GEOID.Tract Chemical Manufacturers GEOID.County GEOID.State
+1: 56025000502              2.6588609        56025          56
+2: 56025001000              0.7369018        56025          56
+3: 56025000902              0.4124016        56025          56
+4: 56025001401              0.9285379        56025          56
+5: 56025000700              1.1292543        56025          56
+6: 56025000300              1.2476961        56025          56
+[1] "****** 120 Verified ******"
+
+
+[1] "----- 121"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/FRS_metal_processed.csv  exists?  TRUE 
+[1] "STATEFP10"     "COUNTYFP10"    "TRACTCE10"     "GEOID10"       "BV_E_FRSmetal"
+****GEOID Column Name  GEOID10 TRUE 
+****Data Column Name  BV_E_FRSmetal TRUE 
+number of rows:  73057 
+number of na rows:  28603  or  NA 
+         GEOID Metal Recyclers
+1: 01001020100      0.12977194
+2: 01001020200      0.01630736
+3: 01001020300      0.12422123
+4: 01001020400      0.13522454
+5: 01001020500      0.25614533
+6: 01001020600              NA
+-------------------------------
+
+   GEOID.Tract Metal Recyclers GEOID.County GEOID.State
+1: 01001020100      0.12977194        01001          01
+2: 01001020200      0.01630736        01001          01
+3: 01001020300      0.12422123        01001          01
+4: 01001020400      0.13522454        01001          01
+5: 01001020500      0.25614533        01001          01
+6: 01001020600              NA        01001          01
+[1] "****** 121 Verified ******"
+
+
+[1] "----- 122"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/Top 25 Ports by TEU.csv  exists?  TRUE 
+[1] "GEOID"              "State Abbreviation" "Name"               "Total TEUs (2020)"  "CVI TEU"           
+****GEOID Column Name  GEOID TRUE 
+****Data Column Name  CVI TEU TRUE 
+number of rows:  25 
+number of na rows:  0  or  0 
+   GEOID Ports by TEU
+1:     2            2
+2:    24            2
+3:    25            1
+4:    45            3
+5:    28            1
+6:    15            3
+-------------------------------
+
+[1] "!!!!!!!!!Non-unique GEOIDs"
+   GEOID Ports by TEU
+1:     2            2
+2:    24            2
+3:    25            1
+4:    45            3
+5:    28            1
+6:    15            3
+[1] "!!!!!! 122 Not processed !!!!!!"
+
+
+[1] "----- 123"
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Environment/Environment/Top 50 Ports by Tonnage.csv  exists?  TRUE 
+[1] "GEOID"                 "Ports"                 "Rank"                  "Total tons (millions)" "Tons TEUs"            
+****GEOID Column Name  GEOID TRUE 
+****Data Column Name  Tons TEUs TRUE 
+number of rows:  50 
+number of na rows:  0  or  0 
+   GEOID Ports by Tonnage
+1:    48                4
+2:    22                4
+3:    48                4
+4:    36                4
+5:    22                3
+6:     6                3
+-------------------------------
+
+[1] "!!!!!!!!!Non-unique GEOIDs"
+   GEOID Ports by Tonnage
+1:    48                4
+2:    22                4
+3:    36                4
+4:    22                3
+5:     6                3
+6:    48                3
+[1] "!!!!!! 123 Not processed !!!!!!"
+
+
+[1] "----- 124"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/Hsiang_5_sectors_neat_labels_2050_CLEAN.csv  exists?  TRUE 
   [1] "County Name"                                            "State"                                                  "County FIPS"                                           
   [4] "GEOID"                                                  "Total Population 2010 Census"                           "Urban Population 2010 Census"                          
@@ -3047,10 +3799,10 @@ number of na rows:  1  or  NA
 4:        01007                      6.940317          01
 5:        01009                      6.503366          01
 6:        01011                      8.494831          01
-[1] "****** 100 Verified ******"
+[1] "****** 124 Verified ******"
 
 
-[1] "----- 101"
+[1] "----- 125"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Health/sv-air-quality-2021-07-09-MortalityPM.csv  exists?  TRUE 
 [1] "Tract ID" "1 deg"    "2 deg"    "3 deg"    "4 deg"    "5 deg"   
 ****GEOID Column Name  Tract ID TRUE 
@@ -3073,10 +3825,10 @@ number of na rows:  989  or  NA
 4: 01001020400                          0.00026        01001          01
 5: 01001020500                          0.00029        01001          01
 6: 01001020600                          0.00034        01001          01
-[1] "****** 101 Verified ******"
+[1] "****** 125 Verified ******"
 
 
-[1] "----- 102"
+[1] "----- 126"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Health/sv-air-quality-2021-07-09-AsthmaPM-Tetreault.csv  exists?  TRUE 
 [1] "Tract ID" "1 deg"    "2 deg"    "3 deg"    "4 deg"    "5 deg"   
 ****GEOID Column Name  Tract ID TRUE 
@@ -3099,10 +3851,10 @@ number of na rows:  985  or  NA
 4: 01001020400                   3.09e-04        01001          01
 5: 01001020500                   2.03e-04        01001          01
 6: 01001020600                   1.50e-04        01001          01
-[1] "****** 102 Verified ******"
+[1] "****** 126 Verified ******"
 
 
-[1] "----- 103"
+[1] "----- 127"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Health/sv-air-quality-2021-07-09-AsthmaPM-Alhanti.csv  exists?  TRUE 
 [1] "Tract ID" "1 deg"    "2 deg"    "3 deg"    "4 deg"    "5 deg"   
 ****GEOID Column Name  Tract ID TRUE 
@@ -3125,10 +3877,10 @@ number of na rows:  887  or  NA
 4: 01001020400                          0        01001          01
 5: 01001020500                          0        01001          01
 6: 01001020600                          0        01001          01
-[1] "****** 103 Verified ******"
+[1] "****** 127 Verified ******"
 
 
-[1] "----- 104"
+[1] "----- 128"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Health/sv-air-quality-2021-07-09-MortalityO3.csv  exists?  TRUE 
 [1] "Tract ID" "1 deg"    "2 deg"    "3 deg"    "4 deg"    "5 deg"   
 ****GEOID Column Name  Tract ID TRUE 
@@ -3151,10 +3903,10 @@ number of na rows:  702  or  NA
 4: 01001020400                   1.19e-06        01001          01
 5: 01001020500                   1.19e-06        01001          01
 6: 01001020600                   1.19e-06        01001          01
-[1] "****** 104 Verified ******"
+[1] "****** 128 Verified ******"
 
 
-[1] "----- 105"
+[1] "----- 129"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/PercentJobsForestryFishingAgHunting.csv  exists?  TRUE 
 [1] "County"                                                           "State"                                                           
 [3] "FIPS Code"                                                        "Formatted FIPS"                                                  
@@ -3179,10 +3931,10 @@ number of na rows:  94  or  NA
 4:        01007        3.06          01
 5:        01009        0.66          01
 6:        01011       12.20          01
-[1] "****** 105 Verified ******"
+[1] "****** 129 Verified ******"
 
 
-[1] "----- 106"
+[1] "----- 130"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/Hsiang_5_sectors_neat_labels_2050_CLEAN.csv  exists?  TRUE 
   [1] "County Name"                                            "State"                                                  "County FIPS"                                           
   [4] "GEOID"                                                  "Total Population 2010 Census"                           "Urban Population 2010 Census"                          
@@ -3253,10 +4005,10 @@ number of na rows:  1  or  NA
 4:        01007                 0.09578485          01
 5:        01009                 0.15490244          01
 6:        01011                 0.09897003          01
-[1] "****** 106 Verified ******"
+[1] "****** 130 Verified ******"
 
 
-[1] "----- 107"
+[1] "----- 131"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/Hsiang_5_sectors_neat_labels_2050_CLEAN.csv  exists?  TRUE 
   [1] "County Name"                                            "State"                                                  "County FIPS"                                           
   [4] "GEOID"                                                  "Total Population 2010 Census"                           "Urban Population 2010 Census"                          
@@ -3327,10 +4079,10 @@ number of na rows:  1  or  NA
 4:        01007                 0.9204122          01
 5:        01009                 1.0501384          01
 6:        01011                 1.0081786          01
-[1] "****** 107 Verified ******"
+[1] "****** 131 Verified ******"
 
 
-[1] "----- 108"
+[1] "----- 132"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/Hsiang_5_sectors_neat_labels_2050_CLEAN.csv  exists?  TRUE 
   [1] "County Name"                                            "State"                                                  "County FIPS"                                           
   [4] "GEOID"                                                  "Total Population 2010 Census"                           "Urban Population 2010 Census"                          
@@ -3401,10 +4153,10 @@ number of na rows:  1  or  NA
 4:        01007                                 0.09675328          01
 5:        01009                                 0.09498595          01
 6:        01011                                 0.09390208          01
-[1] "****** 108 Verified ******"
+[1] "****** 132 Verified ******"
 
 
-[1] "----- 109"
+[1] "----- 133"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/Hsiang_5_sectors_neat_labels_2050_CLEAN.csv  exists?  TRUE 
   [1] "County Name"                                            "State"                                                  "County FIPS"                                           
   [4] "GEOID"                                                  "Total Population 2010 Census"                           "Urban Population 2010 Census"                          
@@ -3475,10 +4227,10 @@ number of na rows:  7  or  NA
 4:        01007                             -0.4014847          01
 5:        01009                             -0.3273759          01
 6:        01011                             -0.3547515          01
-[1] "****** 109 Verified ******"
+[1] "****** 133 Verified ******"
 
 
-[1] "----- 110"
+[1] "----- 134"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/Hsiang_5_sectors_neat_labels_2050_CLEAN.csv  exists?  TRUE 
   [1] "County Name"                                            "State"                                                  "County FIPS"                                           
   [4] "GEOID"                                                  "Total Population 2010 Census"                           "Urban Population 2010 Census"                          
@@ -3549,10 +4301,10 @@ number of na rows:  703  or  NA
 4:        01007                NA          01
 5:        01009       -2.74956264          01
 6:        01011      -31.77800593          01
-[1] "****** 110 Verified ******"
+[1] "****** 134 Verified ******"
 
 
-[1] "----- 111"
+[1] "----- 135"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/County_level_risk_FEMA_FSF_v1.3.csv  exists?  TRUE 
  [1] "fips"                          "name"                          "count_property"                "count_fema_sfha"               "pct_fema_sfha"                 "count_fs_risk_2020_5"         
  [7] "pct_fs_risk_2020_5"            "count_fs_risk_2050_5"          "pct_fs_risk_2050_5"            "count_fs_risk_2020_100"        "pct_fs_risk_2020_100"          "count_fs_risk_2050_100"       
@@ -3580,10 +4332,10 @@ number of na rows:  0  or  196
 4:        01007                         0.3          01
 5:        01009                         0.4          01
 6:        01011                         0.5          01
-[1] "****** 111 Verified ******"
+[1] "****** 135 Verified ******"
 
 
-[1] "----- 112"
+[1] "----- 136"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/UCS_Underwater.csv  exists?  TRUE 
 [1] "GEOID"                                        "Homes at Risk"                                "Value at Risk"                                "TaxAtRisk"                                   
 [5] "Population currently housed in at risk homes"
@@ -3607,10 +4359,10 @@ number of na rows:  0  or  0
 4:        06013                                                               1181667          06
 5:        06015                                                                   144          06
 6:        06023                                                                353670          06
-[1] "****** 112 Verified ******"
+[1] "****** 136 Verified ******"
 
 
-[1] "----- 113"
+[1] "----- 137"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Economic/WorkdaysAtRisk.csv  exists?  TRUE 
 [1] "GEOID"          "WorkdaysAtRisk"
 ****GEOID Column Name  GEOID TRUE 
@@ -3633,10 +4385,10 @@ number of na rows:  83  or  NA
 4:        01007                                           27          01
 5:        01009                                           25          01
 6:        01011                                           27          01
-[1] "****** 113 Verified ******"
+[1] "****** 137 Verified ******"
 
 
-[1] "----- 114"
+[1] "----- 138"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/Costofdisasters_summed.csv  exists?  TRUE 
 [1] "GEOID"        "Total_Cost"   "Total_Deaths"
 ****GEOID Column Name  GEOID TRUE 
@@ -3659,10 +4411,10 @@ number of na rows:  0  or  0
 4:          05                  557678.8
 5:          06                  274243.9
 6:          08                  313241.4
-[1] "****** 114 Verified ******"
+[1] "****** 138 Verified ******"
 
 
-[1] "----- 115"
+[1] "----- 139"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/Costofdisasters_summed.csv  exists?  TRUE 
 [1] "GEOID"        "Total_Cost"   "Total_Deaths"
 ****GEOID Column Name  GEOID TRUE 
@@ -3685,10 +4437,10 @@ number of na rows:  0  or  0
 4:          05                          6496
 5:          06                          1303
 6:          08                          1506
-[1] "****** 115 Verified ******"
+[1] "****** 139 Verified ******"
 
 
-[1] "----- 116"
+[1] "----- 140"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -3730,10 +4482,10 @@ number of na rows:  0  or  0
 4: 01001020400                                285.07501        01001          01
 5: 01001020500                                578.96669        01001          01
 6: 01001020600                                378.09990        01001          01
-[1] "****** 116 Verified ******"
+[1] "****** 140 Verified ******"
 
 
-[1] "----- 117"
+[1] "----- 141"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -3775,10 +4527,10 @@ number of na rows:  0  or  0
 4: 01001020400                              86103.28        01001          01
 5: 01001020500                             223191.36        01001          01
 6: 01001020600                              89741.83        01001          01
-[1] "****** 117 Verified ******"
+[1] "****** 141 Verified ******"
 
 
-[1] "----- 118"
+[1] "----- 142"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -3820,15 +4572,15 @@ number of na rows:  0  or  0
 4: 01001020400                                      101477.05        01001          01
 5: 01001020500                                      239652.12        01001          01
 6: 01001020600                                      115499.75        01001          01
-[1] "****** 118 Verified ******"
+[1] "****** 142 Verified ******"
 
 
-[1] "----- 119"
+[1] "----- 143"
 ~/Dropbox/Climate Health Vulnerability Index/                                         HISTORICAL  exists?  FALSE 
-[1] "!!!!!! 119 Not processed !!!!!!"
+[1] "!!!!!! 143 Not processed !!!!!!"
 
 
-[1] "----- 120"
+[1] "----- 144"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -3870,10 +4622,10 @@ number of na rows:  0  or  0
 4: 01001020400                                0        01001          01
 5: 01001020500                                0        01001          01
 6: 01001020600                                0        01001          01
-[1] "****** 120 Verified ******"
+[1] "****** 144 Verified ******"
 
 
-[1] "----- 121"
+[1] "----- 145"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -3915,10 +4667,10 @@ number of na rows:  16965  or  NA
 4: 01001020400                       0.05984082        01001          01
 5: 01001020500                       0.05984082        01001          01
 6: 01001020600                       0.05984082        01001          01
-[1] "****** 121 Verified ******"
+[1] "****** 145 Verified ******"
 
 
-[1] "----- 122"
+[1] "----- 146"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -3960,10 +4712,10 @@ number of na rows:  0  or  0
 4: 01001020400                    0.002295999        01001          01
 5: 01001020500                    0.003608352        01001          01
 6: 01001020600                    0.002739197        01001          01
-[1] "****** 122 Verified ******"
+[1] "****** 146 Verified ******"
 
 
-[1] "----- 123"
+[1] "----- 147"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -4005,10 +4757,10 @@ number of na rows:  0  or  0
 4: 01001020400                             0.5766063        01001          01
 5: 01001020500                             0.5766063        01001          01
 6: 01001020600                             0.5766063        01001          01
-[1] "****** 123 Verified ******"
+[1] "****** 147 Verified ******"
 
 
-[1] "----- 124"
+[1] "----- 148"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -4050,10 +4802,10 @@ number of na rows:  493  or  NA
 4: 01001020400                     1.09397e-04        01001          01
 5: 01001020500                     6.39683e-05        01001          01
 6: 01001020600                     1.54409e-04        01001          01
-[1] "****** 124 Verified ******"
+[1] "****** 148 Verified ******"
 
 
-[1] "----- 125"
+[1] "----- 149"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/NRI_Table_CensusTracts.csv  exists?  TRUE 
   [1] "GEOID10"    "RISK_SCORE" "RISK_RATNG" "RISK_NPCTL" "RISK_SPCTL" "EAL_SCORE"  "EAL_RATNG"  "EAL_NPCTL"  "EAL_SPCTL"  "EAL_VALT"   "EAL_VALB"   "EAL_VALP"   "EAL_VALPE"  "EAL_VALA"   "CFLD_EVNTS"
  [16] "CFLD_AFREQ" "CFLD_EXPB"  "CFLD_EXPP"  "CFLD_EXPPE" "CFLD_EXPT"  "CFLD_HLRB"  "CFLD_HLRP"  "CFLD_HLRR"  "CFLD_EALB"  "CFLD_EALP"  "CFLD_EALPE" "CFLD_EALT"  "CFLD_EALS"  "CFLD_EALR"  "CFLD_RISKS"
@@ -4095,15 +4847,15 @@ number of na rows:  0  or  0
 4: 01001020400                       31.88889        01001          01
 5: 01001020500                       33.05556        01001          01
 6: 01001020600                       30.33333        01001          01
-[1] "****** 125 Verified ******"
+[1] "****** 149 Verified ******"
 
 
-[1] "----- 126"
+[1] "----- 150"
 ~/Dropbox/Climate Health Vulnerability Index/                                         PROJECTIONS  exists?  FALSE 
-[1] "!!!!!! 126 Not processed !!!!!!"
+[1] "!!!!!! 150 Not processed !!!!!!"
 
 
-[1] "----- 127"
+[1] "----- 151"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4127,10 +4879,10 @@ number of na rows:  0  or  31442
 4: 01001020400            0.6583663        01001          01
 5: 01001020500            0.6583663        01001          01
 6: 01001020600            0.6583663        01001          01
-[1] "****** 127 Verified ******"
+[1] "****** 151 Verified ******"
 
 
-[1] "----- 128"
+[1] "----- 152"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4154,10 +4906,10 @@ number of na rows:  0  or  0
 4: 01001020400                                       22.2551        01001          01
 5: 01001020500                                       22.2551        01001          01
 6: 01001020600                                       22.2551        01001          01
-[1] "****** 128 Verified ******"
+[1] "****** 152 Verified ******"
 
 
-[1] "----- 129"
+[1] "----- 153"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4181,10 +4933,10 @@ number of na rows:  0  or  1
 4: 01001020400               5.951258        01001          01
 5: 01001020500               5.951258        01001          01
 6: 01001020600               5.951258        01001          01
-[1] "****** 129 Verified ******"
+[1] "****** 153 Verified ******"
 
 
-[1] "----- 130"
+[1] "----- 154"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4208,10 +4960,10 @@ number of na rows:  0  or  72730
 4: 01001020400  -15.50439        01001          01
 5: 01001020500  -15.50439        01001          01
 6: 01001020600  -15.50439        01001          01
-[1] "****** 130 Verified ******"
+[1] "****** 154 Verified ******"
 
 
-[1] "----- 131"
+[1] "----- 155"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4235,10 +4987,10 @@ number of na rows:  0  or  0
 4: 01001020400                        3.018438        01001          01
 5: 01001020500                        3.018438        01001          01
 6: 01001020600                        3.018438        01001          01
-[1] "****** 131 Verified ******"
+[1] "****** 155 Verified ******"
 
 
-[1] "----- 132"
+[1] "----- 156"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4262,10 +5014,10 @@ number of na rows:  0  or  0
 4: 01001020400         2.728028        01001          01
 5: 01001020500         2.728028        01001          01
 6: 01001020600         2.728028        01001          01
-[1] "****** 132 Verified ******"
+[1] "****** 156 Verified ******"
 
 
-[1] "----- 133"
+[1] "----- 157"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4289,10 +5041,10 @@ number of na rows:  0  or  71007
 4: 01001020400     -2.089116        01001          01
 5: 01001020500     -2.089116        01001          01
 6: 01001020600     -2.089116        01001          01
-[1] "****** 133 Verified ******"
+[1] "****** 157 Verified ******"
 
 
-[1] "----- 134"
+[1] "----- 158"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4316,10 +5068,10 @@ number of na rows:  71630  or  NA
 4: 01001020400             NA        01001          01
 5: 01001020500             NA        01001          01
 6: 01001020600             NA        01001          01
-[1] "****** 134 Verified ******"
+[1] "****** 158 Verified ******"
 
 
-[1] "----- 135"
+[1] "----- 159"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4343,10 +5095,10 @@ number of na rows:  0  or  72419
 4: 01001020400 -0.0191214        01001          01
 5: 01001020500 -0.0191214        01001          01
 6: 01001020600 -0.0191214        01001          01
-[1] "****** 135 Verified ******"
+[1] "****** 159 Verified ******"
 
 
-[1] "----- 136"
+[1] "----- 160"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4370,10 +5122,10 @@ number of na rows:  0  or  14189
 4: 01001020400                  18.66474        01001          01
 5: 01001020500                  18.66474        01001          01
 6: 01001020600                  18.66474        01001          01
-[1] "****** 136 Verified ******"
+[1] "****** 160 Verified ******"
 
 
-[1] "----- 137"
+[1] "----- 161"
 ~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/IPCC Layers.csv  exists?  TRUE 
  [1] "GEOID10"                    "CCI_EE_CDDmean_days"        "CCI_EE_TX35mean_days"       "CCI_EE_TX40mean_days"       "CCI_EE_FDmean_days"         "CCI_EE_TXxmean_degC"       
  [7] "CCI_EE_Tmean_degC"          "CCI_EE_PM25mean_ug_m3"      "CCI_EE_SLRmean_m"           "CCI_EE_Snowfallmean_mm_day" "CCI_EE_SPImean_1"           "CCI_EE_PRmean_mm_day"      
@@ -4397,34 +5149,32 @@ number of na rows:  0  or  8926
 4: 01001020400            4.583092        01001          01
 5: 01001020500            4.583092        01001          01
 6: 01001020600            4.583092        01001          01
-[1] "****** 137 Verified ******"
+[1] "****** 161 Verified ******"
 
 
-[1] "----- 138"
-~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/urbanheat_except_AK_HI.csv  exists?  TRUE 
- [1] "V1"                 "StateFIPS"          "State"              "CensusTract"        "Census.Tract"       "Year"               "Value"              "Data.Comment"       "Relative.Threshold"
-[10] "Heat.Metric"       
-****GEOID Column Name  CensusTract TRUE 
-****Data Column Name  Value TRUE 
-number of rows:  217539 
+[1] "----- 162"
+~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Extreme Events/urbanheat_except_AK_HI_mean.csv  exists?  TRUE 
+[1] "GEOID"             "Urban Heat Island"
+****GEOID Column Name  GEOID TRUE 
+****Data Column Name  Urban Heat Island TRUE 
+number of rows:  72517 
 number of na rows:  0  or  0 
         GEOID Urban Heat Island
-1: 1001020100                 4
-2: 1001020100                36
-3: 1001020100                23
-4: 1001020200                 4
-5: 1001020200                36
-6: 1001020200                23
+1: 1001020100                21
+2: 1001020200                21
+3: 1001020300                21
+4: 1001020400                21
+5: 1001020500                21
+6: 1001020600                21
 -------------------------------
 
-[1] "!!!!!!!!!Non-unique GEOIDs"
-        GEOID Urban Heat Island
-1: 1001020100                 4
-2: 1001020100                36
-3: 1001020100                23
-4: 1001020200                 4
-5: 1001020200                36
-6: 1001020200                23
-[1] "!!!!!! 138 Not processed !!!!!!"
+   GEOID.Tract Urban Heat Island GEOID.County GEOID.State
+1: 01001020100                21        01001          01
+2: 01001020200                21        01001          01
+3: 01001020300                21        01001          01
+4: 01001020400                21        01001          01
+5: 01001020500                21        01001          01
+6: 01001020600                21        01001          01
+[1] "****** 162 Verified ******"
 
 
