@@ -61,6 +61,7 @@ Unbanked Households,1,0,Infrastructure,Financial Services,Percent of Unbanked Ho
 Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
 Voter Turnout,-1,0,Infrastructure,Governance,Voter Turnout (2020 Presidential),Policy Map,2020,State
 Hate Crimes,1,0,Social,Crime,Hate Crimes,FBI,2019,State
+Redlining,1,0,Infrastructure,Financial Services,Redlining,University of Richmond's Digital Scholarship Lab,2021,City - incomplete.
 Congestion,,0,Infrastructure,Transportation,Delay (congestion) per capita/census tract,,,Already at CST level
 Flooded roads,,0,Infrastructure,Transportation,Flooding risk to roads,,,Already at CST level
 Proximity to Hospitals,-1,0,Infrastructure,Transportation,Access to hospitals ,,,Already at CST level
@@ -71,6 +72,9 @@ Lane Mile per Capita.2,1,0,Infrastructure,Transportation,Lane miles per capita,,
 Truck Lane Miles,1,0,Infrastructure,Transportation,Truck lane miles per capita,,,Already at CST level
 Transit Performance Score,1,0,Infrastructure,Transportation,Public Transit,,,Already at CST level
 Bridge Quality,-1,0,Infrastructure,Transportation,Bridge Quality/Maintenance,,,Already at CST level
+Walkability,1,0,Infrastructure,Transportation,Walkability,,,Already at CST level
+Transit Access,1,0,Infrastructure,Transportation,Transit Access,,,Already at CST level
+Bikability,1,0,Infrastructure,Transportation,Bikability,,,Already at CST level
 No Broadband Access,1,0,Infrastructure,Communications,Percent of Household with no internet access,National Environmental Public Health Tracking Network,2013-2017,Census Tract
 Cellular Coverage,1,0,Infrastructure,Communications,Percent of household with smartphone but no other device.,National Environmental Public Health Tracking Network,2013-2017,Census Tract
 Residential Energy Cost Burden,1,0,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
@@ -113,6 +117,8 @@ Black Carbon,1,1,Environment,Air pollutant,Black Carbon=Elemental Carbon,Randall
 % pre-1960 housing (lead paint indicator),1,0,Environment,Air pollutant,Lead Paint: Housing units built before 1960 (percent),EJ Screen ,2020,Census Tract
 Superfund Sites,1,0,Environment,Pollutant Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level
 Proximity to Brownfields,1,0,Environment,Pollutant Sources,Brownfields,EPA Facility Registry Service,2020,Facility Level
+Oil and Gas Wells,1,0,Environment,Oil and Gas Wells,Proximity to Active Oil and Gas Wells,DrillingInfo,2019-21,CST
+Methane,1,0,Environment,Air pollutant,Gridded 2012 Methane Emissions,EPA ,2012,National
 Ports,1,0,Environment,Ports,Proximity to Ports,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point
 Parks and Greenspace,-1,0,Environment,Land Use,Parks/Green Spaces,National Neighborhood Data Archive (NaNDA),2018,Census Tract
 Impermeable Surfaces,1,0,Environment,Land Use,Impermeable Surfaces,CDC: National Environmental Public Health Tracking,2021,Census Tract
