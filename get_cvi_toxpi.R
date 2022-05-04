@@ -119,7 +119,7 @@ for (i in 1:length(categories)) {
 
 f.slices <- TxpSliceList(Baseline.Health=
                            TxpSlice(txpValueNames = indicators.bycat[[1]]),
-                         Baseline.Social=
+                         Baseline.SocialEconomic=
                            TxpSlice(txpValueNames = indicators.bycat[[2]]),
                          Baseline.Infrastructure=
                            TxpSlice(txpValueNames = indicators.bycat[[3]]),
@@ -127,7 +127,7 @@ f.slices <- TxpSliceList(Baseline.Health=
                            TxpSlice(txpValueNames = indicators.bycat[[4]]),
                          ClimateChange.Health=
                            TxpSlice(txpValueNames = indicators.bycat[[5]]),
-                         ClimateChange.Economic=
+                         ClimateChange.SocialEconomic=
                            TxpSlice(txpValueNames = indicators.bycat[[6]]),
                          ClimateChange.ExtremeEvents=
                            TxpSlice(txpValueNames = indicators.bycat[[7]]))
@@ -309,7 +309,7 @@ dev.off()
 ## Combined 
 fcomb.slices <- TxpSliceList(Baseline.Health=
                                TxpSlice(txpValueNames = categories[1]),
-                             Baseline.Social=
+                             Baseline.SocialEconomic=
                                TxpSlice(txpValueNames = categories[2]),
                              Baseline.Infrastructure=
                                TxpSlice(txpValueNames = categories[3]),
@@ -317,7 +317,7 @@ fcomb.slices <- TxpSliceList(Baseline.Health=
                                TxpSlice(txpValueNames = categories[4]),
                              ClimateChange.Health=
                                TxpSlice(txpValueNames = categories[5]),
-                             ClimateChange.Economic=
+                             ClimateChange.SocialEconomic=
                                TxpSlice(txpValueNames = categories[6]),
                              ClimateChange.ExtremeEvents=
                                TxpSlice(txpValueNames = categories[7]))
