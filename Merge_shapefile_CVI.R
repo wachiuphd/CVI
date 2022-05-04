@@ -5,9 +5,10 @@ library(rgdal) ## use install.packages(c("rgdal"),repos="https://mac.R-project.o
 p <- shapefile(file.path("Data","2010 Tracts","2010tracts.shp"))
 
 # # Load CSV file
-cvi.df<-fread("CVI_data_current.csv",
+cvi.df<-fread("CVI_data_current.csv",integer64 = "double",
               keepLeadingZeros = TRUE)
-# # merge on common variable, here called 'key'
-# m <- merge(p, d, by.x = "GEOID10", by.y = "GEOID.Tract")
-# # save as shapefile again
-# shapefile(m, "path/merged.shp")
+# merge on common variable
+m <- merge(p, cvi.df, by.x = "GEOID10", by.y = "GEOID.Tract")
+# save as shapefile again
+shapefile(m, file.path("Data","CVI Tracts","CVItracts.shp"),overwrite=TRUE)
+save(m,file=file.path("Data","CVI Tracts.RData"))

@@ -63,3 +63,8 @@ Data/2010 Tracts/2010tracts.dbf
 Data/2010 Tracts/2010tracts.cpg
 ~$CVI Indicators Framework.pptx
 .DS_Store
+Data/CVI Tracts.RData
+Data/CVI Tracts/CVItracts.dbf
+Data/CVI Tracts/CVItracts.prj
+Data/CVI Tracts/CVItracts.shp
+Data/CVI Tracts/CVItracts.shx
