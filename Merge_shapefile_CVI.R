@@ -10,33 +10,30 @@ shpdir <- file.path("Data","CVI ToxPi Tracts")
 if (!dir.exists(shpdir)) dir.create(shpdir)
 cvi.toxpi.df <- fread("CVI-pct-comb.csv",integer64 = "double",
                       keepLeadingZeros = TRUE)
+names(cvi.toxpi.df) <- gsub("[[:punct:]]", "", names(cvi.toxpi.df))
 m <- merge(p, cvi.toxpi.df, by.x = "GEOID10", by.y = "FIPS")
 # save as shapefile again
 shapefile(m, file.path(shpdir,"CVIToxPiTracts.shp"),overwrite=TRUE)
-zip(paste0(shpdir,".zip"),shpdir) 
-unlink(shpdir,recursive=TRUE) # clean up
 
 # merge all pct data
 shpdir <- file.path("Data","CVI Pct Tracts")
 if (!dir.exists(shpdir)) dir.create(shpdir)
 cvi.pct.df <- fread("CVI_data_pct.csv",integer64 = "double",
                     keepLeadingZeros = TRUE)
+names(cvi.pct.df) <- gsub("[[:punct:]]", "", names(cvi.pct.df))
 m <- merge(p, cvi.pct.df, by.x = "GEOID10", by.y = "FIPS")
 # save as shapefile again
 shapefile(m, file.path(shpdir,"CVIPctTracts.shp"),overwrite=TRUE)
-zip(paste0(shpdir,".zip"),shpdir) 
-unlink(shpdir,recursive=TRUE) # clean up
 
 # merge all original data
 shpdir <- file.path("Data","CVI Data Tracts")
 if (!dir.exists(shpdir)) dir.create(shpdir)
 cvi.df<-fread("CVI_data_current.csv",integer64 = "double",
               keepLeadingZeros = TRUE)
-m <- merge(p, cvi.df, by.x = "GEOID10", by.y = "GEOID.Tract")
+names(cvi.df) <- gsub("[[:punct:]]", "", names(cvi.df))
+m <- merge(p, cvi.df, by.x = "GEOID10", by.y = "GEOIDTract")
 # save as shapefile again
 shapefile(m, file.path(shpdir,"CVIDataTracts.shp"),overwrite=TRUE)
-zip(paste0(shpdir,".zip"),shpdir) 
-unlink(shpdir,recursive=TRUE) # clean up
 
 # merge each category
 indicators.df<-fread("CVI_indicators_current.csv")
@@ -44,24 +41,23 @@ categories <- unique(indicators.df$`Baseline Vulnerability`)
 
 for (i in 1:length(categories)) { 
   onecat <- categories[i]
+  onecatname <- gsub(" ","",gsub("[[:punct:]]", ".", onecat))
   print(onecat)
   # Create directory for shapefile
   catdir <- file.path("Data",
-                      paste0("CVI ToxPi.",onecat))
+                      paste0("CVI ToxPi.",onecatname))
   if (!dir.exists(catdir)) dir.create(catdir)
   # read in one category ToxPi
   cvi.pct.toxpi.cat <- fread(paste0("CVI-pct-cat-",
                                     gsub(": ","-",onecat),".csv"),
                              integer64 = "double",
                              keepLeadingZeros = TRUE)
+  names(cvi.pct.toxpi.cat) <- gsub("[[:punct:]]", "", names(cvi.pct.toxpi.cat))
   m <- merge(p, cvi.pct.toxpi.cat, by.x = "GEOID10", by.y = "FIPS")
   # save as shapefile again
   shapefile(m, file.path(catdir,
-                         paste0("CVIToxPi",onecat,".shp")),
+                         paste0("CVIToxPi",onecatname,".shp")),
                          overwrite=TRUE)
-  # create zip file for uploading
-  zip(paste0(catdir,".zip"),catdir) 
-  unlink(catdir,recursive=TRUE) # clean up
 }
 
 
