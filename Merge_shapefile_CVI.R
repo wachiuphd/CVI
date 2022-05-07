@@ -6,7 +6,7 @@ library(rgdal) ## use install.packages(c("rgdal"),repos="https://mac.R-project.o
 p <- shapefile(file.path("Data","2010 Tracts","2010tracts.shp"))
 
 # merge overall toxpi
-shpdir <- file.path("Data","CVI ToxPi Tracts")
+shpdir <- file.path("Shapefiles","CVI ToxPi Tracts")
 if (!dir.exists(shpdir)) dir.create(shpdir)
 cvi.toxpi.df <- fread("CVI-pct-comb.csv",integer64 = "double",
                       keepLeadingZeros = TRUE)
@@ -16,7 +16,7 @@ m <- merge(p, cvi.toxpi.df, by.x = "GEOID10", by.y = "FIPS")
 shapefile(m, file.path(shpdir,"CVIToxPiTracts.shp"),overwrite=TRUE)
 
 # merge all pct data
-shpdir <- file.path("Data","CVI Pct Tracts")
+shpdir <- file.path("Shapefiles","CVI Pct Tracts")
 if (!dir.exists(shpdir)) dir.create(shpdir)
 cvi.pct.df <- fread("CVI_data_pct.csv",integer64 = "double",
                     keepLeadingZeros = TRUE)
@@ -26,7 +26,7 @@ m <- merge(p, cvi.pct.df, by.x = "GEOID10", by.y = "FIPS")
 shapefile(m, file.path(shpdir,"CVIPctTracts.shp"),overwrite=TRUE)
 
 # merge all original data
-shpdir <- file.path("Data","CVI Data Tracts")
+shpdir <- file.path("Shapefiles","CVI Data Tracts")
 if (!dir.exists(shpdir)) dir.create(shpdir)
 cvi.df<-fread("CVI_data_current.csv",integer64 = "double",
               keepLeadingZeros = TRUE)
@@ -44,7 +44,7 @@ for (i in 1:length(categories)) {
   onecatname <- gsub(" ","",gsub("[[:punct:]]", ".", onecat))
   print(onecat)
   # Create directory for shapefile
-  catdir <- file.path("Data",
+  catdir <- file.path("Shapefiles",
                       paste0("CVI ToxPi.",onecatname))
   if (!dir.exists(catdir)) dir.create(catdir)
   # read in one category ToxPi
