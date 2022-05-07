@@ -56,19 +56,6 @@ print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))))
 
 cvi.dat.df <- cvi.df[,-(1:6)]
 
-# idcols for use in GUI
-idcols_gui.df <- data.table(
-  `row#` = 1:nrow(cvi.df),
-  Name=paste0(cvi.df$STATE,", ",cvi.df$County_Name,", ",cvi.df$GEOID.Tract),
-  FIPS=cvi.df$GEOID.Tract,
-  Source=cvi.df$LatLong
-)
-
-idcols_gis.df <- data.table(
-  FIPS=cvi.df$GEOID.Tract,
-  Name=paste0(cvi.df$STATE,", ",cvi.df$County_Name,", ",cvi.df$GEOID.Tract),
-  Source=cvi.df$LatLong
-)
 ## Rank correlations
 pdf(file.path(diagdir,"CVI-corr.pdf"))
 cvi.abbr <- cvi.df[,-(1:6)]
@@ -86,6 +73,20 @@ if (length(na_adverse) > 0) {
   cvi.dat.df <- as.data.table(cvi.dat.df)
   indicators.df$`Adverse Direction`[na_adverse] <- 1
 }
+
+# idcols for use in GUI
+idcols_gui.df <- data.table(
+  `row#` = 1:nrow(cvi.df),
+  Name=paste0(cvi.df$STATE,", ",cvi.df$County_Name,", ",cvi.df$GEOID.Tract),
+  FIPS=cvi.df$GEOID.Tract,
+  Source=cvi.df$LatLong
+)
+
+idcols_gis.df <- data.table(
+  FIPS=cvi.df$GEOID.Tract,
+  Name=paste0(cvi.df$STATE,", ",cvi.df$County_Name,", ",cvi.df$GEOID.Tract),
+  Source=cvi.df$LatLong
+)
 
 ############ Percentiles
 pctdir <- "CVI-pct"
