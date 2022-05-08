@@ -15,17 +15,20 @@ Tol_muted <- tolower(c('88CCEE', '44AA99', '117733', '332288', 'DDCC77', '999933
 
 indicators.df<-fread("CVI_indicators_current.csv")
 cvi.df<-fread("CVI_data_current.csv",
-              keepLeadingZeros = TRUE)
+              keepLeadingZeros = TRUE,integer64 = "numeric")
 pdf(file.path(diagdir,"CheckDist.pdf"))
 for (j in 1:nrow(indicators.df)) {
   par(mfcol=c(2,2))
   y <- cvi.df[[j+6]]
+  mtitle <- paste("Row",j,"\n",indicators.df$Parameters[j],"\n",
+                  paste(substr(names(summary(y)),1,4),collapse=" | "),"\n",
+                  paste(signif(summary(y),3),collapse=" | "))
   y <- y[!is.na(y)]
   try({qqnorm(y,main="",pch=15,cex=0.2); qqline(y);})
   try(hist(y,main="",xlab="Value"))
   try({qqnorm(log(y[y>0]),main="",pch=15,cex=0.2); qqline(log(y[y>0]));})
   try(hist(log(y[y>0]),main="",xlab="Log Value [positive only]"))
-  mtext(paste("Row",j,"\n",indicators.df$Parameters[j]),outer=TRUE,line=-2,cex=0.75)
+  mtext(mtitle,outer=TRUE,line=-4,cex=0.75)
 }
 dev.off()
 
