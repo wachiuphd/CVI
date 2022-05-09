@@ -5,6 +5,7 @@ library(ggplot2)
 library(GGally)
 library(grid)
 library(moments)
+library(tigris)
 
 ######## Data post-processing
 
@@ -15,32 +16,25 @@ indicators.df<-fread("CVI_indicators_current.csv")
 cvi.df<-fread("CVI_data_current.csv",
               keepLeadingZeros = TRUE,integer64 = "numeric")
 
-############ State - take median census tract
-latlong <- unlist(strsplit(cvi.df$LatLong,","))
-cvi.df$Lat <- as.numeric(latlong[seq(1,length(latlong)-1,2)])
-cvi.df$Long <- as.numeric(latlong[seq(2,length(latlong),2)])
+st.df10 <- as.data.frame(states(year=2010))
+st.df10 <- st.df10[,names(st.df10)%in%c("GEOID10","INTPTLAT10","INTPTLON10")]
+st.df10$LatLong <- paste(st.df10$INTPTLAT10,st.df10$INTPTLON10,sep=",")
+rownames(st.df10)<-st.df10$GEOID10
+
+############ State 
 cvi.state.df <- cvi.df[,c(1:6)]
-cvi.state.df$LatLong <- ""
+cvi.state.df$LatLong <- st.df10[cvi.state.df$GEOID.State,"LatLong"]
 cvi.state.df$County_Name <- ""
 cvi.state.df$GEOID.County <- ""
 cvi.state.df$GEOID.Tract <- ""
 cvi.state.df <- cvi.state.df[!duplicated(cvi.state.df),]
-for (j in 7:(ncol(cvi.df)-2)) {
-  print(j)
+for (j in 7:(ncol(cvi.df))) {
+  cat(paste0(j,"...",names(cvi.df)[j],"..."))
   tmp <- aggregate(. ~ STATE+GEOID.State,
                    data=as.data.frame(cvi.df)[,c(1,3,j)],
                    FUN = median, na.rm=T)
   cvi.state.df <- left_join(cvi.state.df,tmp)
 }
-lat.df <- aggregate(. ~ STATE+GEOID.State,
-                    data=as.data.frame(cvi.df)[,c(1,3,ncol(cvi.df)-1)],
-                    FUN = median, na.rm=T)
-long.df <- aggregate(. ~ STATE+GEOID.State,
-                     data=as.data.frame(cvi.df)[,c(1,3,ncol(cvi.df))],
-                     FUN = median, na.rm=T)
-latlong.df <- left_join(lat.df,long.df)
-latlong.df$LatLong <- paste0("+",latlong.df$Lat,",",latlong.df$Long)
-cvi.state.df$LatLong <- latlong.df$LatLong
 
 # Replace main data frame with state data frame
 cvi.df <- cvi.state.df
