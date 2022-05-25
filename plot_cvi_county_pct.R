@@ -1,12 +1,9 @@
 library(data.table)
 library(choroplethr)
 library(choroplethrMaps)
-# library(dplyr)
-# library(ggplot2)
-# library(GGally)
-# library(grid)
-# library(moments)
+library(ggplot2)
 library(tigris)
+library(dplyr)
 
 data(df_pop_county)
 pctdat <- fread(file.path("CVI-county-pct","CVI-county_data_pct.csv"),
