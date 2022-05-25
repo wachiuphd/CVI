@@ -21,18 +21,16 @@ Mammography use among women aged 50-74 years,-1,1,Health,Chronic Disease Prevent
 Visits to dentist or dental clinic among adults aged >=18 years,-1,1,Health,Chronic Disease Prevention,Dental Exams,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 COVID Deaths,1,0,Health,Infectious Diseases,COVID-19 Deaths,Sustainable Development Solutions Intiative,2022,County
 Hepatitis,1,1,Health,Infectious Diseases,Hepatitis (Medicare Recipients diagnosed),Policy Map,2018,County
-HIV,1,1,Health,Infectious Diseases,HIV,CDC,2018,State
+HIV,1,1,Health,Infectious Diseases,HIV,CDC,2018,County
 Chlamydia,1,1,Health,Infectious Diseases,Chlamydia,Policy Map,2017,County
 Gonorrhea,1,1,Health,Infectious Diseases,Gonorrhea,Policy Map,2017,County
 Syphillis,1,1,Health,Infectious Diseases,Syphillis,Policy Map,2017,County
-Infant Mortality,1,1,Health,Child & Maternal Health,Infant Mortality,Policy Map,2017,County
-Low Birthweight,1,1,Health,Child & Maternal Health,Low birthweight,Policy Map,2018,County
 Pre-term Birth,1,1,Health,Child & Maternal Health,Pre-term birth,March of Dimes,2014,State
 Childhood Asthma,1,1,Health,Child & Maternal Health,Childhood Asthma,CDC EPH Tracking,2018,State
 Teen Birth,1,0,Health,Child & Maternal Health,Teen births,CDC National Center for Health Statistics,2018,County
 Nursing Homes,-1,0,Health,Child & Maternal Health,Proximity to Nursing Homes,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,
 Hospital Access,-1,1,Health,Access to Care,"Number of Hospital Beds per 10,000 people",CDC: National Environmental Public Health Tracking,2016,County
-Covid vaccination rates,-1,0,Health,Access to Care,Covid-19 Vaccination Rates,John Hopkins,2022,State
+Covid vaccination rates,-1,0,Health,Access to Care,Covid-19 Vaccination Rates,Centers for Disease Control and Prevention,2022,County
 MedicallyUnderserved,1,0,Health,Access to Care,Medically Underserved Areas,Policy Map,2020,Census Tract
 Current lack of health insurance among adults aged 18-64 years,1,1,Health,Access to Care,Current Lack of Health Insurance,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 Proximity to Hospitals,1,0,Health,Access to Care,Proximity to hospitals ,,,Already at CST level
@@ -45,8 +43,8 @@ Aged 17 or Younger,1,1,Social & Economic,Housing Composition & Disability,Aged 1
 Civilian with a Disability,1,1,Social & Economic,Housing Composition & Disability,Civilian with a Disability,ASTDR,2018,Census Tract
 Single-Parent Households,1,1,Social & Economic,Housing Composition & Disability,Single-Parent Households,ASTDR,2018,Census Tract
 Minority,1,1,Social & Economic,Minority Status & Language,Minority,ASTDR,2018,Census Tract
-"Speaks English ""Less than Well""",1,1,Social & Economic,Minority Status & Language,"Speaks English ""Less than Well""",ASTDR,2018,Census Tract
-Unauthorized immigrants,1,0,Social & Economic,Minority Status & Language,Undocumented Population,Migration Policy Institute,2015-18,County Level
+Speaks English Less than Well,1,1,Social & Economic,Minority Status & Language,Speaks English Less than Well,ASTDR,2018,Census Tract
+Unauthorized immigrants,1,0,Social & Economic,Minority Status & Language,Undocumented Population,Migration Policy Institute,2015-18,State
 Hate Crimes,1,0,Social & Economic,Minority Status & Language,Hate Crimes,FBI,2019,State
 Redlining,1,0,Social & Economic,Minority Status & Language,Redlining,University of Richmond's Digital Scholarship Lab,2021,City - incomplete.
 Multi-Unit Structures,1,1,Social & Economic,Housing Type & Transportation,Multi-Unit Structures,ASTDR,2018,Census Tract
@@ -61,7 +59,6 @@ Payday lending,1,0,Infrastructure,Financial Services,Payday lending rank,Center 
 Housing Affordability.1,1,0,Infrastructure,Financial Services,Housing Affordability (renters),HUD Office of Policy Development and Research,2014-2018,Census Tract
 Housing Affordability.2,1,0,Infrastructure,Financial Services,Housing Affordability (owners),HUD Office of Policy Development and Research,2014-2018,Census Tract
 Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
-Municipal wastewater,-1,0,Infrastructure,"Food, Water, and Waste Management",Municipal Wastewater,EPA CWNS,2012,
 Indoor plumbing,-1,0,Infrastructure,"Food, Water, and Waste Management",Indoor Plumbing,Census Bureau: ACS,2019,County
 Residential Energy Cost Burden,1,0,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
 Fossil Fuel Generation,1,1,Infrastructure,Energy,Share of energy from fossil fuels,Policy Map,2019,County
@@ -113,7 +110,7 @@ Proximity to Risk Management Plan (RMP) facilities,1,0,Environment,Pollution Sou
 Proximity to petrochem,-1,0,Environment,Pollution Sources,Chemical Manufacturers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.
 Proximity to metal recyclers,-1,0,Environment,Pollution Sources,Metal Recyclers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.
 Oil and Gas Wells,1,0,Environment,Pollution Sources,Active Oil and Gas Wells,DrillingInfo,2019-21,CST
-PM 2.5 concentration,1,0,Environment,Criteria Air Pollutants,PM 2.5 concentration,"Data from Harvard team, processed by JP@edf",2018,Census Tract
+PM 2.5 concentration,1,0,Environment,Criteria Air Pollutants,PM 2.5 concentration,"Data from Harvard team, processed by JP@edf",2014-2016,Census Tract
 NO2 concentration,1,0,Environment,Criteria Air Pollutants,NO2 concentration,GWU Data ,2019,
 Ozone concentration,1,0,Environment,Criteria Air Pollutants,Ozone concentration,EPA Fused Air Quality Surface Using Downscaling (FAQSD) Files,2018,Census Tract
 Parks and Greenspace,-1,0,Environment,Land Use,Parks and Greenspace,National Neighborhood Data Archive (NaNDA),2018,Census Tract
@@ -121,7 +118,7 @@ Impermeable Surfaces,1,0,Environment,Land Use,Impermeable Surfaces,CDC: National
 Forest Land Cover,-1,0,Environment,Land Use,Forest Land Cover,CDC: National Environmental Public Health Tracking,2021,Census Tract
 Tribal Lands,1,0,Environment,Land Use,Native American Lands,USGS,2014,"USGS 1:1,000,000-Scale Indian Lands of the United States 201412 Shapefile"
 Temperature-related mortality,1,1,CC: Health,Temperature-related deaths,Temperature-related mortality,Hsiang et al. ,2017,County
-Deaths from Historical Climate Disasters 1980-present,1,0,CC: Health,Disaster-related deaths,Deaths from climate disasters,NOAA  ,2021,State level - point
+Deaths from Historical Climate Disasters 1980-present,1,0,CC: Health,Disaster-related deaths,Deaths from climate disasters,NOAA  ,2021,State 
 New Incidence of Asthma Associated with PM2.5 Exposure in Children Age 0 to 17,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma incidence,EPA CIRA,2021,Census Tract
 Asthma Related ED Visits Associated with PM2.5 Exposure in Children Age 0 to 18,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma ER visits,EPA CIRA,2021,Census Tract
 Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related deaths,Increased PM2.5 mortality - CVD (ages 65+),EPA CIRA,2021,Census Tract
@@ -153,7 +150,7 @@ Hurricanes,1,0,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA N
 Tornadoes,1,1,CC: Extreme Events,Storms,Tornado - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 Winter Weather,1,1,CC: Extreme Events,Storms,Winter Weather - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 Drought,1,1,CC: Extreme Events,Droughts,Drought - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-CDD: Consecutive Dry Days (unit = days),,1,CC: Extreme Events,Droughts,Consecutive Dry Days,IPCC AR6,2021,Tract Level processed from rasters
+CDD: Consecutive Dry Days (unit = days),1,1,CC: Extreme Events,Droughts,Consecutive Dry Days,IPCC AR6,2021,Tract Level processed from rasters
 Wildfires,1,1,CC: Extreme Events,Wildfires,Wildfire - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 PM25: Surface PM2.5 (unit = ug/m^3),1,1,CC: Extreme Events,Wildfires,Surface PM2.5,IPCC AR6,2021,Tract Level processed from rasters
 Snowfall: Snowfall (mm/day),,1,CC: Extreme Events,Precipitation,Snowfall,IPCC AR6,2021,Tract Level processed from rasters

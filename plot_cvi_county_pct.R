@@ -1,11 +1,11 @@
 library(data.table)
 library(choroplethr)
 library(choroplethrMaps)
-library(dplyr)
-library(ggplot2)
-library(GGally)
-library(grid)
-library(moments)
+# library(dplyr)
+# library(ggplot2)
+# library(GGally)
+# library(grid)
+# library(moments)
 library(tigris)
 
 data(df_pop_county)
@@ -16,10 +16,13 @@ pdf(file.path("CVI-county-pct","CVI-county_data_pct.pdf"),height=6,width=10)
 for (j in 5:(ncol(pctdat))) {
   dat.df <- data.frame(region=as.numeric(pctdat$FIPS),
                        value=100*pctdat[[j]])
-  p<-county_choropleth(dat.df,
-                    title=paste0(names(pctdat)[j],"\n(median of census tracts in county)"),
-                    num_colors=1,
-                    legend="County\nVulnerability\nPercentile")
+  plt<-CountyChoropleth$new(dat.df)
+  plt$set_num_colors(1)
+  plt$set_zoom(NULL)
+  plt$ggplot_scale <- scale_fill_viridis_c("County\nVulnerability\nPercentile",option="magma")
+  plt$title<-paste0(names(pctdat)[j],"\n(median of census tracts in county)")
+  plt$ggplot_polygon <- geom_polygon(aes(fill = value),color=NA)
+  p<-plt$render()
   print(p)
 }
 dev.off()
@@ -130,17 +133,20 @@ pdf(file.path("CVI-county-pct","CVI-county_data_maxpct.pdf"),height=6,width=10)
 for (j in 5:(ncol(cvi.pct.df))) {
   dat.df <- data.frame(region=as.numeric(cvi.pct.df$FIPS),
                        value=100*cvi.pct.df[[j]])
-  p<-county_choropleth(dat.df,
-                       title=paste0(names(cvi.pct.df)[j],"\n(MAX of census tracts in county)"),
-                       num_colors=1,
-                       legend="County\nVulnerability\nPercentile")
+  plt<-CountyChoropleth$new(dat.df)
+  plt$set_num_colors(1)
+  plt$set_zoom(NULL)
+  plt$ggplot_scale <- scale_fill_viridis_c("County\nVulnerability\nPercentile",option="magma")
+  plt$title<-paste0(names(cvi.pct.df)[j],"\n(MAX of census tracts in county)")
+  plt$ggplot_polygon <- geom_polygon(aes(fill = value),color=NA)
+  p<-plt$render()
   print(p)
 }
 dev.off()
 
 
 ############ NA Census tract county map
-
+pctdir <- "CVI-county-pct"
 indicators.df<-fread("CVI_indicators_current.csv")
 cvi.df<-fread("CVI_data_current.csv",
               keepLeadingZeros = TRUE,integer64 = "numeric")
@@ -189,10 +195,17 @@ for (j in 5:(ncol(cvi.na.df))) {
   dat.df <- data.frame(region=as.numeric(cvi.na.df$FIPS),
                        value=cvi.na.df[[j]])
   if (length(unique(dat.df$value))==1) ncolors <- 0 else ncolors=1
-  p<-county_choropleth(dat.df,
-                       title=paste0(names(cvi.na.df)[j],"\n(Fraction of NA census tracts in county)"),
-                       num_colors=ncolors,
-                       legend="County\nFraction")
+  mtitle <- paste0(names(cvi.na.df)[j],"\n(Fraction of NA census tracts in county)")
+  if (indicators.df$`Replace NA with median`[j-4]==0) {
+    mtitle <- paste(mtitle, "[NA means 0]")
+  }
+  plt<-CountyChoropleth$new(dat.df)
+  plt$set_num_colors(ncolors)
+  plt$set_zoom(NULL)
+  plt$ggplot_scale <- scale_fill_viridis_c("County\nFraction",option="magma")
+  plt$title<-mtitle
+  plt$ggplot_polygon <- geom_polygon(aes(fill = value),color=NA)
+  p<-plt$render()
   print(p)
 }
 dev.off()
