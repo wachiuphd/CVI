@@ -18,7 +18,7 @@ tracts <- tracts[order(tracts$GEOID.Tract),]
 
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForAlpha_051622xlsx.xlsx",
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForBeta_052222xlsx.xlsx",
                         sheet="Alpha Indicators",trim_ws = FALSE)
 indicator.verified <- rep(FALSE,nrow(cvi.master))
 
@@ -58,6 +58,10 @@ checkdatrow <- function(jrow) {
       tmp[[2]] <- as.numeric(tmp[[2]])
     }
     tmp[[2]][tmp[[2]]==-999] <- NA
+    ## Special case treat 999 as zero
+    if (cvi.master$`Data Column Name`[j] %in% c("WalkScore","TransitScore","BikeScore")) {
+      tmp[[2]][tmp[[2]]==999] <- 0
+    }
     tmp <- subset(tmp,!is.na(GEOID)) # Remove row without GEOID
     tmp <- subset(tmp,GEOID != "") # Remove row without GEOID
     cat("number of rows: ",nrow(tmp),"\n")
@@ -159,4 +163,4 @@ indicators.df$`Replace NA with median`<-as.numeric(indicators.df$`Replace NA wit
 indicators.df$`Replace NA with median`[is.na(indicators.df$`Replace NA with median`)]<-0
 fwrite(tracts,"CVI_data_current.csv")
 fwrite(indicators.df,"CVI_indicators_current.csv")
-print(as.numeric((apply(tracts,2,FUN=function(x) {sum(!is.na(x))}))))
+print(as.numeric((base::apply(tracts,2,FUN=function(x) {sum(!is.na(x))}))))

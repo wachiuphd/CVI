@@ -33,29 +33,29 @@ for (j in 1:nrow(indicators.df)) {
 dev.off()
 
 nareplcols <- indicators.df$Parameters[indicators.df$`Replace NA with median`==1]
-# View((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols])
-print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
+# View((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols])
+print(as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 # Replace NA by county median
 cvi.df[, (nareplcols) := lapply(.SD, function(x) nafill(x, type = "const", fill = median(x, na.rm = TRUE)))
     , by = GEOID.County
     , .SDcols = nareplcols]
-print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
+print(as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 # if still NA replace remaining by state median
 cvi.df[, (nareplcols) := lapply(.SD, function(x) nafill(x, type = "const", fill = median(x, na.rm = TRUE)))
        , by = GEOID.State
        , .SDcols = nareplcols]
-print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
+print(as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 # if still NA replace remaining by overall median
 cvi.df[, (nareplcols) := lapply(.SD, function(x) nafill(x, type = "const", fill = median(x, na.rm = TRUE)))
        , .SDcols = nareplcols]
-print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
+print(as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 
 na0cols <- indicators.df$Parameters[indicators.df$`Replace NA with median`==0]
 
 # other columns replace NA with 0
 cvi.df[, (na0cols) := lapply(.SD, function(x) nafill(x, type = "const", fill = 0))
        , .SDcols = na0cols]
-print(as.numeric((apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))))
+print(as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))))
 
 cvi.dat.df <- cvi.df[,-(1:6)]
 
@@ -98,8 +98,8 @@ if (!dir.exists(pctdir)) dir.create(pctdir)
 # Standardize to percentile from 0 to 1
 # ToxPi will treat NA as zero by default
 cvi.pct.df<-sweep(cvi.dat.df,2,indicators.df$`Adverse Direction`,"*") # multiple by adverse direction
-cvi.pct.df<-as.data.frame(apply(cvi.pct.df,2,rank,ties.method="min",na.last="keep")) # rank
-cvi.pct.df<-sweep(cvi.pct.df-1,2,apply(cvi.pct.df,2,max,na.rm=T)-1,"/") # turn into percentile 0-1
+cvi.pct.df<-as.data.frame(base::apply(cvi.pct.df,2,rank,ties.method="min",na.last="keep")) # rank
+cvi.pct.df<-sweep(cvi.pct.df-1,2,base::apply(cvi.pct.df,2,max,na.rm=T)-1,"/") # turn into percentile 0-1
 pdf(file.path(pctdir,"CVI-pct.pdf"),height=10,width=7)
 boxplot(as.list(cvi.pct.df),
         horizontal = TRUE,pars=list(outpch=15,cex=0.3))
@@ -301,8 +301,8 @@ if (!dir.exists(scaledir)) dir.create(scaledir)
 # 
 # # Standardize to 0-1 without transformations
 cvi.scale.df<-sweep(cvi.dat.df,2,indicators.df$`Adverse Direction`,"*") # multiple by adverse direction
-cvi.scale.df<-as.data.frame(scale(cvi.scale.df,center=apply(cvi.scale.df,2,min),
-                                  scale=apply(cvi.scale.df,2,FUN=function(x){diff(range(x))})))
+cvi.scale.df<-as.data.frame(scale(cvi.scale.df,center=base::apply(cvi.scale.df,2,min),
+                                  scale=base::apply(cvi.scale.df,2,FUN=function(x){diff(range(x))})))
 pdf(file.path(scaledir,"CVI-scale.pdf"),height=10,width=7)
 boxplot(as.list(cvi.scale.df),
         horizontal = TRUE,pars=list(outpch=15,cex=0.3))
