@@ -19,7 +19,7 @@ Mammography use among women aged 50-74 years,-1,1,Health,Chronic Disease Prevent
 "Older adult men aged >=65 years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening",-1,1,Health,Chronic Disease Prevention,Older Men Preventive Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 "Older adult women aged >=65 years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening, and Mammogram past 2 years",-1,1,Health,Chronic Disease Prevention,Older Women Preventive Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 Visits to dentist or dental clinic among adults aged >=18 years,-1,1,Health,Chronic Disease Prevention,Dental Exams,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-COVID Deaths,1,0,Health,Infectious Diseases,COVID-19 Deaths,Sustainable Development Solutions Intiative,2022,County
+COVID Deaths,1,1,Health,Infectious Diseases,COVID-19 Deaths,Sustainable Development Solutions Intiative,2022,County
 Hepatitis,1,1,Health,Infectious Diseases,Hepatitis (Medicare Recipients diagnosed),Policy Map,2018,County
 HIV,1,1,Health,Infectious Diseases,HIV,CDC,2018,County
 Chlamydia,1,1,Health,Infectious Diseases,Chlamydia,Policy Map,2017,County
@@ -30,7 +30,6 @@ Childhood Asthma,1,0,Health,Child & Maternal Health,Childhood Asthma,CDC,2019,St
 Teen Birth,1,0,Health,Child & Maternal Health,Teen births,CDC National Center for Health Statistics,2018,County
 Nursing Homes,-1,0,Health,Child & Maternal Health,Proximity to Nursing Homes,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,
 Hospital Access,-1,1,Health,Access to Care,"Number of Hospital Beds per 10,000 people",CDC: National Environmental Public Health Tracking,2016,County
-Covid vaccination rates,-1,0,Health,Access to Care,Covid-19 Vaccination Rates,Centers for Disease Control and Prevention,2022,County
 MedicallyUnderserved,1,0,Health,Access to Care,Medically Underserved Areas,Policy Map,2020,Census Tract
 Current lack of health insurance among adults aged 18-64 years,1,1,Health,Access to Care,Current Lack of Health Insurance,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
 Proximity to Hospitals,1,0,Health,Access to Care,Proximity to hospitals ,,,Already at CST level
@@ -38,8 +37,8 @@ Below Poverty,1,1,Social & Economic,Socioeconomic Stressors,Below Poverty,ASTDR,
 Unemployed,1,1,Social & Economic,Socioeconomic Stressors,Unemployed,ASTDR,2018,Census Tract
 Income,1,1,Social & Economic,Socioeconomic Stressors,Low Income,ASTDR,2018,Census Tract
 No High School Diploma,1,1,Social & Economic,Socioeconomic Stressors,No High School Diploma,ASTDR,2018,Census Tract
-Murders Per Capita,1,0,Social & Economic,Socioeconomic Stressors,Crime (Murder Rate Per Capita),The Federal Bureau of Investigation’s Uniform Crime Reporting (UCR) Program ,2020,County
-Religious Organizations,-1,0,Social & Economic,Governance,Religioius Organizations,University of Michigan. Institute for Social Research,2003-2017,Census Tract
+Murders Per Capita,1,1,Social & Economic,Socioeconomic Stressors,Crime (Murder Rate Per Capita),The Federal Bureau of Investigation’s Uniform Crime Reporting (UCR) Program ,2020,County
+Religious Organizations,-1,0,Social & Economic,Governance,Religious Organizations,University of Michigan. Institute for Social Research,2003-2017,Census Tract
 Civic and Social Organizations,-1,0,Social & Economic,Governance,Civic and Social Organizations,University of Michigan. Institute for Social Research,2003-2017,Census Tract
 Aged 65 or Older,1,1,Social & Economic,Housing Composition & Disability,Aged 65 or Older,ASTDR,2018,Census Tract
 Aged 17 or Younger,1,1,Social & Economic,Housing Composition & Disability,Aged 17 or Younger,ASTDR,2018,Census Tract
@@ -47,15 +46,15 @@ Civilian with a Disability,1,1,Social & Economic,Housing Composition & Disabilit
 Single-Parent Households,1,1,Social & Economic,Housing Composition & Disability,Single-Parent Households,ASTDR,2018,Census Tract
 Minority,1,1,Social & Economic,Minority Status & Language,Minority,ASTDR,2018,Census Tract
 Speaks English Less than Well,1,1,Social & Economic,Minority Status & Language,Speaks English Less than Well,ASTDR,2018,Census Tract
-Unauthorized immigrants,1,0,Social & Economic,Minority Status & Language,Undocumented Population,Migration Policy Institute,2015-18,State
-Hate Crimes,1,0,Social & Economic,Minority Status & Language,Hate Crimes,FBI,2019,State
+Unauthorized immigrants,1,1,Social & Economic,Minority Status & Language,Undocumented Population,Migration Policy Institute,2015-18,State
+Hate Crimes,1,1,Social & Economic,Minority Status & Language,Hate Crimes,FBI,2019,State
 Redlining,1,0,Social & Economic,Minority Status & Language,Redlining,University of Richmond's Digital Scholarship Lab,2021,City - incomplete.
 Multi-Unit Structures,1,1,Social & Economic,Housing Type & Transportation,Multi-Unit Structures,ASTDR,2018,Census Tract
 Mobile Homes,1,1,Social & Economic,Housing Type & Transportation,Mobile Homes,ASTDR,2018,Census Tract
 Crowding,1,1,Social & Economic,Housing Type & Transportation,Crowding,ASTDR,2018,Census Tract
 No Vehicle,1,1,Social & Economic,Housing Type & Transportation,No Vehicle,ASTDR,2018,Census Tract
 Group Quarters,1,1,Social & Economic,Housing Type & Transportation,Group Quarters,ASTDR,2018,Census Tract
-Foreclosure Rate,1,0,Social & Economic,Housing Type & Transportation,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract
+Foreclosure Rate,1,1,Social & Economic,Housing Type & Transportation,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract
 Housing Built Past v.s. Now,1,0,Social & Economic,Housing Type & Transportation,Percent of Housing Units Built Between 1940-1969 as of 2015-2019,Policy Map,2015-2019,Census Tract
 Unbanked Households,1,0,Infrastructure,Financial Services,Percent of Unbanked Households,Policy Map,2015-2019,State
 Payday lending,1,0,Infrastructure,Financial Services,Payday lending rank,Center for Responsible Lending,2010,State
@@ -63,7 +62,7 @@ Housing Affordability (renters),1,0,Infrastructure,Financial Services,Housing Af
 Housing Affordability (owners),1,0,Infrastructure,Financial Services,Housing Affordability (owners),HUD Office of Policy Development and Research,2014-2018,Census Tract
 Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
 Indoor plumbing,-1,0,Infrastructure,"Food, Water, and Waste Management",Indoor Plumbing,Census Bureau: ACS,2019,County
-Residential Energy Cost Burden,1,0,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
+Residential Energy Cost Burden,1,1,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
 Fossil Fuel Generation,1,1,Infrastructure,Energy,Share of energy from fossil fuels,Policy Map,2019,County
 EV charging ,-1,0,Infrastructure,Energy,EV Charging Stations,U.S. Department of Energy,44644,Point
 Congestion,1,0,Infrastructure,Transportation,Delay (congestion) per capita/census tract,,,Census Tract
@@ -144,13 +143,16 @@ Expected Annual Loss - Agriculture Value - Composite,1,0,CC: Social & Economic,E
 Expected Annual Loss - Building Value - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Building Value,FEMA National Risk Index,2021,Tract Level
 Expected Annual Loss - Population Equivalence - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Population Equivalence ,FEMA National Risk Index,2022,Tract Level
 Cold Wave,1,1,CC: Extreme Events,Temperature,Cold Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Heat Wave,1,1,CC: Extreme Events,Temperature,Heat Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 TX35: Days with maximum temperature (TX) above 35 C (units = days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature (TX) above 35 C,IPCC AR6,2021,Tract Level processed from rasters
 TX40: Days with TX above 40C (units= days),1,1,CC: Extreme Events,Temperature,Days with TX above 40C,IPCC AR6,2021,Tract Level processed from rasters
 FD: Frost Days (units = days),,1,CC: Extreme Events,Temperature,Frost Days,IPCC AR6,2021,Tract Level processed from rasters
 TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,Maximum of maximum temperatures,IPCC AR6,2021,Tract Level processed from rasters
 T: Mean temperature (unit = degree C),1,1,CC: Extreme Events,Temperature,Mean temperature,IPCC AR6,2021,Tract Level processed from rasters
 Urban Heat Island,1,0,CC: Extreme Events,Temperature,Urban Heat Island Extreme Heat Days,,2018,CST
-SLR: Sea Level Rise  (unit = meters),1,0,CC: Extreme Events,Sea Level Rise,Sea Level Rise,IPCC AR6,2021,Tract Level processed from rasters
+Coastal Flooding,1,0,CC: Extreme Events,Flooding,Coastal Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+Riverine Flooding,1,0,CC: Extreme Events,Flooding,Riverine Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
+SLR: Sea Level Rise  (unit = meters),1,0,CC: Extreme Events,Flooding,Sea Level Rise,IPCC AR6,2021,Tract Level processed from rasters
 Hurricanes,1,0,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 Tornadoes,1,1,CC: Extreme Events,Storms,Tornado - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
 Winter Weather,1,1,CC: Extreme Events,Storms,Winter Weather - Annualized Frequency,FEMA National Risk Index,2022,Tract Level

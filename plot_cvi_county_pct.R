@@ -160,14 +160,14 @@ cvi.county.df <- cvi.county.df[!duplicated(cvi.county.df),]
 for (j in 7:(ncol(cvi.df))) {
   cat(paste0(j,"...")) 
   tmpdat <- as.data.frame(cvi.df)[,c(1,2,3,4,j)]
+  tmpdat[[5]] <- is.na(tmpdat[[5]])
 #  if (indicators.df$`Replace NA with median`[j-6]==0) tmpdat[is.na(tmpdat[[5]]),5] <- 0
   tmp <- aggregate(. ~ STATE+County_Name+GEOID.State+GEOID.County,
                    data=tmpdat,
-                   FUN = function (x) {sum(is.na(x))/length(x)})
+                   FUN = function (x) {sum(x)/length(x)})
   cat(paste0(names(cvi.df)[j],"..."))
   cvi.county.df <- left_join(cvi.county.df,tmp)
 }
-cvi.county.df[is.na(cvi.county.df)] <- 1 # If NA, then all are NA
 
 # Replace main data frame with county data frame
 cvi.df <- cvi.county.df
@@ -199,7 +199,7 @@ for (j in 5:(ncol(cvi.na.df))) {
   plt<-CountyChoropleth$new(dat.df)
   plt$set_num_colors(ncolors)
   plt$set_zoom(NULL)
-  plt$ggplot_scale <- scale_fill_viridis_c("County\nFraction",option="magma")
+  plt$ggplot_scale <- scale_fill_viridis_c("County\nFraction",option="magma",limits=c(0,1))
   plt$title<-mtitle
   plt$ggplot_polygon <- geom_polygon(aes(fill = value),color=NA)
   p<-plt$render()
