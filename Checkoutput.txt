@@ -381,7 +381,7 @@ number of na rows:  0  or  0
  [1] "Year"                       "StateAbbr"                  "StateDesc"                  "CountyName"                 "CountyFIPS"                 "LocationName"              
  [7] "DataSource"                 "Category"                   "Measure"                    "Data_Value_Unit"            "Data_Value_Type"            "Data_Value"                
 [13] "Data_Value_Footnote_Symbol" "Data_Value_Footnote"        "Low_Confidence_Limit"       "High_Confidence_Limit"      "TotalPopulation"            "Geolocation"               
-[19] "LocationID"                 "CategoryID"                 "MeasureId"                  cols "Short_Question_Text"       
+[19] "LocationID"                 "CategoryID"                 "MeasureId"                  "DataValueTypeID"            "Short_Question_Text"       
 ****GEOID Column Name  LocationName TRUE 
 ****Indicator subset  Coronary heart disease among adults aged >=18 years TRUE 
 ****Data Column Name  Data_Value TRUE 

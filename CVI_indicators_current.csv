@@ -1,165 +1,165 @@
-Indicator Name,Adverse Direction,Replace NA with median,Baseline Vulnerability,Subcategory,Parameters,Agency or data source,Year of data release,Geographic Level
-Life Expectancy,-1,1,Health,Overall Physical Health,Life Expectancy,Policy Map,2010-2015,Census Tract
-Physical health not good for >=14 days among adults aged >=18 years,1,1,Health,Overall Physical Health,Self-Reported Physical Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Mental health not good for >=14 days among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Self-Reported Mental Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Opioid Overdose,1,1,Health,Mental Health & Deaths of Despair,"Opioid Overdose Per 100,000 People",County Health Rankings & Roadmaps,2021,Census Tract
-Fatal Drug Overdose,1,1,Health,Mental Health & Deaths of Despair,Fatal Drug Overdose,CDC,2019,State 
-Binge drinking among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Alcohol Abuse,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Suicide,1,1,Health,Mental Health & Deaths of Despair,Suicide Rates,CDC  ,2019,State 
-Current asthma among adults aged >=18 years,1,1,Health,Chronic Disease,Current Asthma Over Age 18,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Stroke among adults aged >=18 years,1,1,Health,Chronic Disease,Stroke,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Chronic obstructive pulmonary disease among adults aged >=18 years,1,1,Health,Chronic Disease,COPD,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Coronary heart disease among adults aged >=18 years,1,1,Health,Chronic Disease,CHD,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Cancer (excluding skin cancer) among adults aged >=18 years,1,1,Health,Chronic Disease,Cancer,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-High blood pressure among adults aged >=18 years,1,1,Health,Chronic Disease Prevention,High Blood Pressure ,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-High cholesterol among adults aged >=18 years who have been screened in the past 5 years,1,1,Health,Chronic Disease Prevention,Cholesterol Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Visits to doctor for routine checkup within the past year among adults aged >=18 years,-1,1,Health,Chronic Disease Prevention,Routine Doctor Visit,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-"Fecal occult blood test, sigmoidoscopy, or colonoscopy among adults aged 50-75 years",-1,1,Health,Chronic Disease Prevention,Colonoscopy,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Mammography use among women aged 50-74 years,-1,1,Health,Chronic Disease Prevention,Mammogram,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-"Older adult men aged >=65 years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening",-1,1,Health,Chronic Disease Prevention,Older Men Preventive Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-"Older adult women aged >=65 years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening, and Mammogram past 2 years",-1,1,Health,Chronic Disease Prevention,Older Women Preventive Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Visits to dentist or dental clinic among adults aged >=18 years,-1,1,Health,Chronic Disease Prevention,Dental Exams,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-COVID Deaths,1,1,Health,Infectious Diseases,COVID-19 Deaths,Sustainable Development Solutions Intiative,2022,County
-Hepatitis,1,1,Health,Infectious Diseases,Hepatitis (Medicare Recipients diagnosed),Policy Map,2018,County
-HIV,1,1,Health,Infectious Diseases,HIV,CDC,2018,County
-Chlamydia,1,1,Health,Infectious Diseases,Chlamydia,Policy Map,2017,County
-Gonorrhea,1,1,Health,Infectious Diseases,Gonorrhea,Policy Map,2017,County
-Syphillis,1,1,Health,Infectious Diseases,Syphillis,Policy Map,2017,County
-Pre-term Birth,1,1,Health,Child & Maternal Health,Pre-term birth,March of Dimes,2014,State
-Childhood Asthma,1,0,Health,Child & Maternal Health,Childhood Asthma,CDC,2019,State
-Teen Birth,1,0,Health,Child & Maternal Health,Teen births,CDC National Center for Health Statistics,2018,County
-Nursing Homes,-1,0,Health,Child & Maternal Health,Proximity to Nursing Homes,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,
-Hospital Access,-1,1,Health,Access to Care,"Number of Hospital Beds per 10,000 people",CDC: National Environmental Public Health Tracking,2016,County
-MedicallyUnderserved,1,0,Health,Access to Care,Medically Underserved Areas,Policy Map,2020,Census Tract
-Current lack of health insurance among adults aged 18-64 years,1,1,Health,Access to Care,Current Lack of Health Insurance,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based)
-Proximity to Hospitals,1,0,Health,Access to Care,Proximity to hospitals ,,,Already at CST level
-Below Poverty,1,1,Social & Economic,Socioeconomic Stressors,Below Poverty,ASTDR,2018,Census Tract
-Unemployed,1,1,Social & Economic,Socioeconomic Stressors,Unemployed,ASTDR,2018,Census Tract
-Income,1,1,Social & Economic,Socioeconomic Stressors,Low Income,ASTDR,2018,Census Tract
-No High School Diploma,1,1,Social & Economic,Socioeconomic Stressors,No High School Diploma,ASTDR,2018,Census Tract
-Murders Per Capita,1,1,Social & Economic,Socioeconomic Stressors,Crime (Murder Rate Per Capita),The Federal Bureau of Investigation’s Uniform Crime Reporting (UCR) Program ,2020,County
-Religious Organizations,-1,0,Social & Economic,Governance,Religious Organizations,University of Michigan. Institute for Social Research,2003-2017,Census Tract
-Civic and Social Organizations,-1,0,Social & Economic,Governance,Civic and Social Organizations,University of Michigan. Institute for Social Research,2003-2017,Census Tract
-Aged 65 or Older,1,1,Social & Economic,Housing Composition & Disability,Aged 65 or Older,ASTDR,2018,Census Tract
-Aged 17 or Younger,1,1,Social & Economic,Housing Composition & Disability,Aged 17 or Younger,ASTDR,2018,Census Tract
-Civilian with a Disability,1,1,Social & Economic,Housing Composition & Disability,Civilian with a Disability,ASTDR,2018,Census Tract
-Single-Parent Households,1,1,Social & Economic,Housing Composition & Disability,Single-Parent Households,ASTDR,2018,Census Tract
-Minority,1,1,Social & Economic,Minority Status & Language,Minority,ASTDR,2018,Census Tract
-Speaks English Less than Well,1,1,Social & Economic,Minority Status & Language,Speaks English Less than Well,ASTDR,2018,Census Tract
-Unauthorized immigrants,1,1,Social & Economic,Minority Status & Language,Undocumented Population,Migration Policy Institute,2015-18,State
-Hate Crimes,1,1,Social & Economic,Minority Status & Language,Hate Crimes,FBI,2019,State
-Redlining,1,0,Social & Economic,Minority Status & Language,Redlining,University of Richmond's Digital Scholarship Lab,2021,City - incomplete.
-Multi-Unit Structures,1,1,Social & Economic,Housing Type & Transportation,Multi-Unit Structures,ASTDR,2018,Census Tract
-Mobile Homes,1,1,Social & Economic,Housing Type & Transportation,Mobile Homes,ASTDR,2018,Census Tract
-Crowding,1,1,Social & Economic,Housing Type & Transportation,Crowding,ASTDR,2018,Census Tract
-No Vehicle,1,1,Social & Economic,Housing Type & Transportation,No Vehicle,ASTDR,2018,Census Tract
-Group Quarters,1,1,Social & Economic,Housing Type & Transportation,Group Quarters,ASTDR,2018,Census Tract
-Foreclosure Rate,1,1,Social & Economic,Housing Type & Transportation,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract
-Housing Built Past v.s. Now,1,0,Social & Economic,Housing Type & Transportation,Percent of Housing Units Built Between 1940-1969 as of 2015-2019,Policy Map,2015-2019,Census Tract
-Unbanked Households,1,0,Infrastructure,Financial Services,Percent of Unbanked Households,Policy Map,2015-2019,State
-Payday lending,1,0,Infrastructure,Financial Services,Payday lending rank,Center for Responsible Lending,2010,State
-Housing Affordability (renters),1,0,Infrastructure,Financial Services,Housing Affordability (renters),HUD Office of Policy Development and Research,2014-2018,Census Tract
-Housing Affordability (owners),1,0,Infrastructure,Financial Services,Housing Affordability (owners),HUD Office of Policy Development and Research,2014-2018,Census Tract
-Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract
-Indoor plumbing,-1,0,Infrastructure,"Food, Water, and Waste Management",Indoor Plumbing,Census Bureau: ACS,2019,County
-Residential Energy Cost Burden,1,1,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract
-Fossil Fuel Generation,1,1,Infrastructure,Energy,Share of energy from fossil fuels,Policy Map,2019,County
-EV charging ,-1,0,Infrastructure,Energy,EV Charging Stations,U.S. Department of Energy,44644,Point
-Congestion,1,0,Infrastructure,Transportation,Delay (congestion) per capita/census tract,,,Census Tract
-Flooded roads,1,0,Infrastructure,Transportation,Flooding risk to roads,,,Census Tract
-Lane Mile per Capita,-1,0,Infrastructure,Transportation,Lane miles per capita,,,Census Tract
-Road Quality/ Maintenance,1,0,Infrastructure,Transportation,Road Quality/ Maintenance,VMT weighted International Roughness Index (IRI),,Census Tract
-Transit Performance Score,-1,0,Infrastructure,Transportation,Public Transit Performance,,,Census Tract
-Bridge Quality,-1,0,Infrastructure,Transportation,Bridge Quality/Maintenance,,,Census Tract
-Walkability,-1,0,Infrastructure,Transportation,Walkability,,,Census Tract
-Transit Access,-1,0,Infrastructure,Transportation,Transit Access,,,Census Tract
-Bikability,-1,0,Infrastructure,Transportation,Bikability,,,Census Tract
-No Broadband Access,1,0,Infrastructure,Communications,Percent of Household with no internet access,National Environmental Public Health Tracking Network,2013-2017,Census Tract
-Cellular Coverage,1,0,Infrastructure,Communications,Percent of household with smartphone but no other device.,National Environmental Public Health Tracking Network,2013-2017,Census Tract
-Real Estate Taxes,-1,0,Infrastructure,Governance,Tax Base: Median Real Estate Taxes Paid,Policy Map,2015-2019,Census Tract
-Voter Turnout,-1,0,Infrastructure,Governance,Voter Turnout (2020 Presidential),Policy Map,2020,State
-Public Libraries,-1,0,Infrastructure,Governance,Public Library Locations,Policy Map,2020,Point
-HUD public housing,1,0,Infrastructure,Governance,HUD Public Housing,Policy Map,2009-2020,Point
-Total VMT,1,0,Environment,Transportation Sources,Total vehicle miles traveled per capita,,,Already at CST level
-Passenger Lane VMT,1,0,Environment,Transportation Sources,Passenger vehicle miles traveled per capita,,,Already at CST level
-Heavy Duty VMT,1,0,Environment,Transportation Sources,Truck vehicle miles traveled per capita,,,Already at CST level
-Combination VMT,1,0,Infrastructure,Transportation Sources,Heavy Duty Vehicle vehicle miles traveled per capita,,,Census Tract
-Ports,1,0,Environment,Transportation Sources,Proximity to Ports,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point
-Traffic proximity and volume,1,0,Environment,Transportation Sources,Traffic Proximity and Volume,EJ Screen ,2020,Census Tract
-Risk-Screening Environmental Indicators (RSEI) ,1,0,Environment,Exposures & Risks,Risk-Screening Environmental Indicators (RSEI) ,EASYRSEI,2019,Census Tract
-Non-Cancer Air Toxics Health Effects: Respiratory,1,0,Environment,Exposures & Risks,Respiratory,EPA Air Tox Screen,2017,Census Tract
-Non-Cancer Air Toxics Health Effects: Neurological,1,0,Environment,Exposures & Risks,Neurological,EPA Air Tox Screen,2017,Census Tract
-Non-Cancer Air Toxics Health Effects: Liver HI,1,0,Environment,Exposures & Risks,Liver,EPA Air Tox Screen,2017,Census Tract
-Non-Cancer Air Toxics Health Effects: Developmental HI,1,0,Environment,Exposures & Risks,Developmental,EPA Air Tox Screen,2017,Census Tract
-Non-Cancer Air Toxics Health Effects: Reproductive HI,1,0,Environment,Exposures & Risks,Reproductive,EPA Air Tox Screen,2017,Census Tract
-Non-Cancer Air Toxics Health Effects: Kidney HI,1,0,Environment,Exposures & Risks,Kidney,EPA Air Tox Screen,2017,Census Tract
-Non-Cancer Air Toxics Health Effects: Immunological HI,1,0,Environment,Exposures & Risks,Immunological,EPA Air Tox Screen,2017,Census Tract
-Non-Cancer Air Toxics Health Effects: Thyroid HI,1,0,Environment,Exposures & Risks,Thyroid,EPA Air Tox Screen,2017,Census Tract
-Cancer Risk ,1,0,Environment,Exposures & Risks,Total Cancer Risk,EPA Air Tox Screen,2017,Census Tract
-Black Carbon,1,1,Environment,Exposures & Risks,Black Carbon,Randall Martin's group at Washington University,2021," Nationally, 1km x1km grid cells"
-Agricultural pesticides,1,0,Environment,Exposures & Risks,Agricultural pesticides,USGS,2013-17,County
-% pre-1960 housing (lead paint indicator),1,0,Environment,Exposures & Risks,Lead Paint: Housing units built before 1960 (percent),EJ Screen ,2020,Census Tract
-% systems with lead in the drinking water,1,0,Environment,Exposures & Risks,Lead in drinking water violations,NRDC (Emailed to us by Kristi),2018-2020,County
-Superfund Sites,1,0,Environment,Pollution Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level
-Proximity to Brownfields,1,0,Environment,Pollution Sources,Brownfields,EPA Facility Registry Service,2020,Facility Level
-Major direct dischargers to water,1,0,Environment,Pollution Sources,Stream Toxicity Risk-Screening Environmental Indicators (RSEI),EJ Screen ,2020,Census Tract
-Air Markets,1,0,Environment,Pollution Sources,Proximity to facilities participating in air markets,EPA,2020,County
-Proximity to National Priorities List (NPL) sites,1,0,Environment,Pollution Sources,NPL sites,EJ Screen ,2020,Census Tract
-Proximity to Treatment Storage and Disposal (TSDF) facilities,1,0,Environment,Pollution Sources,Hazardous Waste Management Facilities (TSDFs) ,EJ Screen ,2020,Census Tract
-Proximity to Hazardous Waste Generators,1,0,Environment,Pollution Sources,Hazardous Waste Generator/Incinerators,EPA,2022,Point
-Proximity to Facility with Enforcement/Violation,1,0,Environment,Pollution Sources,Facilities with Enforcement/Violation,EPA ECHO,44662,Point 
-Proximity to Landfills,1,0,Environment,Pollution Sources,Landfills,EPA Landfill Methane Outreach Program,As of Sept 2021,Point
-Proximity to TSCA Facilities,1,0,Environment,Pollution Sources,TSCA Facilities ,"Jennifer McPartland, EDF",2015-2019,
-Proximity to Risk Management Plan (RMP) facilities,1,0,Environment,Pollution Sources,Risk Management Plan Facilities,EJ Screen ,2020,Census Tract
-Proximity to petrochem,1,0,Environment,Pollution Sources,Chemical Manufacturers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.
-Proximity to metal recyclers,1,0,Environment,Pollution Sources,Metal Recyclers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.
-Oil and Gas Wells,1,0,Environment,Pollution Sources,Active Oil and Gas Wells,DrillingInfo,2019-21,CST
-PM 2.5 concentration,1,0,Environment,Criteria Air Pollutants,PM 2.5 concentration,"Data from Harvard team, processed by JP@edf",2014-2016,Census Tract
-NO2 concentration,1,0,Environment,Criteria Air Pollutants,NO2 concentration,GWU Data ,2019,
-Ozone concentration,1,0,Environment,Criteria Air Pollutants,Ozone concentration,EPA Fused Air Quality Surface Using Downscaling (FAQSD) Files,2018,Census Tract
-Parks and Greenspace,-1,0,Environment,Land Use,Parks and Greenspace,National Neighborhood Data Archive (NaNDA),2018,Census Tract
-Impermeable Surfaces,1,0,Environment,Land Use,Impermeable Surfaces,CDC: National Environmental Public Health Tracking,2021,Census Tract
-Forest Land Cover,-1,0,Environment,Land Use,Forest Land Cover,CDC: National Environmental Public Health Tracking,2021,Census Tract
-Tribal Lands,1,0,Environment,Land Use,Native American Lands,USGS,2014,"USGS 1:1,000,000-Scale Indian Lands of the United States 201412 Shapefile"
-Temperature-related mortality,1,1,CC: Health,Temperature-related deaths,Temperature-related mortality,Hsiang et al. ,2017,County
-Deaths from Historical Climate Disasters 1980-present,1,0,CC: Health,Disaster-related deaths,Deaths from climate disasters,NOAA  ,2021,State 
-New Incidence of Asthma Associated with PM2.5 Exposure in Children Age 0 to 17,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma incidence,EPA CIRA,2021,Census Tract
-Asthma Related ED Visits Associated with PM2.5 Exposure in Children Age 0 to 18,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma ER visits,EPA CIRA,2021,Census Tract
-Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related deaths,Increased PM2.5 mortality - CVD (ages 65+),EPA CIRA,2021,Census Tract
-Premature Mortality Associated with Ozone Exposure Across All Ages,1,1,CC: Health,Air pollution-related deaths,Increased Ozone mortality (all ages),EPA CIRA,2021,Census Tract
-Flooding risk to properties,1,0,CC: Social & Economic,Costs of Climate Disasters,Flooding risk to properties,First Street Foundation Flood Model,2020,County Level
-Percent Property Tax at Risk from Flooding,1,0,CC: Social & Economic,Costs of Climate Disasters,Property taxes expected to be lost by 2045 due to chronic inundation ,UCS Underwater Report,2020,County
-Cost of Historical Climate Disasters 1980-present,1,0,CC: Social & Economic,Costs of Climate Disasters,Cost of climate disasters,NOAA  ,2021,State
-Change in Residential Energy,1,1,CC: Social & Economic,Transition Risks,Residential Energy Expenditures (% change),Hsiang et al. ,2017,County Level
-Agriculture,1,0,CC: Social & Economic,Transition Risks,Share of Jobs in Agriculture,Policy Map,2015,County
-CO2 emissions,1,0,CC: Social & Economic,Transition Risks,State energy-related carbon dioxide emissions by year,U.S. Energy Information Administration (EIA),1990-2017,State 
-Methane,1,0,CC: Social & Economic,Transition Risks,Methane Emissions,EPA ,2012,National
-Property Crimes,1,1,CC: Social & Economic,Social Stressors,Property Crimes (% change),Hsiang et al. ,2017,County Level
-Violent Crimes,1,1,CC: Social & Economic,Social Stressors,Violent Crimes (% change),Hsiang et al. ,2017,County Level
-Job Productivity,-1,1,CC: Social & Economic,Economic & Productivity Losses,High-Risk Jobs Productivity (% Change),Hsiang et al. ,2017,County Level
-Yields,-1,0,CC: Social & Economic,Economic & Productivity Losses,Yields (% change),Hsiang et al. ,2017,County Level
-Outdoor workers,1,0,CC: Social & Economic,Economic & Productivity Losses,Outdoor workers - work days at risk per year,Licker et al. 2021 (UCS scientists),2021,County Level
-Expected Annual Loss - Agriculture Value - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Agriculture Value,FEMA National Risk Index,2021,Tract Level
-Expected Annual Loss - Building Value - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Building Value,FEMA National Risk Index,2021,Tract Level
-Expected Annual Loss - Population Equivalence - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Population Equivalence ,FEMA National Risk Index,2022,Tract Level
-Cold Wave,1,1,CC: Extreme Events,Temperature,Cold Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-Heat Wave,1,1,CC: Extreme Events,Temperature,Heat Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-TX35: Days with maximum temperature (TX) above 35 C (units = days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature (TX) above 35 C,IPCC AR6,2021,Tract Level processed from rasters
-TX40: Days with TX above 40C (units= days),1,1,CC: Extreme Events,Temperature,Days with TX above 40C,IPCC AR6,2021,Tract Level processed from rasters
-FD: Frost Days (units = days),,1,CC: Extreme Events,Temperature,Frost Days,IPCC AR6,2021,Tract Level processed from rasters
-TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,Maximum of maximum temperatures,IPCC AR6,2021,Tract Level processed from rasters
-T: Mean temperature (unit = degree C),1,1,CC: Extreme Events,Temperature,Mean temperature,IPCC AR6,2021,Tract Level processed from rasters
-Urban Heat Island,1,0,CC: Extreme Events,Temperature,Urban Heat Island Extreme Heat Days,,2018,CST
-Coastal Flooding,1,0,CC: Extreme Events,Flooding,Coastal Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-Riverine Flooding,1,0,CC: Extreme Events,Flooding,Riverine Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-SLR: Sea Level Rise  (unit = meters),1,0,CC: Extreme Events,Flooding,Sea Level Rise,IPCC AR6,2021,Tract Level processed from rasters
-Hurricanes,1,0,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-Tornadoes,1,1,CC: Extreme Events,Storms,Tornado - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-Winter Weather,1,1,CC: Extreme Events,Storms,Winter Weather - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-Drought,1,1,CC: Extreme Events,Droughts,Drought - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-CDD: Consecutive Dry Days (unit = days),1,1,CC: Extreme Events,Droughts,Consecutive Dry Days,IPCC AR6,2021,Tract Level processed from rasters
-Wildfires,1,1,CC: Extreme Events,Wildfires,Wildfire - Annualized Frequency,FEMA National Risk Index,2022,Tract Level
-PM2.5: Surface PM2.5 (unit = ug/m^3),1,1,CC: Extreme Events,Wildfires,Surface PM2.5,IPCC AR6,2021,Tract Level processed from rasters
-Snowfall: Snowfall (mm/day),,1,CC: Extreme Events,Precipitation,Snowfall,IPCC AR6,2021,Tract Level processed from rasters
-SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),,1,CC: Extreme Events,Precipitation,Standardized Precip Index,IPCC AR6,2021,Tract Level processed from rasters
-PR: Total Precipitation (mm/day),,1,CC: Extreme Events,Precipitation,Total Precipitation,IPCC AR6,2021,Tract Level processed from rasters
+Indicator Name,Adverse Direction,Replace NA with median,Baseline Vulnerability,Subcategory,Parameters,Agency or data source,Year of data release,Geographic Level,GeographicScale
+Life Expectancy,-1,1,Health,Overall Physical Health,Life Expectancy,Policy Map,2010-2015,Census Tract,Tract
+Physical health not good for >=14 days among adults aged >=18 years,1,1,Health,Overall Physical Health,Self-Reported Physical Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Mental health not good for >=14 days among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Self-Reported Mental Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Opioid Overdose,1,1,Health,Mental Health & Deaths of Despair,"Opioid Overdose Per 100,000 People",County Health Rankings & Roadmaps,2021,Census Tract,County
+Fatal Drug Overdose,1,1,Health,Mental Health & Deaths of Despair,Fatal Drug Overdose,CDC,2019,State ,State
+Binge drinking among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Alcohol Abuse,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Suicide,1,1,Health,Mental Health & Deaths of Despair,Suicide Rates,CDC  ,2019,State ,State
+Current asthma among adults aged >=18 years,1,1,Health,Chronic Disease,Current Asthma Over Age 18,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Stroke among adults aged >=18 years,1,1,Health,Chronic Disease,Stroke,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Chronic obstructive pulmonary disease among adults aged >=18 years,1,1,Health,Chronic Disease,COPD,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Coronary heart disease among adults aged >=18 years,1,1,Health,Chronic Disease,CHD,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Cancer (excluding skin cancer) among adults aged >=18 years,1,1,Health,Chronic Disease,Cancer,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+High blood pressure among adults aged >=18 years,1,1,Health,Chronic Disease Prevention,High Blood Pressure ,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+High cholesterol among adults aged >=18 years who have been screened in the past 5 years,1,1,Health,Chronic Disease Prevention,Cholesterol Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Visits to doctor for routine checkup within the past year among adults aged >=18 years,-1,1,Health,Chronic Disease Prevention,Routine Doctor Visit,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+"Fecal occult blood test, sigmoidoscopy, or colonoscopy among adults aged 50-75 years",-1,1,Health,Chronic Disease Prevention,Colonoscopy,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Mammography use among women aged 50-74 years,-1,1,Health,Chronic Disease Prevention,Mammogram,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+"Older adult men aged >=65 years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening",-1,1,Health,Chronic Disease Prevention,Older Men Preventive Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+"Older adult women aged >=65 years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening, and Mammogram past 2 years",-1,1,Health,Chronic Disease Prevention,Older Women Preventive Screening,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Visits to dentist or dental clinic among adults aged >=18 years,-1,1,Health,Chronic Disease Prevention,Dental Exams,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+COVID Deaths,1,1,Health,Infectious Diseases,COVID-19 Deaths,Sustainable Development Solutions Intiative,2022,County,County
+Hepatitis,1,1,Health,Infectious Diseases,Hepatitis (Medicare Recipients diagnosed),Policy Map,2018,County,County
+HIV,1,1,Health,Infectious Diseases,HIV,CDC,2018,County,County
+Chlamydia,1,1,Health,Infectious Diseases,Chlamydia,Policy Map,2017,County,County
+Gonorrhea,1,1,Health,Infectious Diseases,Gonorrhea,Policy Map,2017,County,County
+Syphillis,1,1,Health,Infectious Diseases,Syphillis,Policy Map,2017,County,County
+Pre-term Birth,1,1,Health,Child & Maternal Health,Pre-term birth,March of Dimes,2014,State,State
+Childhood Asthma,1,0,Health,Child & Maternal Health,Childhood Asthma,CDC,2019,State,State
+Teen Birth,1,0,Health,Child & Maternal Health,Teen births,CDC National Center for Health Statistics,2018,County,County
+Nursing Homes,-1,0,Health,Child & Maternal Health,Proximity to Nursing Homes,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,,Tract
+Hospital Access,-1,1,Health,Access to Care,"Number of Hospital Beds per 10,000 people",CDC: National Environmental Public Health Tracking,2016,County,County
+MedicallyUnderserved,1,0,Health,Access to Care,Medically Underserved Areas,Policy Map,2020,Census Tract,Tract
+Current lack of health insurance among adults aged 18-64 years,1,1,Health,Access to Care,Current Lack of Health Insurance,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
+Proximity to Hospitals,1,0,Health,Access to Care,Proximity to hospitals ,,,Already at CST level,Tract
+Below Poverty,1,1,Social & Economic,Socioeconomic Stressors,Below Poverty,ASTDR,2018,Census Tract,Tract
+Unemployed,1,1,Social & Economic,Socioeconomic Stressors,Unemployed,ASTDR,2018,Census Tract,Tract
+Income,1,1,Social & Economic,Socioeconomic Stressors,Low Income,ASTDR,2018,Census Tract,Tract
+No High School Diploma,1,1,Social & Economic,Socioeconomic Stressors,No High School Diploma,ASTDR,2018,Census Tract,Tract
+Murders Per Capita,1,1,Social & Economic,Socioeconomic Stressors,Crime (Murder Rate Per Capita),The Federal Bureau of Investigation’s Uniform Crime Reporting (UCR) Program ,2020,County,County
+Religious Organizations,-1,0,Social & Economic,Governance,Religious Organizations,University of Michigan. Institute for Social Research,2003-2017,Census Tract,Tract
+Civic and Social Organizations,-1,0,Social & Economic,Governance,Civic and Social Organizations,University of Michigan. Institute for Social Research,2003-2017,Census Tract,Tract
+Aged 65 or Older,1,1,Social & Economic,Housing Composition & Disability,Aged 65 or Older,ASTDR,2018,Census Tract,Tract
+Aged 17 or Younger,1,1,Social & Economic,Housing Composition & Disability,Aged 17 or Younger,ASTDR,2018,Census Tract,Tract
+Civilian with a Disability,1,1,Social & Economic,Housing Composition & Disability,Civilian with a Disability,ASTDR,2018,Census Tract,Tract
+Single-Parent Households,1,1,Social & Economic,Housing Composition & Disability,Single-Parent Households,ASTDR,2018,Census Tract,Tract
+Minority,1,1,Social & Economic,Minority Status & Language,Minority,ASTDR,2018,Census Tract,Tract
+Speaks English Less than Well,1,1,Social & Economic,Minority Status & Language,Speaks English Less than Well,ASTDR,2018,Census Tract,Tract
+Unauthorized immigrants,1,1,Social & Economic,Minority Status & Language,Undocumented Population,Migration Policy Institute,2015-18,State,State
+Hate Crimes,1,1,Social & Economic,Minority Status & Language,Hate Crimes,FBI,2019,State,State
+Redlining,1,0,Social & Economic,Minority Status & Language,Redlining,University of Richmond's Digital Scholarship Lab,2021,City - incomplete.,Tract
+Multi-Unit Structures,1,1,Social & Economic,Housing Type & Transportation,Multi-Unit Structures,ASTDR,2018,Census Tract,Tract
+Mobile Homes,1,1,Social & Economic,Housing Type & Transportation,Mobile Homes,ASTDR,2018,Census Tract,Tract
+Crowding,1,1,Social & Economic,Housing Type & Transportation,Crowding,ASTDR,2018,Census Tract,Tract
+No Vehicle,1,1,Social & Economic,Housing Type & Transportation,No Vehicle,ASTDR,2018,Census Tract,Tract
+Group Quarters,1,1,Social & Economic,Housing Type & Transportation,Group Quarters,ASTDR,2018,Census Tract,Tract
+Foreclosure Rate,1,1,Social & Economic,Housing Type & Transportation,Housing Foreclosure Risk,HUD Office of Policy Development and Research,2008,Census Tract,Tract
+Housing Built Past v.s. Now,1,0,Social & Economic,Housing Type & Transportation,Percent of Housing Units Built Between 1940-1969 as of 2015-2019,Policy Map,2015-2019,Census Tract,Tract
+Unbanked Households,1,0,Infrastructure,Financial Services,Percent of Unbanked Households,Policy Map,2015-2019,State,State
+Payday lending,1,0,Infrastructure,Financial Services,Payday lending rank,Center for Responsible Lending,2010,State,State
+Housing Affordability (renters),1,0,Infrastructure,Financial Services,Housing Affordability (renters),HUD Office of Policy Development and Research,2014-2018,Census Tract,Tract
+Housing Affordability (owners),1,0,Infrastructure,Financial Services,Housing Affordability (owners),HUD Office of Policy Development and Research,2014-2018,Census Tract,Tract
+Retail Food,-1,0,Infrastructure,"Food, Water, and Waste Management",Modified Retail Food Environment Index,MRFEI,2011,Census Tract,Tract
+Indoor plumbing,-1,0,Infrastructure,"Food, Water, and Waste Management",Indoor Plumbing,Census Bureau: ACS,2019,County,County
+Residential Energy Cost Burden,1,1,Infrastructure,Energy,Residential Energy Cost Burden,Office of Energy Efficiency & Renewable Energy,2018,Census Tract,Tract
+Fossil Fuel Generation,1,1,Infrastructure,Energy,Share of energy from fossil fuels,Policy Map,2019,County,County
+EV charging ,-1,0,Infrastructure,Energy,EV Charging Stations,U.S. Department of Energy,44644,Point,Tract
+Congestion,1,0,Infrastructure,Transportation,Delay (congestion) per capita/census tract,,,Census Tract,Tract
+Flooded roads,1,0,Infrastructure,Transportation,Flooding risk to roads,,,Census Tract,Tract
+Lane Mile per Capita,-1,0,Infrastructure,Transportation,Lane miles per capita,,,Census Tract,Tract
+Road Quality/ Maintenance,1,0,Infrastructure,Transportation,Road Quality/ Maintenance,VMT weighted International Roughness Index (IRI),,Census Tract,Tract
+Transit Performance Score,-1,0,Infrastructure,Transportation,Public Transit Performance,,,Census Tract,Tract
+Bridge Quality,-1,0,Infrastructure,Transportation,Bridge Quality/Maintenance,,,Census Tract,Tract
+Walkability,-1,0,Infrastructure,Transportation,Walkability,,,Census Tract,Tract
+Transit Access,-1,0,Infrastructure,Transportation,Transit Access,,,Census Tract,Tract
+Bikability,-1,0,Infrastructure,Transportation,Bikability,,,Census Tract,Tract
+No Broadband Access,1,0,Infrastructure,Communications,Percent of Household with no internet access,National Environmental Public Health Tracking Network,2013-2017,Census Tract,Tract
+Cellular Coverage,1,0,Infrastructure,Communications,Percent of household with smartphone but no other device.,National Environmental Public Health Tracking Network,2013-2017,Census Tract,Tract
+Real Estate Taxes,-1,0,Infrastructure,Governance,Tax Base: Median Real Estate Taxes Paid,Policy Map,2015-2019,Census Tract,Tract
+Voter Turnout,-1,0,Infrastructure,Governance,Voter Turnout (2020 Presidential),Policy Map,2020,State,State
+Public Libraries,-1,0,Infrastructure,Governance,Public Library Locations,Policy Map,2020,Point,Tract
+HUD public housing,1,0,Infrastructure,Governance,HUD Public Housing,Policy Map,2009-2020,Point,County
+Total VMT,1,0,Environment,Transportation Sources,Total vehicle miles traveled per capita,,,Already at CST level,Tract
+Passenger Lane VMT,1,0,Environment,Transportation Sources,Passenger vehicle miles traveled per capita,,,Already at CST level,Tract
+Heavy Duty VMT,1,0,Environment,Transportation Sources,Truck vehicle miles traveled per capita,,,Already at CST level,Tract
+Combination VMT,1,0,Infrastructure,Transportation Sources,Heavy Duty Vehicle vehicle miles traveled per capita,,,Census Tract,Tract
+Ports,1,0,Environment,Transportation Sources,Proximity to Ports,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point,Tract
+Traffic proximity and volume,1,0,Environment,Transportation Sources,Traffic Proximity and Volume,EJ Screen ,2020,Census Tract,Tract
+Risk-Screening Environmental Indicators (RSEI) ,1,0,Environment,Exposures & Risks,Risk-Screening Environmental Indicators (RSEI) ,EASYRSEI,2019,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Respiratory,1,0,Environment,Exposures & Risks,Respiratory,EPA Air Tox Screen,2017,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Neurological,1,0,Environment,Exposures & Risks,Neurological,EPA Air Tox Screen,2017,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Liver HI,1,0,Environment,Exposures & Risks,Liver,EPA Air Tox Screen,2017,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Developmental HI,1,0,Environment,Exposures & Risks,Developmental,EPA Air Tox Screen,2017,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Reproductive HI,1,0,Environment,Exposures & Risks,Reproductive,EPA Air Tox Screen,2017,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Kidney HI,1,0,Environment,Exposures & Risks,Kidney,EPA Air Tox Screen,2017,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Immunological HI,1,0,Environment,Exposures & Risks,Immunological,EPA Air Tox Screen,2017,Census Tract,Tract
+Non-Cancer Air Toxics Health Effects: Thyroid HI,1,0,Environment,Exposures & Risks,Thyroid,EPA Air Tox Screen,2017,Census Tract,Tract
+Cancer Risk ,1,0,Environment,Exposures & Risks,Total Cancer Risk,EPA Air Tox Screen,2017,Census Tract,Tract
+Black Carbon,1,1,Environment,Exposures & Risks,Black Carbon,Randall Martin's group at Washington University,2021," Nationally, 1km x1km grid cells",County
+Agricultural pesticides,1,0,Environment,Exposures & Risks,Agricultural pesticides,USGS,2013-17,County,County
+% pre-1960 housing (lead paint indicator),1,0,Environment,Exposures & Risks,Lead Paint: Housing units built before 1960 (percent),EJ Screen ,2020,Census Tract,Tract
+% systems with lead in the drinking water,1,0,Environment,Exposures & Risks,Lead in drinking water violations,NRDC (Emailed to us by Kristi),2018-2020,County,County
+Superfund Sites,1,0,Environment,Pollution Sources,Superfund Sites,UNC Chapel Hill,1981-2021,Facility Level,Tract
+Proximity to Brownfields,1,0,Environment,Pollution Sources,Brownfields,EPA Facility Registry Service,2020,Facility Level,Tract
+Major direct dischargers to water,1,0,Environment,Pollution Sources,Stream Toxicity Risk-Screening Environmental Indicators (RSEI),EJ Screen ,2020,Census Tract,Tract
+Air Markets,1,0,Environment,Pollution Sources,Proximity to facilities participating in air markets,EPA,2020,County,Tract
+Proximity to National Priorities List (NPL) sites,1,0,Environment,Pollution Sources,NPL sites,EJ Screen ,2020,Census Tract,Tract
+Proximity to Treatment Storage and Disposal (TSDF) facilities,1,0,Environment,Pollution Sources,Hazardous Waste Management Facilities (TSDFs) ,EJ Screen ,2020,Census Tract,Tract
+Proximity to Hazardous Waste Generators,1,0,Environment,Pollution Sources,Hazardous Waste Generator/Incinerators,EPA,2022,Point,Tract
+Proximity to Facility with Enforcement/Violation,1,0,Environment,Pollution Sources,Facilities with Enforcement/Violation,EPA ECHO,44662,Point ,Tract
+Proximity to Landfills,1,0,Environment,Pollution Sources,Landfills,EPA Landfill Methane Outreach Program,As of Sept 2021,Point,Tract
+Proximity to TSCA Facilities,1,0,Environment,Pollution Sources,TSCA Facilities ,"Jennifer McPartland, EDF",2015-2019,,Tract
+Proximity to Risk Management Plan (RMP) facilities,1,0,Environment,Pollution Sources,Risk Management Plan Facilities,EJ Screen ,2020,Census Tract,Tract
+Proximity to petrochem,1,0,Environment,Pollution Sources,Chemical Manufacturers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.,Tract
+Proximity to metal recyclers,1,0,Environment,Pollution Sources,Metal Recyclers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.,Tract
+Oil and Gas Wells,1,0,Environment,Pollution Sources,Active Oil and Gas Wells,DrillingInfo,2019-21,CST,Tract
+PM 2.5 concentration,1,0,Environment,Criteria Air Pollutants,PM 2.5 concentration,"Data from Harvard team, processed by JP@edf",2014-2016,Census Tract,Tract
+NO2 concentration,1,0,Environment,Criteria Air Pollutants,NO2 concentration,GWU Data ,2019,,Tract
+Ozone concentration,1,0,Environment,Criteria Air Pollutants,Ozone concentration,EPA Fused Air Quality Surface Using Downscaling (FAQSD) Files,2018,Census Tract,Tract
+Parks and Greenspace,-1,0,Environment,Land Use,Parks and Greenspace,National Neighborhood Data Archive (NaNDA),2018,Census Tract,Tract
+Impermeable Surfaces,1,0,Environment,Land Use,Impermeable Surfaces,CDC: National Environmental Public Health Tracking,2021,Census Tract,Tract
+Forest Land Cover,-1,0,Environment,Land Use,Forest Land Cover,CDC: National Environmental Public Health Tracking,2021,Census Tract,Tract
+Tribal Lands,1,0,Environment,Land Use,Native American Lands,USGS,2014,"USGS 1:1,000,000-Scale Indian Lands of the United States 201412 Shapefile",Tract
+Temperature-related mortality,1,1,CC: Health,Temperature-related deaths,Temperature-related mortality,Hsiang et al. ,2017,County,County
+Deaths from Historical Climate Disasters 1980-present,1,0,CC: Health,Disaster-related deaths,Deaths from climate disasters,NOAA  ,2021,State ,State
+New Incidence of Asthma Associated with PM2.5 Exposure in Children Age 0 to 17,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma incidence,EPA CIRA,2021,Census Tract,Tract
+Asthma Related ED Visits Associated with PM2.5 Exposure in Children Age 0 to 18,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma ER visits,EPA CIRA,2021,Census Tract,Tract
+Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related deaths,Increased PM2.5 mortality - CVD (ages 65+),EPA CIRA,2021,Census Tract,Tract
+Premature Mortality Associated with Ozone Exposure Across All Ages,1,1,CC: Health,Air pollution-related deaths,Increased Ozone mortality (all ages),EPA CIRA,2021,Census Tract,Tract
+Flooding risk to properties,1,0,CC: Social & Economic,Costs of Climate Disasters,Flooding risk to properties,First Street Foundation Flood Model,2020,County Level,County
+Percent Property Tax at Risk from Flooding,1,0,CC: Social & Economic,Costs of Climate Disasters,Property taxes expected to be lost by 2045 due to chronic inundation ,UCS Underwater Report,2020,County,County
+Cost of Historical Climate Disasters 1980-present,1,0,CC: Social & Economic,Costs of Climate Disasters,Cost of climate disasters,NOAA  ,2021,State,State
+Change in Residential Energy,1,1,CC: Social & Economic,Transition Risks,Residential Energy Expenditures (% change),Hsiang et al. ,2017,County Level,County
+Agriculture,1,0,CC: Social & Economic,Transition Risks,Share of Jobs in Agriculture,Policy Map,2015,County,County
+CO2 emissions,1,0,CC: Social & Economic,Transition Risks,State energy-related carbon dioxide emissions by year,U.S. Energy Information Administration (EIA),1990-2017,State ,State
+Methane,1,0,CC: Social & Economic,Transition Risks,Methane Emissions,EPA ,2012,National,Tract
+Property Crimes,1,1,CC: Social & Economic,Social Stressors,Property Crimes (% change),Hsiang et al. ,2017,County Level,County
+Violent Crimes,1,1,CC: Social & Economic,Social Stressors,Violent Crimes (% change),Hsiang et al. ,2017,County Level,County
+Job Productivity,-1,1,CC: Social & Economic,Economic & Productivity Losses,High-Risk Jobs Productivity (% Change),Hsiang et al. ,2017,County Level,County
+Yields,-1,0,CC: Social & Economic,Economic & Productivity Losses,Yields (% change),Hsiang et al. ,2017,County Level,County
+Outdoor workers,1,0,CC: Social & Economic,Economic & Productivity Losses,Outdoor workers - work days at risk per year,Licker et al. 2021 (UCS scientists),2021,County Level,County
+Expected Annual Loss - Agriculture Value - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Agriculture Value,FEMA National Risk Index,2021,Tract Level,Tract
+Expected Annual Loss - Building Value - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Building Value,FEMA National Risk Index,2021,Tract Level,Tract
+Expected Annual Loss - Population Equivalence - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Population Equivalence ,FEMA National Risk Index,2022,Tract Level,Tract
+Cold Wave,1,1,CC: Extreme Events,Temperature,Cold Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+Heat Wave,1,1,CC: Extreme Events,Temperature,Heat Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+TX35: Days with maximum temperature (TX) above 35 C (units = days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature (TX) above 35 C,IPCC AR6,2021,Tract Level processed from rasters,Tract
+TX40: Days with TX above 40C (units= days),1,1,CC: Extreme Events,Temperature,Days with TX above 40C,IPCC AR6,2021,Tract Level processed from rasters,Tract
+FD: Frost Days (units = days),,1,CC: Extreme Events,Temperature,Frost Days,IPCC AR6,2021,Tract Level processed from rasters,Tract
+TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,Maximum of maximum temperatures,IPCC AR6,2021,Tract Level processed from rasters,Tract
+T: Mean temperature (unit = degree C),1,1,CC: Extreme Events,Temperature,Mean temperature,IPCC AR6,2021,Tract Level processed from rasters,Tract
+Urban Heat Island,1,0,CC: Extreme Events,Temperature,Urban Heat Island Extreme Heat Days,,2018,CST,Tract
+Coastal Flooding,1,0,CC: Extreme Events,Flooding,Coastal Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+Riverine Flooding,1,0,CC: Extreme Events,Flooding,Riverine Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+SLR: Sea Level Rise  (unit = meters),1,0,CC: Extreme Events,Flooding,Sea Level Rise,IPCC AR6,2021,Tract Level processed from rasters,Tract
+Hurricanes,1,0,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+Tornadoes,1,1,CC: Extreme Events,Storms,Tornado - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+Winter Weather,1,1,CC: Extreme Events,Storms,Winter Weather - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+Drought,1,1,CC: Extreme Events,Droughts,Drought - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+CDD: Consecutive Dry Days (unit = days),1,1,CC: Extreme Events,Droughts,Consecutive Dry Days,IPCC AR6,2021,Tract Level processed from rasters,Tract
+Wildfires,1,1,CC: Extreme Events,Wildfires,Wildfire - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
+PM2.5: Surface PM2.5 (unit = ug/m^3),1,1,CC: Extreme Events,Wildfires,Surface PM2.5,IPCC AR6,2021,Tract Level processed from rasters,Tract
+Snowfall: Snowfall (mm/day),,1,CC: Extreme Events,Precipitation,Snowfall,IPCC AR6,2021,Tract Level processed from rasters,Tract
+SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),,1,CC: Extreme Events,Precipitation,Standardized Precip Index,IPCC AR6,2021,Tract Level processed from rasters,Tract
+PR: Total Precipitation (mm/day),,1,CC: Extreme Events,Precipitation,Total Precipitation,IPCC AR6,2021,Tract Level processed from rasters,Tract
