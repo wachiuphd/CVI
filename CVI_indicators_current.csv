@@ -144,22 +144,22 @@ Expected Annual Loss - Building Value - Composite,1,0,CC: Social & Economic,Econ
 Expected Annual Loss - Population Equivalence - Composite,1,0,CC: Social & Economic,Economic & Productivity Losses,Expected Annual Loss - Population Equivalence ,FEMA National Risk Index,2022,Tract Level,Tract
 Cold Wave,1,1,CC: Extreme Events,Temperature,Cold Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
 Heat Wave,1,1,CC: Extreme Events,Temperature,Heat Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
-TX35: Days with maximum temperature (TX) above 35 C (units = days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature (TX) above 35 C,IPCC AR6,2021,Tract Level processed from rasters,Tract
-TX40: Days with TX above 40C (units= days),1,1,CC: Extreme Events,Temperature,Days with TX above 40C,IPCC AR6,2021,Tract Level processed from rasters,Tract
-FD: Frost Days (units = days),,1,CC: Extreme Events,Temperature,Frost Days,IPCC AR6,2021,Tract Level processed from rasters,Tract
-TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,Maximum of maximum temperatures,IPCC AR6,2021,Tract Level processed from rasters,Tract
-T: Mean temperature (unit = degree C),1,1,CC: Extreme Events,Temperature,Mean temperature,IPCC AR6,2021,Tract Level processed from rasters,Tract
+TX35: Days with maximum temperature (TX) above 35 C (units = days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature (TX) above 35 C,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+TX40: Days with TX above 40C (units= days),1,1,CC: Extreme Events,Temperature,Days with TX above 40C,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+FD: Frost Days (units = days),,1,CC: Extreme Events,Temperature,Frost Days,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,Maximum of maximum temperatures,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+T: Mean temperature (unit = degree C),1,1,CC: Extreme Events,Temperature,Mean temperature,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
 Urban Heat Island,1,0,CC: Extreme Events,Temperature,Urban Heat Island Extreme Heat Days,,2018,CST,Tract
 Coastal Flooding,1,0,CC: Extreme Events,Flooding,Coastal Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
 Riverine Flooding,1,0,CC: Extreme Events,Flooding,Riverine Flooding - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
-SLR: Sea Level Rise  (unit = meters),1,0,CC: Extreme Events,Flooding,Sea Level Rise,IPCC AR6,2021,Tract Level processed from rasters,Tract
+SLR: Sea Level Rise  (unit = meters),1,0,CC: Extreme Events,Flooding,Sea Level Rise,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
 Hurricanes,1,0,CC: Extreme Events,Storms,Hurricane - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
 Tornadoes,1,1,CC: Extreme Events,Storms,Tornado - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
 Winter Weather,1,1,CC: Extreme Events,Storms,Winter Weather - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
 Drought,1,1,CC: Extreme Events,Droughts,Drought - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
-CDD: Consecutive Dry Days (unit = days),1,1,CC: Extreme Events,Droughts,Consecutive Dry Days,IPCC AR6,2021,Tract Level processed from rasters,Tract
+CDD: Consecutive Dry Days (unit = days),1,1,CC: Extreme Events,Droughts,Consecutive Dry Days,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
 Wildfires,1,1,CC: Extreme Events,Wildfires,Wildfire - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
-PM2.5: Surface PM2.5 (unit = ug/m^3),1,1,CC: Extreme Events,Wildfires,Surface PM2.5,IPCC AR6,2021,Tract Level processed from rasters,Tract
-Snowfall: Snowfall (mm/day),,1,CC: Extreme Events,Precipitation,Snowfall,IPCC AR6,2021,Tract Level processed from rasters,Tract
-SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),,1,CC: Extreme Events,Precipitation,Standardized Precip Index,IPCC AR6,2021,Tract Level processed from rasters,Tract
-PR: Total Precipitation (mm/day),,1,CC: Extreme Events,Precipitation,Total Precipitation,IPCC AR6,2021,Tract Level processed from rasters,Tract
+PM2.5: Surface PM2.5 (unit = ug/m^3),1,1,CC: Extreme Events,Wildfires,Surface PM2.5,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+Snowfall: Snowfall (mm/day),,1,CC: Extreme Events,Precipitation,Snowfall,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+SPI: Standardized Precip Index (compares cumulated precipitation for 6 months with the long term precipitation distribution for the same location and cumulation period. Units: 1),,1,CC: Extreme Events,Precipitation,Standardized Precip Index,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+PR: Total Precipitation (mm/day),,1,CC: Extreme Events,Precipitation,Total Precipitation,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)

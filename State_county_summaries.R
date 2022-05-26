@@ -6,6 +6,7 @@ library(choroplethr)
 library(choroplethrMaps)
 library(tidyr)
 library(ggpubr)
+
 data(state.regions)
 state.regions$`Census Region` <- "South"
 state.regions$`Census Region`[state.regions$abb %in% 
@@ -173,8 +174,50 @@ scoresboxplt<-
 print(scoresboxplt)
 ggsave("StateSummaryBoxplots.pdf",scoresboxplt,height=3,width=6.5,scale=2)
 
-##### Heterogeneity - state and county level
+#####
 
+indicators.df <- fread("CVI_indicators_current.csv")
+indicators.df$`Baseline Vulnerability` <- 
+  factor(indicators.df$`Baseline Vulnerability`,
+         levels=unique(indicators.df$`Baseline Vulnerability`))
+
+indicators.geo <- 
+  rbind(
+    as.matrix(t(table(indicators.df$GeographicScale))),
+    as.matrix(ftable(indicators.df$`Baseline Vulnerability`,
+                     indicators.df$GeographicScale)))
+rownames(indicators.geo)<- c(
+  "CVI Score",
+  "Baseline Vulnerability: Health",
+  "Baseline Vulnerability: Social and Economic",
+  "Baseline Vulnerability: Infrastructure",
+  "Baseline Vulnerability: Enviroment",
+  "Climate Change Risk: Health",
+  "Climate Change Risk: Social and Economic",
+  "Climate Change Risk: Extreme Events"
+)
+indicators.geo <- as.data.frame(indicators.geo)
+indicators.geo$label <- gsub(": ",":\n",rownames(indicators.geo))
+indicators.geo$label <- factor(indicators.geo$label,levels=
+                                 rev(indicators.geo$label))
+indicators.geo.df <- pivot_longer(indicators.geo,1:4)
+indicators.geo.df$name <- factor(indicators.geo.df$name,
+                                 levels=rev(c("State","County","Tract","Tract (raster)")))
+
+pgeo <- ggplot(indicators.geo.df)+
+  geom_col(aes(x=label,y=value,fill=name),position="fill")+
+  scale_y_continuous(label = scales::percent)+
+  scale_fill_viridis_d(begin=0,end=0.9,option="C")+
+  labs(x="",y="Geographic Scale (% of indicators)")+theme_bw()+
+  coord_flip()+
+  theme(legend.title = element_blank(),
+        axis.text.y=element_text(hjust=0))+
+  guides(fill = guide_legend(reverse = TRUE))
+print(pgeo)
+ggsave("GeoScale.pdf",pgeo,height=3,width=2.33,scale=2)
+
+
+##### Heterogeneity - state and county level
 scores.df.state.SSres <- aggregate(.~STATE,data=scores.df[,2:10],
                                  FUN=function(x) {var(x)*length(x)})
 state.r2 <- 1 - (base::apply(scores.df.state.SSres[,-1],2,sum))/
@@ -197,14 +240,15 @@ r2.df$Category<-factor(r2.df$Category,levels=
 pr2<-ggplot(r2.df)+
   geom_col(aes(x=Category,y=R2,
                group=Variable,fill=Variable),position="dodge")+
-  scale_fill_viridis_d(begin=0.2,end=0.8,option="magma")+
-  labs(x="",y=bquote('Proportion of census tract variance due to state or county '(R^2)))+
+  scale_y_continuous(label = scales::percent)+
+  scale_fill_viridis_d(begin=0.6,end=0.9,option="C")+
+  labs(x="",y=bquote('% census tract variance due to state or county '(R^2)))+
   coord_flip()+theme_bw()+theme(legend.title = element_blank(),
                                 axis.text.y=element_text(hjust=0))+
   guides(fill = guide_legend(reverse = TRUE))
 
 print(pr2)
-ggsave("R2.pdf",pr2,height=3,width=3.5,scale=2)
+ggsave("R2.pdf",pr2,height=3,width=2.33,scale=2)
 
 ###### Bar graph of top categories
 
@@ -234,18 +278,18 @@ scores.df.cat$Sample <- factor(scores.df.cat$Sample,
 pcat <- ggplot(scores.df.cat)+
   geom_col(aes(x=`Dominant Category`,y=`Fraction of census tracts`,
                fill=Sample,group=Sample),position="dodge")+
+  scale_y_continuous(label = scales::percent)+
   scale_fill_viridis_d(begin=0.2,end=0.8,option="inferno")+xlab("")+
-  labs(subtitle = "Dominant Category")+
+  labs(subtitle = "Dominant Category",y="% of census tracts")+
   coord_flip()+theme_bw()+theme(legend.title = element_blank(),
-                                axis.text.y=element_text(hjust=0),
-                                plot.subtitle =  element_text(hjust=-0.57))+
+                                axis.text.y=element_text(hjust=0))+
   guides(fill = guide_legend(reverse = TRUE))
 print(pcat)
-ggsave("Top.Categories.pdf",pcat,height=3,width=3.5,scale=2)
+ggsave("Top.Categories.pdf",pcat,height=3,width=2.33,scale=2)
 ###
 
 pfig <- ggarrange(scoresboxplt,
-                  ggarrange(pr2,pcat,labels=c("b","c")),
+                  ggarrange(pgeo,pr2,pcat,labels=c("b","c","d"),nrow=1),
                   labels=c("a",""),ncol=1,heights=c(2,1))
 ggsave("State_County_summary_fig.pdf",pfig,height=4.5,width=6.5,scale=2)
 

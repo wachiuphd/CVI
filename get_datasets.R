@@ -162,6 +162,9 @@ for (j in 1:nrow(cvi.master)) {
 options(width=80)
 cvi.master$Verified <- indicator.verified
 cvi.master$GeographicScale <- indicator.geo
+rasterindx<-grepl("raster",cvi.master$`Geographic Level`)
+cvi.master$GeographicScale[rasterindx] <- 
+  paste(cvi.master$GeographicScale[rasterindx],"(raster)")
 fwrite(cvi.master,"CVI_master.csv")
 
 icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level","GeographicScale")
