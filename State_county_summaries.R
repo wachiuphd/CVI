@@ -26,8 +26,16 @@ cvi.df<-fread("CVI_data_current.csv",
               keepLeadingZeros = TRUE,integer64 = "numeric")
 cvi.toxpi.df <- fread(file.path("CVI-pct","CVI-pct-comb.csv"),
                       integer64 = "double",keepLeadingZeros = TRUE)
+cvi.baseline.toxpi.df <- fread(file.path("CVI-pct","CVI-pct-comb-baseline.csv"),
+                      integer64 = "double",keepLeadingZeros = TRUE)
+names(cvi.baseline.toxpi.df)[5] <- "ToxPi Score Baseline"
+cvi.climate.toxpi.df <- fread(file.path("CVI-pct","CVI-pct-comb-climate.csv"),
+                      integer64 = "double",keepLeadingZeros = TRUE)
+names(cvi.climate.toxpi.df)[5] <- "ToxPi Score Climate"
 
 scores.df <- cvi.toxpi.df[,c(3,5:12)]
+scores.df <- left_join(scores.df,cvi.baseline.toxpi.df[,c(3,5)])
+scores.df <- left_join(scores.df,cvi.climate.toxpi.df[,c(3,5)])
 names(scores.df)[1] <- "GEOID.Tract"
 scores.df <- left_join(scores.df,cvi.df[,1:5])
 scores.df$state <- factor(scores.df$STATE)
@@ -36,10 +44,11 @@ scores.df$`Census Region` <- state.regions[scores.df$STATE,"Census Region"]
 scores.df$`Census Region` <- factor(scores.df$`Census Region`,levels=
                                       c("Northeast","Midwest","South","West"))
 
-scores.df.med <- aggregate(.~state,FUN=median,data=scores.df[,c(2:9,14)])
-scores.df.max <- aggregate(.~state,FUN=max,data=scores.df[,c(2:9,14)])
+## State aggregates
+scores.df.med <- aggregate(.~state,FUN=median,data=scores.df[,c(2:11,16)])
+scores.df.max <- aggregate(.~state,FUN=max,data=scores.df[,c(2:11,16)])
 
-names(scores.df)[2:9] <- c(
+names(scores.df)[2:11] <- c(
   "CVI Score",
   "Baseline Vulnerability: Health",
   "Baseline Vulnerability: Social and Economic",
@@ -47,46 +56,64 @@ names(scores.df)[2:9] <- c(
   "Baseline Vulnerability: Enviroment",
   "Climate Change Risk: Health",
   "Climate Change Risk: Social and Economic",
-  "Climate Change Risk: Extreme Events"
+  "Climate Change Risk: Extreme Events",
+  "Baseline Vulnerabilities",
+  "Climate Change Risks"
 )
 
 
 ############# County level maps
 
 scores.df.med.county <- aggregate(.~GEOID.County,
-                                  FUN=median,data=scores.df[,c(2:9,13)])
+                                  FUN=median,data=scores.df[,c(2:11,15)])
 mapplt.list <-list()
 
 scores.df.mean.county <- aggregate(.~GEOID.County,
-                                  FUN=mean,data=scores.df[,c(2:9,13)])
+                                  FUN=mean,data=scores.df[,c(2:11,15)])
 
 scores.df.var.county <- aggregate(.~GEOID.County,
-                                   FUN=function(x) {if (length(x)>1) var(x) else 0},data=scores.df[,c(2:9,13)])
+                                   FUN=function(x) {if (length(x)>1) var(x) else 0},data=scores.df[,c(2:11,15)])
 
 scores.df.relvar.county <- cbind(GEOID.County=scores.df.var.county[,1],
-                                 as.data.frame(sweep(data.matrix(scores.df.var.county[,2:9]),
-                                       2,base::apply(as.matrix(scores.df[,2:9]),2,FUN=var),
+                                 as.data.frame(sweep(data.matrix(scores.df.var.county[,2:11]),
+                                       2,base::apply(as.matrix(scores.df[,2:11]),2,FUN=var),
                                        FUN = "/")))
 
 scores.df.max.county <- aggregate(.~GEOID.County,
-                                   FUN=max,data=scores.df[,c(2:9,13)])
+                                   FUN=max,data=scores.df[,c(2:11,15)])
 
-viridisopts <- c("A","B","C","D","E","A","B","C")
+viridisopts <- c("A","B","C","D","E","A","B","C","B","C")
 
-for (j in 1:8) {
+## Maps 
+
+for (j in 1:10) {
   dat.df <- data.frame(region=as.numeric(scores.df.med.county$GEOID.County),
                        value=scores.df.med.county[[j+1]])
   plt<-CountyChoropleth$new(dat.df)
   plt$set_num_colors(1)
   plt$set_zoom(NULL)
-  plt$ggplot_scale <- scale_fill_viridis_c("",option=viridisopts[j],limits=c(0,1))
-  plt$title<-paste(letters[j],names(scores.df.med.county)[j+1])
-  plt$ggplot_polygon <- geom_polygon(aes(fill = value),color=NA)
+  plt$ggplot_scale <- list(scale_fill_viridis_c("",option=viridisopts[j],limits=c(0,1)),
+    scale_color_viridis_c("",option=viridisopts[j],limits=c(0,1)))
+  plt$title<-paste0("     ",names(scores.df.med.county)[j+1])
+  plt$ggplot_polygon <- geom_polygon(aes(fill = value,color=value))
   mapplt.list[[j]]<-plt$render()
 }
-figmaps <- ggarrange(plotlist=mapplt.list,nrow=4,ncol=2)
-ggsave("CVI_maps.pdf",figmaps,height=7,width=6.5,scale=2)
-
+figmaps8 <- ggarrange(plotlist=mapplt.list[1:8],nrow=4,ncol=2,
+                     labels=letters[1:8])
+ggsave("CVI_maps_8.pdf",figmaps8,height=7,width=6.5,scale=2)
+figmaps3 <- ggarrange(mapplt.list[[1]],
+                      ggarrange(mapplt.list[[9]],mapplt.list[[10]],
+                                nrow=1,labels=letters[2:3]),
+                      labels=c(letters[1],""),
+                      nrow=2,ncol=1,heights = c(2,1))
+ggsave("CVI_maps_3.pdf",figmaps3,height=5.25,width=6.5,scale=2)
+figmaps10 <- ggarrange(
+  ggarrange(mapplt.list[[1]],mapplt.list[[9]],mapplt.list[[10]],
+            ncol=1,labels=letters[1:3]),
+  ggarrange(mapplt.list[[2]],mapplt.list[[3]],mapplt.list[[4]],mapplt.list[[5]],mapplt.list[[6]],mapplt.list[[7]],mapplt.list[[8]],
+            ncol=1,labels=letters[4:11]),
+  nrow=1,widths = c(32.5,13))
+ggsave("CVI_maps_10.pdf",figmaps10,height=7,width=6.5,scale=2)
 
 for (j in 1:8) {
   dat.df <- data.frame(region=as.numeric(scores.df.max.county$GEOID.County),

@@ -283,6 +283,104 @@ print(pp)
 
 dev.off()
 
+## Baseline
+## Combined 
+fcomb.slices <- TxpSliceList(Baseline.Health=
+                               TxpSlice(txpValueNames = categories[1]),
+                             Baseline.SocialEconomic=
+                               TxpSlice(txpValueNames = categories[2]),
+                             Baseline.Infrastructure=
+                               TxpSlice(txpValueNames = categories[3]),
+                             Baseline.Environment=
+                               TxpSlice(txpValueNames = categories[4]))
+fcomb.model <-TxpModel(txpSlices = fcomb.slices)
+
+pdf(file.path(pctdir,"ToxPi-county-pct-subcat-comb-baseline.pdf"),height=8,width=10)
+
+## Pct
+cvi.pct.cat.scores <- idcols_gui.df
+for (i in 1:length(categories)) {
+  cvi.pct.cat.scores <- cbind(cvi.pct.cat.scores,f.pct.results.list[[i]]@txpScores)
+}
+names(cvi.pct.cat.scores) <- c(names(idcols_gui.df),categories)
+fcomb.pct.results <- txpCalculateScores(model=fcomb.model,
+                                        input=cvi.pct.cat.scores,
+                                        id.var="FIPS")
+indx.pct <- txpRanks(fcomb.pct.results)<=10 |
+  txpRanks(fcomb.pct.results)>=(max(txpRanks(fcomb.pct.results))-9)
+
+# save for use by ToxPi GUI
+cvi.pct.toxpi.comb <- cbind(idcols_gui.df, 
+                            data.table(`ToxPi Score`=fcomb.pct.results@txpScores),
+                            data.table(fcomb.pct.results@txpSliceScores)) 
+fwrite(cvi.pct.toxpi.comb,file.path(pctdir,paste0("CVI-county-pct-comb-baseline.csv")))
+# save for use by ToxPi GIS
+cvi.pct.toxpi.comb.gis <- cbind(data.table(`ToxPi Score`=fcomb.pct.results@txpScores),
+                                idcols_gis.df, 
+                                data.table(fcomb.pct.results@txpSliceScores)) 
+slicenames <- names(fcomb.slices@listData)
+newslicenames <- paste0(slicenames,"!1","!0x",Tol_muted[1:length(slicenames)],"ff")
+setnames(cvi.pct.toxpi.comb.gis,slicenames,newslicenames)
+fwrite(cvi.pct.toxpi.comb.gis,file.path(pctdir,paste0("CVI-county-pct-comb-baseline.gis.csv")))
+
+plot(fcomb.pct.results[indx.pct,],fills=paste0("#",Tol_muted))
+plot(fcomb.pct.results,y=txpRanks(fcomb.pct.results))
+grid.text(paste("Pct","Overall"),y=0.95,x=0.5,just="top")
+pp<-ggpairs(slice_sample(as.data.table(fcomb.pct.results@txpSliceScores),
+                         n=1000),
+            lower = list(continuous = wrap("points", alpha=0.1, size=0.1)))
+print(pp)
+
+dev.off()
+
+## Climate only
+## Combined 
+fcomb.slices <- TxpSliceList(ClimateChange.Health=
+                               TxpSlice(txpValueNames = categories[5]),
+                             ClimateChange.SocialEconomic=
+                               TxpSlice(txpValueNames = categories[6]),
+                             ClimateChange.ExtremeEvents=
+                               TxpSlice(txpValueNames = categories[7]))
+fcomb.model <-TxpModel(txpSlices = fcomb.slices)
+
+pdf(file.path(pctdir,"ToxPi-county-pct-subcat-comb-climate.pdf"),height=8,width=10)
+
+## Pct
+cvi.pct.cat.scores <- idcols_gui.df
+for (i in 1:length(categories)) {
+  cvi.pct.cat.scores <- cbind(cvi.pct.cat.scores,f.pct.results.list[[i]]@txpScores)
+}
+names(cvi.pct.cat.scores) <- c(names(idcols_gui.df),categories)
+fcomb.pct.results <- txpCalculateScores(model=fcomb.model,
+                                        input=cvi.pct.cat.scores,
+                                        id.var="FIPS")
+indx.pct <- txpRanks(fcomb.pct.results)<=10 |
+  txpRanks(fcomb.pct.results)>=(max(txpRanks(fcomb.pct.results))-9)
+
+# save for use by ToxPi GUI
+cvi.pct.toxpi.comb <- cbind(idcols_gui.df, 
+                            data.table(`ToxPi Score`=fcomb.pct.results@txpScores),
+                            data.table(fcomb.pct.results@txpSliceScores)) 
+fwrite(cvi.pct.toxpi.comb,file.path(pctdir,paste0("CVI-county-pct-comb-climate.csv")))
+# save for use by ToxPi GIS
+cvi.pct.toxpi.comb.gis <- cbind(data.table(`ToxPi Score`=fcomb.pct.results@txpScores),
+                                idcols_gis.df, 
+                                data.table(fcomb.pct.results@txpSliceScores)) 
+slicenames <- names(fcomb.slices@listData)
+newslicenames <- paste0(slicenames,"!1","!0x",Tol_muted[1:length(slicenames)],"ff")
+setnames(cvi.pct.toxpi.comb.gis,slicenames,newslicenames)
+fwrite(cvi.pct.toxpi.comb.gis,file.path(pctdir,paste0("CVI-county-pct-comb-climate.gis.csv")))
+
+plot(fcomb.pct.results[indx.pct,],fills=paste0("#",Tol_muted))
+plot(fcomb.pct.results,y=txpRanks(fcomb.pct.results))
+grid.text(paste("Pct","Overall"),y=0.95,x=0.5,just="top")
+pp<-ggpairs(slice_sample(as.data.table(fcomb.pct.results@txpSliceScores),
+                         n=1000),
+            lower = list(continuous = wrap("points", alpha=0.1, size=0.1)))
+print(pp)
+
+dev.off()
+
 ## Percentile file for GIS
 cvi.pct.df.namesfixed <- cvi.pct.df
 names(cvi.pct.df.namesfixed)<-gsub(",","",names(cvi.pct.df.namesfixed))
