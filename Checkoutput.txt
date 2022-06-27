@@ -1847,7 +1847,7 @@ number of na rows:  609  or  NA
 
 [1] "----- 63"
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Social & Economic/Social/SVI2018_US.csv  exists?  TRUE 
-  [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     cols "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
+  [1] "ST"         "STATE"      "ST_ABBR"    "STCNTY"     "COUNTY"     "FIPS"       "LOCATION"   "AREA_SQMI"  "E_TOTPOP"   "M_TOTPOP"   "E_HU"       "M_HU"       "E_HH"       "M_HH"       "E_POV"     
  [16] "M_POV"      "E_UNEMP"    "M_UNEMP"    "E_PCI"      "M_PCI"      "E_NOHSDP"   "M_NOHSDP"   "E_AGE65"    "M_AGE65"    "E_AGE17"    "M_AGE17"    "E_DISABL"   "M_DISABL"   "E_SNGPNT"   "M_SNGPNT"  
  [31] "E_MINRTY"   "M_MINRTY"   "E_LIMENG"   "M_LIMENG"   "E_MUNIT"    "M_MUNIT"    "E_MOBILE"   "M_MOBILE"   "E_CROWD"    "M_CROWD"    "E_NOVEH"    "M_NOVEH"    "E_GROUPQ"   "M_GROUPQ"   "EP_POV"    
  [46] "MP_POV"     "EP_UNEMP"   "MP_UNEMP"   "EP_PCI"     "MP_PCI"     "EP_NOHSDP"  "MP_NOHSDP"  "EP_AGE65"   "MP_AGE65"   "EP_AGE17"   "MP_AGE17"   "EP_DISABL"  "MP_DISABL"  "EP_SNGPNT"  "MP_SNGPNT" 
