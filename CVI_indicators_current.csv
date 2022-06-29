@@ -2,7 +2,6 @@ Indicator Name,Adverse Direction,Replace NA with median,Baseline Vulnerability,S
 Life Expectancy,-1,1,Health,Overall Physical Health,Life Expectancy,Policy Map,2010-2015,Census Tract,Tract
 Physical health not good for >=14 days among adults aged >=18 years,1,1,Health,Overall Physical Health,Self-Reported Physical Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
 Mental health not good for >=14 days among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Self-Reported Mental Health,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
-Drug Overdose Deaths,1,1,Health,Mental Health & Deaths of Despair,"Drug Overdose Deaths Per 100,000 People",County Health Rankings & Roadmaps,2021,Census Tract,County
 Fatal Drug Overdose,1,1,Health,Mental Health & Deaths of Despair,Fatal Drug Overdose,CDC,2019,State ,State
 Binge drinking among adults aged >=18 years,1,1,Health,Mental Health & Deaths of Despair,Alcohol Abuse,"PLACES (BRFSS, RWJ, CDC)","BRFSS 2019 or 2018, Census Bureau 2010 data, and ACS 2015–2019 or 2014–2018 estimates. ",Census Tract (Model based),Tract
 Suicide,1,1,Health,Mental Health & Deaths of Despair,Suicide Rates,CDC  ,2019,State ,State
@@ -22,8 +21,7 @@ Visits to dentist or dental clinic among adults aged >=18 years,-1,1,Health,Chro
 COVID Deaths,1,1,Health,Infectious Diseases,COVID-19 Deaths,Sustainable Development Solutions Intiative,2022,County,County
 Hepatitis A,1,1,Health,Infectious Diseases,Hepatitis A,CDC ,2019,State ,State
 Hepatitis B,1,1,Health,Infectious Diseases,Hepatitis B,CDC ,2019,State ,State
-Hepatitis C,1,1,Health,Infectious Diseases,Hepatitis C,CDC ,2019,State ,State
-HIV,1,1,Health,Infectious Diseases,HIV,CDC,2018,County,County
+HIV,1,1,Health,Infectious Diseases,HIV,CDC,2019,County,County
 Chlamydia,1,1,Health,Infectious Diseases,Chlamydia,Policy Map,2017,County,County
 Gonorrhea,1,1,Health,Infectious Diseases,Gonorrhea,Policy Map,2017,County,County
 Syphillis,1,1,Health,Infectious Diseases,Syphillis,Policy Map,2017,County,County
@@ -96,6 +94,7 @@ Heavy Duty VMT,1,0,Environment,Transportation Sources,Truck vehicle miles travel
 Combination VMT,1,0,Infrastructure,Transportation Sources,Heavy Duty Vehicle vehicle miles traveled per capita,,,Census Tract,Tract
 Ports,1,0,Environment,Transportation Sources,Proximity to Ports,Homeland Infrastructure Foundation-Level Data (HIFLD),2019,Point,Tract
 Traffic proximity and volume,1,0,Environment,Transportation Sources,Traffic Proximity and Volume,EJ Screen ,2020,Census Tract,Tract
+National Transportation Noise Map,1,0,Environment,Transportation Sources,National Transportation Noise Map,Bureau of Transportation Statistics,2018,Census Tract,Tract
 Risk-Screening Environmental Indicators (RSEI) ,1,0,Environment,Exposures & Risks,Risk-Screening Environmental Indicators (RSEI) ,EASYRSEI,2019,Census Tract,Tract
 Non-Cancer Air Toxics Health Effects: Respiratory,1,0,Environment,Exposures & Risks,Respiratory,EPA Air Tox Screen,2017,Census Tract,Tract
 Non-Cancer Air Toxics Health Effects: Neurological,1,0,Environment,Exposures & Risks,Neurological,EPA Air Tox Screen,2017,Census Tract,Tract
@@ -130,6 +129,9 @@ Impermeable Surfaces,1,0,Environment,Land Use,Impermeable Surfaces,CDC: National
 Forest Land Cover,-1,0,Environment,Land Use,Forest Land Cover,CDC: National Environmental Public Health Tracking,2021,Census Tract,Tract
 Temperature-related mortality,1,1,CC: Health,Temperature-related deaths,Temperature-related mortality,Hsiang et al. ,2017,County,County
 Deaths from Historical Climate Disasters 1980-present,1,0,CC: Health,Disaster-related deaths,Deaths from climate disasters,NOAA  ,2021,State ,State
+Aedes aldopictus dengue transmission,1,1,CC: Health,Infectious Diseases,Aedes aldopictus dengue transmission,Ryan et al. 2019 PLOS Neglected Tropical Diseases,2019,Census Tract,Tract
+Aedes aegypti dengue transmission,1,1,CC: Health,Infectious Diseases,Aedes aegypti dengue transmission,Ryan et al. 2019 PLOS Neglected Tropical Diseases,2020,Census Tract,Tract
+Aedes aegypti zika transmission,1,1,CC: Health,Infectious Diseases,Aedes aegypti zika transmission,Ryan et al. 2019 PLOS Neglected Tropical Diseases,2020,Census Tract,Tract
 New Incidence of Asthma Associated with PM2.5 Exposure in Children Age 0 to 17,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma incidence,EPA CIRA,2021,Census Tract,Tract
 Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related deaths,Increased PM2.5 mortality - CVD (ages 65+),EPA CIRA,2021,Census Tract,Tract
 Premature Mortality Associated with Ozone Exposure Across All Ages,1,1,CC: Health,Air pollution-related deaths,Increased Ozone mortality (all ages),EPA CIRA,2021,Census Tract,Tract
