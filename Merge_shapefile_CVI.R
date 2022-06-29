@@ -28,7 +28,7 @@ shapefile(m, file.path(shpdir,"CVIBaselineToxPiTracts.shp"),overwrite=TRUE)
 # merge climate toxpi
 shpdir <- file.path("Shapefiles","CVI Climate ToxPi Tracts")
 if (!dir.exists(shpdir)) dir.create(shpdir)
-cvi.toxpi.df <- fread(file.path("CVI-pct","CVI-pct-comb-baseline.csv"),integer64 = "double",
+cvi.toxpi.df <- fread(file.path("CVI-pct","CVI-pct-comb-climate.csv"),integer64 = "double",
                       keepLeadingZeros = TRUE)
 names(cvi.toxpi.df) <- gsub("[[:punct:]]", "", names(cvi.toxpi.df))
 m <- merge(p, cvi.toxpi.df, by.x = "GEOID10", by.y = "FIPS")
