@@ -88,7 +88,7 @@ Real Estate Taxes,-1,1,Infrastructure,Governance,Tax Base: Median Real Estate Ta
 Voter Turnout,-1,1,Infrastructure,Governance,Voter Turnout (2020 Presidential),Policy Map,2020,State,State
 Public Libraries,-1,0,Infrastructure,Governance,Public Library Locations,Policy Map,2020,Point,Tract
 HUD public housing,1,1,Infrastructure,Governance,HUD Public Housing,Policy Map,2009-2020,Point,Tract
-HUD Community Grants,1,0,Infrastructure,Governance,Aggregate funding amount for HUD grants,HUD,2018,County,Tract
+HUD Community Grants,1,0,Infrastructure,Governance,Aggregate funding amount for HUD grants,HUD,2018,State,Tract
 Total VMT,1,0,Environment,Transportation Sources,Total vehicle miles traveled per capita,,,Already at CST level,Tract
 Passenger Lane VMT,1,0,Environment,Transportation Sources,Passenger vehicle miles traveled per capita,,,Already at CST level,Tract
 Heavy Duty VMT,1,0,Environment,Transportation Sources,Truck vehicle miles traveled per capita,,,Already at CST level,Tract
@@ -126,7 +126,7 @@ Proximity to petrochem,1,0,Environment,Pollution Sources,Chemical Manufacturers,
 Proximity to metal recyclers,1,0,Environment,Pollution Sources,Metal Recyclers,EPA Facility Registry Service,"Last updated on September 24, 2015",17 KMZ files (one per NAICS code) of the location of the facilities.,Tract
 Oil and Gas Wells,1,0,Environment,Pollution Sources,Active Oil and Gas Wells,DrillingInfo,2019-21,Census Tract,Tract
 PM 2.5 concentration,1,1,Environment,Criteria Air Pollutants,Annual average PM2.5 concentrations,Randall Martin's group at Washington University,2017-2019 ,Census Tract,Tract
-NO2 concentration,1,1,Environment,Criteria Air Pollutants,NO2 concentration,GWU Data ,2019,,Tract
+NO2 concentration,1,1,Environment,Criteria Air Pollutants,NO2 concentration,Randall Martin's group at Washington University,2017-2019 ,Census Tract,Tract
 Ozone concentration,1,1,Environment,Criteria Air Pollutants,Ozone concentration,EPA Fused Air Quality Surface Using Downscaling (FAQSD) Files,2018,Census Tract,Tract
 Parks and Greenspace,-1,1,Environment,Land Use,Parks and Greenspace,National Neighborhood Data Archive (NaNDA),2018,Census Tract,Tract
 Impermeable Surfaces,1,1,Environment,Land Use,Impermeable Surfaces,CDC: National Environmental Public Health Tracking,2021,Census Tract,Tract
