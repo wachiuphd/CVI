@@ -18,10 +18,11 @@ tracts <- tracts[order(tracts$GEOID.Tract),]
 
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForBeta_062922.xlsx",
-                        sheet="Beta Indicators",trim_ws = FALSE)
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForFinal_072522.xlsx",
+                        sheet="For FINAL",trim_ws = FALSE)
 indicator.verified <- rep(FALSE,nrow(cvi.master))
 indicator.geo <- rep("",nrow(cvi.master))
+indicator.fracna <- rep(NA,nrow(cvi.master))
 
 checkdatrow <- function(jrow) {
   j<-jrow
@@ -153,6 +154,8 @@ for (j in 1:nrow(cvi.master)) {
   if ("GEOID.State" %in% names(tmp.df)) {
     print(paste("******",j,"Verified ******"))
     indicator.verified[j] <- TRUE
+    y <- tracts[,ncol(tracts)]
+    indicator.fracna[j] <- sum(is.na(y))/nrow(y)
   } else {
     print(paste("!!!!!!",j,"Not processed !!!!!!"))
   }
@@ -161,6 +164,7 @@ for (j in 1:nrow(cvi.master)) {
 },file="Checkoutput.txt")
 options(width=80)
 cvi.master$Verified <- indicator.verified
+cvi.master$FracTractsNA <- indicator.fracna
 cvi.master$GeographicScale <- indicator.geo
 rasterindx<-grepl("raster",cvi.master$`Geographic Level`)
 cvi.master$GeographicScale[rasterindx] <- 
