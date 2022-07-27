@@ -47,9 +47,8 @@ cvi.df[, (nareplcols) := lapply(.SD, function(x) nafill(x, type = "const", fill 
        , .SDcols = nareplcols]
 print(as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 # if still NA replace remaining by overall median
-nareplcols2 <- nareplcols[as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols])>0]
-cvi.df[, (nareplcols2) := lapply(.SD, function(x) nafill(x, type = "const", fill = median(x, na.rm = TRUE)))
-       , .SDcols = nareplcols2]
+cvi.df[, (nareplcols) := lapply(.SD, function(x) nafill(x, type = "const", fill = median(x, na.rm = TRUE)))
+       , .SDcols = nareplcols]
 print(as.numeric((base::apply(cvi.df,2,FUN=function(x) {sum(is.na(x))}))[nareplcols]))
 
 na0cols <- indicators.df$Parameters[indicators.df$`Replace NA with median`==0]
