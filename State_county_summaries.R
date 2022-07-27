@@ -126,7 +126,7 @@ for (j in 1:8) {
   plt$ggplot_polygon <- geom_polygon(aes(fill = value),color=NA)
   mapplt.list[[j]]<-plt$render()
 }
-figmaps <- ggarrange(plotlist=mapplt.list,nrow=4,ncol=2)
+figmaps <- ggarrange(plotlist=mapplt.list[1:8],nrow=4,ncol=2)
 ggsave("CVI_maps_max.pdf",figmaps,height=7,width=6.5,scale=2)
 
 for (j in 1:8) {
@@ -140,7 +140,7 @@ for (j in 1:8) {
   plt$ggplot_polygon <- geom_polygon(aes(fill = value),color=NA)
   mapplt.list[[j]]<-plt$render()
 }
-figmaps <- ggarrange(plotlist=mapplt.list,nrow=4,ncol=2)
+figmaps <- ggarrange(plotlist=mapplt.list[1:8],nrow=4,ncol=2)
 ggsave("CVI_maps_relvar.pdf",figmaps,height=7,width=6.5,scale=2)
 
 ############# Source of variability
@@ -245,12 +245,12 @@ ggsave("GeoScale.pdf",pgeo,height=3,width=2.33,scale=2)
 
 
 ##### Heterogeneity - state and county level
-scores.df.state.SSres <- aggregate(.~STATE,data=scores.df[,2:10],
+scores.df.state.SSres <- aggregate(.~STATE,data=scores.df[,c(2:9,12)],
                                  FUN=function(x) {var(x)*length(x)})
 state.r2 <- 1 - (base::apply(scores.df.state.SSres[,-1],2,sum))/
   (base::apply(scores.df[,2:9],2,var)*nrow(scores.df))
 
-scores.df.county.SSres <- aggregate(.~GEOID.County,data=scores.df[,c(2:9,13)],
+scores.df.county.SSres <- aggregate(.~GEOID.County,data=scores.df[,c(2:9,15)],
                                    FUN=function(x) {if (length(x)>1) (var(x)*length(x)) else 0})
 county.r2 <- 1 - (base::apply(scores.df.county.SSres[,-1],2,sum))/
   (base::apply(scores.df[,2:9],2,var)*nrow(scores.df))

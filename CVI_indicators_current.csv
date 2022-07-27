@@ -33,6 +33,8 @@ Childhood Asthma,1,1,Health,Child & Maternal Health,Childhood Asthma,CDC,2019,St
 Teen Birth,1,1,Health,Child & Maternal Health,Teen births,CDC National Center for Health Statistics,2018,County,County
 ADHD Prevalence,1,1,Health,Child & Maternal Health,ADHD Prevalence,CDC ,2011,State ,State
 ADHD Treatment,1,1,Health,Child & Maternal Health,ADHD Treatment,CDC ,2011,State ,State
+Child Mortality ,1,1,Health,Child & Maternal Health,Child Mortality,County Health Rankings & Roadmaps,2022,County,County
+Free or Reduced Price Lunch,1,1,Health,Child & Maternal Health,Free or Reduced Price Lunch - Children,County Health Rankings & Roadmaps,2022,County,County
 Nursing Homes,-1,0,Health,Access to Care,Proximity to Nursing Homes,Homeland Infrastructure Foundation-Level Data (HIFLD),2017,,Tract
 Hospital Access,-1,1,Health,Access to Care,"Number of Hospital Beds per 10,000 people",CDC: National Environmental Public Health Tracking,2016,County,County
 Covid vaccination rates,-1,1,Health,Access to Care,Covid-19 Vaccination Rates,Centers for Disease Control and Prevention,2022,County,County

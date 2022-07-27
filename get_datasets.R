@@ -18,7 +18,7 @@ tracts <- tracts[order(tracts$GEOID.Tract),]
 
 ### Get master sheet
 
-cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForFinal_072522.xlsx",
+cvi.master <- read_xlsx("~/Dropbox/Climate Health Vulnerability Index/CVI Indicators_ForFinal_072722.xlsx",
                         sheet="For FINAL",trim_ws = FALSE)
 indicator.verified <- rep(FALSE,nrow(cvi.master))
 indicator.geo <- rep("",nrow(cvi.master))
