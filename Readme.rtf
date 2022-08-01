@@ -2,23 +2,34 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid4\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2880\lin2880 }{\listname ;}\listid1}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid4\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2880\lin2880 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid103\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid202\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
 \margl1440\margr1440\vieww11520\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
 CVI_data_current.csv - CVI data from all verified indicators\
 CVI_indicators_current.csv - verified CVI indicators\
 CVI_data_pct.csv - CVI data converted to percentiles\
 CVI-pct-cat-xxx.csv - ToxPi scores for each category (slices are subcategories)\
 CVI-pct-comb.csv - Overall ToxPi scores (slices are categories, using category-specific ToxPi scores, rescaled to 0-1)\
 \
-To create ToxPi:\
-Run script \
-> python ToxPi_creation.py CVI-pct-comb.gis.csv CVI_layer\\CVI-pct-comb.lyrx \'97scale=0.1 \'97extent=localcensusTract \'97labels=FALSE\
+To create ToxPi layer file:\
+(1) Set up directories \
+- Put ToxPi-GIS-main folder (contains python script) is in C:\\Users\\wchiu\\Documents\\ArcGIS\
+- Put the CVI ToxPi shapefiles (folder "CVI ToxPi Tracts") in C:\\Users\\wchiu\\Documents\\ArcGIS\\Projects\\ -- this will be the shapefile that is merged with the ToxPi symbols\
+- Create C:\\Users\\wchiu\\Documents\\ArcGIS\\Projects\\CVI beta \'97 this is the folder where the ToxPi script will create a layer file\
+(2) Put the CVI-pct-comb.gis.csv file in C:\\Users\\wchiu\\Documents\\ArcGIS\\Projects\\CVI beta -- this is the file used to generate the ToxPi symbols\
+(3) Run code\
+(4) If needed, launch ArcGIS Pro and log in to initialize license\
+(5) Set up proenv\
+> C:\\Users\\wchiu\\AppData\\Local\\Programs\\ArcGIS\\Pro\\bin\\Python\\Scripts\\proenv\
+(6) Go to folder\
+> cd C:\\Users\\wchiu\\Documents\\ArcGIS\\Projects\\CVI beta\
+(7) Run script\
+> python ..\\..\\ToxPi-GIS-main\\ToxPi_creation_CVI_tracts.py CVI-pct-comb.gis.csv CVI_beta\\CVI_beta_layer.lyrx --scale=0.1 --extent=localcensusTract --labels=FALSE\
 \
 In ArcGIS Pro:\
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
@@ -26,39 +37,10 @@ In ArcGIS Pro:\
 {\listtext	\uc0\u8226 	}Rename \'93ToxPi Features\'94 to \'93ToxPi Profiles\'94\
 {\listtext	\uc0\u8226 	}Create Group \'93ToxPi Features\'94\
 {\listtext	\uc0\u8226 	}Put \'93ToxPi Rings\'94 and \'93ToxPi Profiles\'94 into group \'93ToxPi Features\'94\
-{\listtext	\uc0\u8226 	}Add CSV file data CVI-pct-comb.gis.csv as table\
-\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Make sure schema.ini has the FIPS field as text:\
-\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2\cf0 	[CVI-pct-comb.gis.csv]\
-	Col2=FIPS Text\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Join Field (This takes a long time for the whole US ~ 12 hrs)\
-\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Input Table: Boundaries\
-{\listtext	\uc0\u8259 	}Input Join Field: GEOID10\
-{\listtext	\uc0\u8259 	}Join Table: CVI-pct-comb.gis.csv\
-{\listtext	\uc0\u8259 	}Join Table Field: FIPS\
-{\listtext	\uc0\u8259 	}Transfer Fields:\
-\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Name\
-{\listtext	\uc0\u8259 	}ToxPi Score\
-{\listtext	\uc0\u8259 	}Baseline.Health\
-{\listtext	\uc0\u8259 	}Baseline.Social\
-{\listtext	\uc0\u8259 	}Baseline.Infrastructure\
-{\listtext	\uc0\u8259 	}Baseline.Environment\
-{\listtext	\uc0\u8259 	}ClimateChange.Health\
-{\listtext	\uc0\u8259 	}ClimateChange.Economic\
-{\listtext	\uc0\u8259 	}ClimateChange.ExtremeEvents\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Create Group \'93ToxPi Scores and Slices\'94 and put Boundaries in it\
+{\listtext	\uc0\u8226 	}Create Group \'93ToxPi Scores and Slices\'94 and put Boundaries in it\
 {\listtext	\uc0\u8226 	}Rename Boundaries to \'93Overall ToxPi\'94\
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Rename Field aliases for slices to remove the everything from the \'93!\'94 Onwards \
-{\listtext	\uc0\u8259 	}Set Number Format for ToxPi Score and Slices to round to 3 decimals\
-{\listtext	\uc0\u8259 	}Attribute Table: Hide everything except \'93Shape\'94 \'93Name10\'94 \'93Name\'94 \'93ToxPi Score\'94 and individual slice scores\
-{\listtext	\uc0\u8259 	}Reorder so Name comes before ToxPi Score\
-{\listtext	\uc0\u8259 	}Primary Symbology \
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Primary Symbology \
 \pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
 \ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Unclassed Colors\
 {\listtext	\uc0\u8259 	}ToxPi Score\
@@ -67,13 +49,34 @@ In ArcGIS Pro:\
 \ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Apply to fill and outline\
 {\listtext	\uc0\u8259 	}Yellow-Orange-Brown continuous\
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Make 7 copies of \'93Overall ToxPi\'94 \'97 one for each slices\
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}Add Shapefiles for Overall Baseline and Overall Climate\
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Baseline Health - Blues (continuous)\
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Add Data -> CVIBaselineToxPiTracts.shp\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Rename Baseline ToxPi\
+{\listtext	\uc0\u8259 	}Create Group \'93Baseline Vulnerabilities\'94 under \'93ToxPi Scores and Slices\'94 and place in this group\
+{\listtext	\uc0\u8259 	}Make alias of ToxPScr field = Baseline ToxPScr\
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Unclassed colors, Apply to fill and outline, Purples - Blue\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Make copies of Overall ToxPi - one for each slice\
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Baseline Health - Blues (continuous)\
 {\listtext	\uc0\u8259 	}Baseline Social Vulnerability - Green Blue (continuous)\
 {\listtext	\uc0\u8259 	}Baseline Infrastructure - Greens (continuous)\
 {\listtext	\uc0\u8259 	}Baseline Environment - Purples\
-{\listtext	\uc0\u8259 	}Climate Change Health - Oranges\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Add Data -> CVIClimateToxPiTracts.shp\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Rename Climate Change ToxPi\
+{\listtext	\uc0\u8259 	}Create Group \'93Climate Change Vulnerabilities\'94 under \'93ToxPi Scores and Slices\'94  and place in this group\
+{\listtext	\uc0\u8259 	}Make alias of ToxPScr field = Climate Change ToxPScr\
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Unclassed colors, Apply to fill and outline, Yellow - Green - Blue\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}Make copies of Overall ToxPi - one for each slice\
+\pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
+\ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Climate Change Health - Oranges\
 {\listtext	\uc0\u8259 	}Climate Change Economic - Yellow Green\
 {\listtext	\uc0\u8259 	}Climate Change Extreme Events - Red Purples\
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
@@ -85,5 +88,40 @@ In ArcGIS Pro:\
 \pard\tx2380\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2880\fi-2880\pardirnatural\partightenfactor0
 \ls1\ilvl3\cf0 {\listtext	\uc0\u8259 	}Update Map to Use Basemap\'92s Coordinate System \
 \pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Share\
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Share (takes hours)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+[Old - don\'92t use\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}Add CSV file data CVI-pct-comb.gis.csv as table\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}Make sure schema.ini has the FIPS field as text:\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls2\ilvl2\cf0 	[CVI-pct-comb.gis.csv]\
+	Col2=FIPS Text\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}Join Field (This takes a long time for the whole US ~ 12 hrs)\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}Input Table: Boundaries\
+{\listtext	\uc0\u8259 	}Input Join Field: GEOID10\
+{\listtext	\uc0\u8259 	}Join Table: CVI-pct-comb.gis.csv\
+{\listtext	\uc0\u8259 	}Join Table Field: FIPS\
+{\listtext	\uc0\u8259 	}Transfer Fields:\
+\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls2\ilvl2\cf0 {\listtext	\uc0\u8259 	}Name\
+{\listtext	\uc0\u8259 	}ToxPi Score\
+{\listtext	\uc0\u8259 	}Baseline.Health\
+{\listtext	\uc0\u8259 	}Baseline.Social\
+{\listtext	\uc0\u8259 	}Baseline.Infrastructure\
+{\listtext	\uc0\u8259 	}Baseline.Environment\
+{\listtext	\uc0\u8259 	}ClimateChange.Health\
+{\listtext	\uc0\u8259 	}ClimateChange.Economic\
+{\listtext	\uc0\u8259 	}ClimateChange.ExtremeEvents\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls3\ilvl1\cf0 {\listtext	\uc0\u8259 	}Rename Field aliases for slices to remove the everything from the \'93!\'94 Onwards \
+{\listtext	\uc0\u8259 	}Set Number Format for ToxPi Score and Slices to round to 3 decimals\
+{\listtext	\uc0\u8259 	}Attribute Table: Hide everything except \'93Shape\'94 \'93Name10\'94 \'93Name\'94 \'93ToxPi Score\'94 and individual slice scores\
+{\listtext	\uc0\u8259 	}Reorder so Name comes before ToxPi Score\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ]\
 }
