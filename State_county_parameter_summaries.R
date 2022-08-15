@@ -38,20 +38,21 @@ cvi.df<-fread("CVI_data_current.csv",
 cvi.pct.df <- fread(file.path(pctdir,"CVI_data_pct.csv"),
                     keepLeadingZeros = TRUE,integer64 = "numeric")
 cvi.pct.df$GEOID.Tract <- cvi.pct.df$FIPS
-subcategories <- unique(indicators.df$Subcategory)
 
-for (i in 1:length(subcategories)) {
-  onesubcat <- subcategories[i]
+indicators.df$cat_subcat <- paste(indicators.df$Category,indicators.df$Subcategory,sep="__")
+cat_subcat <- unique(indicators.df$cat_sub)
+cat_subcat_split <- strsplit(cat_subcat,"__")
+
+for (i in 1:length(cat_subcat)) {
+  onecat_subcat <- cat_subcat[i]
+  onecat <- cat_subcat_split[[i]][1]
+  onesubcat <- cat_subcat_split[[i]][2]
   subcategoryname <- onesubcat
-  print(subcategoryname)
-  
-  parameters <- unique(indicators.df$Parameters[
-    indicators.df$Subcategory==onesubcat])
+  print(paste(i,onecat,"/",subcategoryname))
+  parameters <- indicators.df$Parameters[
+    indicators.df$Category==onecat & 
+    indicators.df$Subcategory==onesubcat]
   numparm <-length(parameters)
-
-  onecat <- indicators.df$Category[indicators.df$Subcategory==onesubcat &
-                                     indicators.df$Parameters==parameters[1]]
-  
   cvi.pct.toxpi.cat  <- fread(file.path(pctdir,
                                         paste0("CVI-pct-cat-",
                                                gsub(": ","-",onecat),".csv")),
@@ -152,10 +153,10 @@ for (i in 1:length(subcategories)) {
     scale_fill_viridis_d(begin=0.3)+
     facet_wrap(~label,nrow=1)+xlab("")+theme_bw()+theme(axis.text.x=element_text(angle=90,vjust=0.5,hjust=1))+
     ggtitle(subcategoryname)
-  print(scoresboxplt)
+  # print(scoresboxplt)
   
   ##### Geographic scale
-  subcat.indicators <- subset(indicators.df,Subcategory == onesubcat)
+  subcat.indicators <- subset(indicators.df,Subcategory == onesubcat & Category == onecat)
   subcat.indicators$Parameters <- factor(subcat.indicators$Parameters,
                                        levels=unique(subcat.indicators$Parameters))
   indicators.geo <- 
@@ -181,7 +182,7 @@ for (i in 1:length(subcategories)) {
     theme(legend.title = element_blank(),
           axis.text.y=element_text(hjust=0))+
     guides(fill = guide_legend(reverse = TRUE))
-  print(pgeo)
+  # print(pgeo)
   
   ##### Heterogeneity - state and county level
   indx<-c(2+0:numparm,grep("STATE",names(scores.df)))
@@ -221,7 +222,7 @@ for (i in 1:length(subcategories)) {
                                   axis.text.y=element_text(hjust=0))+
     guides(fill = guide_legend(reverse = TRUE))
   
-  print(pr2)
+  # print(pr2)
   ###### Bar graph of top subcategories
   scores.df.cat <- cbind(data.frame(Sample=rep("All",1+numparm)),
                          as.data.frame(prop.table(table(scores.df$TopCat))))
@@ -256,7 +257,7 @@ for (i in 1:length(subcategories)) {
     coord_flip()+theme_bw()+theme(legend.title = element_blank(),
                                   axis.text.y=element_text(hjust=0))+
     guides(fill = guide_legend(reverse = TRUE))
-  print(pcat)
+  # print(pcat)
 
   indx<-2+1:numparm
   scores.cor <- cor(scores.df[,..indx])
