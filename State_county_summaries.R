@@ -204,14 +204,14 @@ ggsave("StateSummaryBoxplots.pdf",scoresboxplt,height=3,width=6.5,scale=2)
 #####
 
 indicators.df <- fread("CVI_indicators_current.csv")
-indicators.df$`Baseline Vulnerability` <- 
-  factor(indicators.df$`Baseline Vulnerability`,
-         levels=unique(indicators.df$`Baseline Vulnerability`))
+indicators.df$`Category` <- 
+  factor(indicators.df$`Category`,
+         levels=unique(indicators.df$`Category`))
 
 indicators.geo <- 
   rbind(
     as.matrix(t(table(indicators.df$GeographicScale))),
-    as.matrix(ftable(indicators.df$`Baseline Vulnerability`,
+    as.matrix(ftable(indicators.df$`Category`,
                      indicators.df$GeographicScale)))
 rownames(indicators.geo)<- c(
   "CVI Score",

@@ -69,7 +69,7 @@ checkdatrow <- function(jrow) {
     cat("number of rows: ",nrow(tmp),"\n")
     cat("number of na rows: ",sum(is.na(tmp[,2]))," or ",sum(tmp[,2]<0),"\n")
     names(tmp)[2] <- cvi.master$Parameters[j]
-#    tmp$Category <- cvi.master$`Baseline Vulnerability`[j]
+#    tmp$Category <- cvi.master$`Category`[j]
 #    tmp$Subcategory <- cvi.master$Subcategory[j]
     print(head(tmp))
     cat("-------------------------------\n\n")
@@ -171,7 +171,7 @@ cvi.master$GeographicScale[rasterindx] <-
   paste(cvi.master$GeographicScale[rasterindx],"(raster)")
 fwrite(cvi.master,"CVI_master.csv")
 
-icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Baseline Vulnerability","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level","GeographicScale")
+icols <- c("Indicator Name","Adverse Direction","Replace NA with median","Category","Subcategory","Parameters","Agency or data source","Year of data release","Geographic Level","GeographicScale")
 indicators.df <- as.data.table(subset(cvi.master,Verified==TRUE))[,..icols]
 indicators.df$`Adverse Direction`<-as.numeric(indicators.df$`Adverse Direction`)
 # replace "n/a" with 0

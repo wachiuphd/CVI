@@ -102,12 +102,12 @@ cvi.pct.df<-cbind(idcols_gui.df, cvi.pct.df) # save for use by ToxPi GUI
 fwrite(cvi.pct.df,file.path(pctdir,"CVI-county_data_pct.csv"),quote=TRUE)
 
 # Simple ToxPi - by Category only - all indicators equal weights, each category equal weight
-categories <- unique(indicators.df$`Baseline Vulnerability`)
+categories <- unique(indicators.df$`Category`)
 indicators.bycat <- list()
 for (i in 1:length(categories)) {
   onecat <- categories[i]
   indicators.bycat[[i]] <- indicators.df$Parameters[
-    indicators.df$`Baseline Vulnerability`==onecat
+    indicators.df$`Category`==onecat
   ]
 }
 
@@ -171,12 +171,12 @@ pdf(file.path(pctdir,"ToxPi-county-pct-subcat.pdf"),height=8,width=10)
 for (i in 1:length(categories)) {
   onecat <- categories[i]
   subcategories <- unique(indicators.df$Subcategory[
-    indicators.df$`Baseline Vulnerability`==onecat])
+    indicators.df$`Category`==onecat])
   indicators.bysubcat <- list()
   for (j in 1:length(subcategories)) {
     onesubcat <- subcategories[j]
     indicators.bysubcat[[j]] <- indicators.df$Parameters[
-      indicators.df$`Baseline Vulnerability`==onecat &
+      indicators.df$`Category`==onecat &
         indicators.df$Subcategory==onesubcat
     ]
   }

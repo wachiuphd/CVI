@@ -108,12 +108,12 @@ cvi.pct.df<-cbind(idcols_gui.df, cvi.pct.df) # save for use by ToxPi GUI
 fwrite(cvi.pct.df,file.path(pctdir,"CVI_data_pct.csv"),quote=TRUE)
 
 # Simple ToxPi - by Category only - all indicators equal weights, each category equal weight
-categories <- unique(indicators.df$`Baseline Vulnerability`)
+categories <- unique(indicators.df$`Category`)
 indicators.bycat <- list()
 for (i in 1:length(categories)) {
   onecat <- categories[i]
   indicators.bycat[[i]] <- indicators.df$Parameters[
-    indicators.df$`Baseline Vulnerability`==onecat
+    indicators.df$`Category`==onecat
   ]
 }
 
@@ -137,6 +137,8 @@ f.model <-TxpModel(txpSlices = f.slices)
 f.pct.results <- txpCalculateScores(model=f.model,
                                       input=cvi.pct.df,
                                       id.var="FIPS")
+
+save(f.slices,f.model,f.pct.results,file=file.path(pctdir,"CVI-pct-allinone.Rdata"))
 indx <- txpRanks(f.pct.results)<=10 |
   txpRanks(f.pct.results)>=(max(txpRanks(f.pct.results))-9)
 
@@ -177,12 +179,12 @@ pdf(file.path(pctdir,"ToxPi-pct-subcat.pdf"),height=8,width=10)
 for (i in 1:length(categories)) {
   onecat <- categories[i]
   subcategories <- unique(indicators.df$Subcategory[
-    indicators.df$`Baseline Vulnerability`==onecat])
+    indicators.df$`Category`==onecat])
   indicators.bysubcat <- list()
   for (j in 1:length(subcategories)) {
     onesubcat <- subcategories[j]
     indicators.bysubcat[[j]] <- indicators.df$Parameters[
-      indicators.df$`Baseline Vulnerability`==onecat &
+      indicators.df$`Category`==onecat &
         indicators.df$Subcategory==onesubcat
     ]
   }
@@ -197,6 +199,9 @@ for (i in 1:length(categories)) {
   fcat.pct.results <- txpCalculateScores(model=fcat.model,
                                            input=cvi.pct.df,
                                            id.var="FIPS")
+  save(fcat.slices,fcat.model,fcat.pct.results,file=file.path(pctdir,
+                                  paste0("CVI-pct-cat-",
+                                         gsub(": ","-",onecat),".Rdata")))
   indx.pct <- txpRanks(fcat.pct.results)<=10 |
     txpRanks(fcat.pct.results)>=(max(txpRanks(fcat.pct.results))-9)
   plot(fcat.pct.results[indx.pct,],name=onecat,fills=paste0("#",Tol_muted))
@@ -262,6 +267,9 @@ names(cvi.pct.cat.scores) <- c(names(idcols_gui.df),categories)
 fcomb.pct.results <- txpCalculateScores(model=fcomb.model,
                                 input=cvi.pct.cat.scores,
                                 id.var="FIPS")
+save(fcomb.slices,fcomb.model,fcomb.pct.results,
+     file=file.path(pctdir,paste0("CVI-pct-comb.Rdata")))
+
 indx.pct <- txpRanks(fcomb.pct.results)<=10 |
   txpRanks(fcomb.pct.results)>=(max(txpRanks(fcomb.pct.results))-9)
 
@@ -312,6 +320,9 @@ names(cvi.pct.cat.scores) <- c(names(idcols_gui.df),categories)
 fcomb.pct.results <- txpCalculateScores(model=fcomb.model,
                                         input=cvi.pct.cat.scores,
                                         id.var="FIPS")
+save(fcomb.slices,fcomb.model,fcomb.pct.results,
+     file=file.path(pctdir,paste0("CVI-pct-comb-baseline.Rdata")))
+
 indx.pct <- txpRanks(fcomb.pct.results)<=10 |
   txpRanks(fcomb.pct.results)>=(max(txpRanks(fcomb.pct.results))-9)
 
@@ -360,6 +371,9 @@ names(cvi.pct.cat.scores) <- c(names(idcols_gui.df),categories)
 fcomb.pct.results <- txpCalculateScores(model=fcomb.model,
                                         input=cvi.pct.cat.scores,
                                         id.var="FIPS")
+save(fcomb.slices,fcomb.model,fcomb.pct.results,
+     file=file.path(pctdir,paste0("CVI-pct-comb-climate.Rdata")))
+
 indx.pct <- txpRanks(fcomb.pct.results)<=10 |
   txpRanks(fcomb.pct.results)>=(max(txpRanks(fcomb.pct.results))-9)
 
@@ -449,12 +463,12 @@ fwrite(cvi.pct.df.namesfixed,file.path(pctdir,"CVI_data_pct.gis.csv"))
 # for (i in 1:length(categories)) {
 #   onecat <- categories[i]
 #   subcategories <- unique(indicators.df$Subcategory[
-#     indicators.df$`Baseline Vulnerability`==onecat])
+#     indicators.df$`Category`==onecat])
 #   indicators.bysubcat <- list()
 #   for (j in 1:length(subcategories)) {
 #     onesubcat <- subcategories[j]
 #     indicators.bysubcat[[j]] <- indicators.df$Parameters[
-#       indicators.df$`Baseline Vulnerability`==onecat &
+#       indicators.df$`Category`==onecat &
 #         indicators.df$Subcategory==onesubcat
 #     ]
 #   }

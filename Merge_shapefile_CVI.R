@@ -57,7 +57,7 @@ shapefile(m, file.path(shpdir,"CVIDataTracts.shp"),overwrite=TRUE)
 
 # merge each category
 indicators.df<-fread("CVI_indicators_current.csv")
-categories <- unique(indicators.df$`Baseline Vulnerability`)
+categories <- unique(indicators.df$`Category`)
 
 for (i in 1:length(categories)) { 
   onecat <- categories[i]
