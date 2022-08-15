@@ -146,9 +146,9 @@ figheight <- 1.75*(1+numrow)
 figmap <- ggarrange(plotlist=clusmap.list,
                               nrow=numrow,ncol=2,labels="")
 
-fig_clus <- ggarrange(ggarrange(pcenters,petasq,pbox,
+fig_clus <- ggarrange(ggarrange(pbox,pcenters,petasq,
                                 nrow=1,labels=letters[1:3],
-                                widths = c(2,3,2)),
+                                widths = c(2,2,3)),
                       figmap,nrow=2,heights = c(1,3),labels=c("","d"))
 ggsave(file.path(figdir,
                  "k-means clustering.pdf"),
