@@ -8,6 +8,9 @@ library(ggplot2)
 library(choroplethr)
 library(choroplethrMaps)
 library(ggpubr)
+library(lsr)
+library(toxpiR)
+library(grid)
 
 figdir <- "SuppFigures"
 datafolder <- "Data"
@@ -126,6 +129,12 @@ pbox <- ggplot(cvi)+geom_boxplot(aes(x=`ToxPi Score`,y=cluster))+
 clusmap.list <- list()
 cvi.tract <- cbind(cvi.toxpi.df[,"FIPS"],cvi[,1:2])
 cvi.tract$GEOID.County <- substr(cvi.tract$FIPS,1,5)
+clustext <- c(": High Baseline Hlth, Soc & Econ, Infra Vulnerabilities\n                      High Climate Hlth, Soc & Econ Risks",
+              ": High Baseline Hlth, Soc & Econ, Infra, Env Vulnerabilities",
+              ": High Climate Hlth, Soc & Econ Risks",
+              ": High Climate Soc & Econ, Extreme Event Risks",
+              ": High Baseline Env Vulnerabilities",
+              ": Low Baseline Vulnerabilities\n                     High Climate Soc & Econ, Extreme Event Risks")
 for (i in 1:length(clusletter)) {
   clusnow <- clusletter[i]
   cvi.tract.cluster.med.county <- aggregate(`ToxPi Score`~GEOID.County,
@@ -137,7 +146,7 @@ for (i in 1:length(clusletter)) {
   plt$set_zoom(NULL)
   plt$ggplot_scale <- list(scale_fill_viridis_c("",option="A",limits=c(0,1),na.value="white"),
                            scale_color_viridis_c("",option="A",limits=c(0,1),na.value="white"))
-  plt$title<-paste0("     Cluster ",clusnow)
+  plt$title<-paste0("     Cluster ",clusnow,clustext[i])
   plt$ggplot_polygon <- geom_polygon(aes(fill = value,color=value))
   clusmap.list[[i]] <- plt$render()
 }
