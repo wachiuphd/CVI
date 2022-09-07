@@ -73,12 +73,27 @@ catnames <-   c(  "Baseline Vulnerability:\nHealth",
 centers <- x.kmeans$centers
 centers.cvi <- base::apply(centers,1,mean)
 clusorder <- order(base::apply(x.kmeans$centers,1,mean),decreasing=TRUE)
-pcenters <- pieGridGrob(centers[clusorder,],
+pcenters0 <- pieGridGrob(0*centers[clusorder,],
                         labels=paste0("Cluster ",LETTERS[1:6],"\nMean CVI Score: ",
-                                      round(centers.cvi[clusorder],2)),
-                        fills=paste0("#",Tol_muted),vp=viewport(width=0.9, height=0.9),
-                        gp=gpar(cex=0.8),
+                                      round(centers.cvi[clusorder],2),"\n"),
+                        fills="#FFFFFF00",vp=viewport(width=0.9, height=0.9),
+                        gp=gpar(cex=0.7),
                         ncol=2)
+centers.df <- as.matrix(centers[clusorder[c(5,3,1,6,4,2)],])
+rownames(centers.df)<-NULL
+pcenters <- pieGridGrob(centers.df,
+                        labels=NULL,
+                        fills=paste0("#",Tol_muted),vp=viewport(width=0.9, height=0.9,angle=90),
+                        gp=gpar(cex=0.8),
+                        ncol=3)
+
+
+pcentersfill <- pieGridGrob(1+0*centers.df,
+                           labels=NULL,
+                           fills="#EEEEEE",vp=viewport(width=0.9, height=0.9,angle=90),
+                           gp=gpar(cex=0.8),
+                           ncol=3)
+
 # centers.list <- list()
 # centers.list[[1]] <- pcenters 
 # for (i in 1:6) centers.list[[i]] <- pieGrob(centers[clusorder[i],],fills=paste0("#",Tol_muted),labels="Cluster")
@@ -155,7 +170,7 @@ figheight <- 1.75*(1+numrow)
 figmap <- ggarrange(plotlist=clusmap.list,
                               nrow=numrow,ncol=2,labels="")
 
-fig_clus <- ggarrange(ggarrange(pbox,pcenters,petasq,
+fig_clus <- ggarrange(ggarrange(pbox,gList(pcentersfill,pcenters,pcenters0),petasq,
                                 nrow=1,labels=letters[1:3],
                                 widths = c(2,2,3)),
                       figmap,nrow=2,heights = c(1,3),labels=c("","d"))

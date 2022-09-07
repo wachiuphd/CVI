@@ -21,7 +21,7 @@ pctdir <- "CVI-pct"
 catnames <-   c(  "Baseline Vulnerability:\nHealth",
                   "Baseline Vulnerability:\nSocial and Economic",
                   "Baseline Vulnerability:\nInfrastructure",
-                  "Baseline Vulnerability:\nEnviroment",
+                  "Baseline Vulnerability:\nEnvironment",
                   "Climate Change Risk:\nHealth",
                   "Climate Change Risk:\nSocial and Economic",
                   "Climate Change Risk:\nExtreme Events"
@@ -45,6 +45,8 @@ rownames(state.regions)<-state.regions$abb
 
 # 10 colors, color-blind friendly (# removed, all lower case)
 Tol_muted <- tolower(c('88CCEE', '44AA99', '117733', '332288', 'DDCC77', '999933','CC6677', '882255', 'AA4499', 'DDDDDD'))
+
+Tol_max <- tolower(c('009FEE','00AA8E','007728','170088','DDB800','999900','CC0022','880044','AA008E','010101'))
 
 # Census tracts from 22-02_CVI_state_county_tract_updated.xlsx
 # Nine census tracts internal points moved to be internal to tract boundary
@@ -104,6 +106,9 @@ p <- plt$render()
 p
 
 toptract <- onecounty.df[order(onecounty.df$pctrank,decreasing = TRUE)[1:3],]
+toptract$label <- paste0("Tract ",toptract$FIPS,"\nCVI Score: ",
+                         round(toptract$`ToxPi Score`,4),
+                         " (",toptract$pctrank,"%)")
 tractorder<-order(toptract$`ToxPi Score`,decreasing = FALSE)
 toptract <- toptract[tractorder,]
 plt<-TractChoropleth$new("texas",dat.df)
@@ -114,59 +119,69 @@ plt$title<-""
 plt$ggplot_scale <- list(scale_fill_viridis_c("",option="A",limits=range(cvi.toxpi.df$`ToxPi Score`)),
                          scale_color_viridis_c("",option="A",limits=range(cvi.toxpi.df$`ToxPi Score`)))
 plt$ggplot_polygon <- geom_polygon(aes(fill = value,color=value))
-p2 <- plt$render()+geom_text(data=toptract,aes(INTPTLON10,INTPTLAT10,label=FIPS),size=3)+
+p2 <- plt$render()+geom_text(data=toptract,aes(INTPTLON10,INTPTLAT10,label=label),size=3)+
   theme(legend.position = "none")
 
 ppi_fill <- pieGridGrob(1+0*as.matrix(toptract[,6:12]),
-                        labels=rep(" \n ",3),
-                        fills=paste0("#",Tol_muted[10]),vp=viewport(width=0.9, height=0.9),
-                        gp=gpar(cex=0.8),
-                        ncol=1)
+                        labels=NULL,
+                        fills=paste0("#",Tol_muted[10]),vp=viewport(width=0.9, height=2, angle=90),
+                        #gp=gpar(cex=0.8),
+                        ncol=1)#nrow=1)
 
-ppi <- pieGridGrob(as.matrix(toptract[,6:12]),
-                               labels=paste0("Tract ",toptract$FIPS,"\nCVI Score: ",
-                                             round(toptract$`ToxPi Score`,4),
-                                             " (",toptract$pctrank,"%)"),
-                               fills=paste0("#",Tol_muted),vp=viewport(width=0.9, height=0.9),
-                               gp=gpar(cex=0.8),
-                               ncol=1)
+ppi <- pieGridGrob(as.matrix(toptract[3:1,6:12]),
+                               labels=NULL,
+                               fills=paste0("#",Tol_muted),vp=viewport(width=0.9, height=2, angle=90),
+                               #gp=gpar(cex=0.8),
+                               ncol=1)#nrow=1)
 onetract <- toptract[order(toptract$`ToxPi Score`,decreasing = TRUE)[1],]
 
 
-ppi_onefill <- pieGridGrob(as.matrix(1),
-                        labels=" \n ",
-                        fills="lightgrey",vp=viewport(width=0.9, height=0.9),
-                        gp=gpar(cex=1),
-                        ncol=1)
 ppi_cat.list <- list()
 ppi_leg.list <- list()
 for (i in 1:length(categories)) {
   onecat <- categories[i]
   cvi.toxpi.cat<-cvi.toxpi.cat.list[[i]]
   onetract.cat <- subset(cvi.toxpi.cat,FIPS==onetract$FIPS)
+  nsubcat <- ncol(onetract.cat)-5
+  fillcols <- paste0("#",paste0(Tol_max[i],as.hexmode(round((1+(nsubcat:1))*255/(1+nsubcat)))))
+  ppi_onefill <- pieGridGrob(as.matrix(1),
+                             labels=NULL,
+                             fills="#EEEEEE",vp=viewport(width=0.75, height=0.75,angle=90),
+                             gp=gpar(cex=1),
+                             ncol=1)
+  ppi_onelab <- pieGridGrob(as.matrix(1),
+                             labels=catnames[i],
+                             fills="#FFFFFF00",vp=viewport(width=0.9, height=0.9),
+                             gp=gpar(cex=1),
+                             ncol=1)
   ppi_cat.list[[i]]<-gList(ppi_onefill,
     pieGridGrob(as.matrix(onetract.cat[,6:ncol(onetract.cat)]),
-                labels = catnames[i],
-          fills=paste0("#",Tol_muted),vp=viewport(width=0.9, height=0.9),
-          gp=gpar(cex=1)))
+                labels = NULL,
+          fills=fillcols,
+          vp=viewport(width=0.75, height=0.75,angle=90),
+          gp=gpar(cex=1)),
+    ppi_onelab
+    )
   ppi_leg.list[[i]] <- legendGrob(labels=names(onetract.cat)[6:ncol(onetract.cat)],
-                                  pch=15,gp=gpar(cex=0.7,col=paste0("#",Tol_muted)),
+                                  pch=15,gp=gpar(cex=0.7,
+                                                 col=fillcols),
                                   vp=viewport(width=0.9, height=0.9))
 }
 
-psubcat <- ggarrange(plotlist = c(ppi_cat.list,ppi_leg.list),nrow=2,ncol=7)
+psubcat <- ggarrange(plotlist = c(ppi_cat.list,ppi_leg.list),nrow=2,ncol=7,
+                     heights=c(1,1))
 
-pzoom <- ggarrange(ggarrange(p,gList(ppi_fill,ppi),p2,ncol=3,
-                             labels=c("","","Top Three Ranking Tracts"),
-                             widths = c(3,1,1.5)),
+pzoom <- ggarrange(ggarrange(p,ggarrange(p2,gList(ppi_fill,ppi),ncol=1,
+                                         heights=c(2,1),
+                             labels=c("Top Three Ranking Tracts","")),
+                             ncol=2,
+                             widths = c(3,2.5)),
                    psubcat,nrow=2,heights=c(2,1.25),
                    labels=c("Harris County, TX",paste("Top Ranked Tract:",last(onetract$FIPS))),
                    label.y=c(1,1.1),label.x=c(0,-0.03)
             )
-ggsave("Harris County Zoom.pdf",pzoom,height=4.5,width=6,scale=3)
+ggsave("Harris County Zoom.pdf",pzoom,height=5,width=6,scale=2.5)
 
-
-# REDO WITH FACETING BY SUBCATEGORY
 
 pscores.list <- list()
 
