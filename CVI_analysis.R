@@ -12,7 +12,8 @@ library(lsr)
 library(toxpiR)
 library(grid)
 
-figdir <- "SuppFigures"
+figdir <- "Figures"
+supfigdir <- "SuppFigures"
 datafolder <- "Data"
 pctdir <- "CVI-pct"
 # 10 colors, color-blind friendly (# removed, all lower case)
@@ -260,7 +261,7 @@ for (i in 1:6) {
   g <- arrangeGrob(grobs=pi.list,layout_matrix = matrix(c(1,1,1,1,1,1,1,1,1,10,10,10),nrow=3,ncol=4))
   grid.newpage()
   grid.draw(g)
-  ggsave(file.path(figdir,
+  ggsave(file.path(supfigdir,
                    paste0("k-means cluster ",LETTERS[i],"-example tracts.pdf")),
                    g,height=4.5,width=6,scale=2)
   
@@ -302,15 +303,15 @@ for (i in 1:6) {
 # dev.off()
 # 
 
-
+# 
 library(pca3d)
 pca.x <- princomp(x)
-pdf("PCA.pdf",height=6,width=6)
+pdf(file.path(supfigdir,"PCA.pdf"),height=6,width=6)
 pca2d(pca.x,group=x.kmeans$cluster,legend="topleft")
 pca2d(pca.x,group=x.kmeans$cluster,components = c(1,3))
 dev.off()
 
-pca3d(pca.x,group=x.kmeans$cluster,legend="topleft")
+# pca3d(pca.x,group=x.kmeans$cluster,legend="topleft")
 
 # 
 # pca.xsamp <- princomp(x[indx2,])

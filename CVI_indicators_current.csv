@@ -25,7 +25,7 @@ Hepatitis B,1,1,Health,Infectious Diseases,Hepatitis B,CDC ,2019,State ,State
 HIV,1,1,Health,Infectious Diseases,HIV,CDC,2019,County,County
 Chlamydia,1,1,Health,Infectious Diseases,Chlamydia,Policy Map,2017,County,County
 Gonorrhea,1,1,Health,Infectious Diseases,Gonorrhea,Policy Map,2017,County,County
-Syphillis,1,1,Health,Infectious Diseases,Syphillis,Policy Map,2017,County,County
+Syphilis,1,1,Health,Infectious Diseases,Syphilis,Policy Map,2017,County,County
 Infant Mortality,1,1,Health,Child & Maternal Health,Infant Mortality,County Health Rankings & Roadmaps,2022,County,County
 Low Birthweight,1,1,Health,Child & Maternal Health,Low birthweight,County Health Rankings & Roadmaps,2022,County,County
 Pre-term Birth,1,1,Health,Child & Maternal Health,Pre-term birth,March of Dimes,2014,State,State
@@ -143,7 +143,7 @@ Deaths from Historical Climate Disasters 1980-present,1,0,CC: Health,Disaster-re
 Premature Mortality Associated with PM2.5 Exposure in those Age 65 and up,1,1,CC: Health,Air pollution-related deaths,Increased PM2.5 mortality - CVD (ages 65+),EPA CIRA,2021,Census Tract,Tract
 Premature Mortality Associated with Ozone Exposure Across All Ages,1,1,CC: Health,Air pollution-related deaths,Increased Ozone mortality (all ages),EPA CIRA,2021,Census Tract,Tract
 New Incidence of Asthma Associated with PM2.5 Exposure in Children Age 0 to 17,1,1,CC: Health,Air pollution-related illnesses,Increase in childhood asthma incidence,EPA CIRA,2021,Census Tract,Tract
-Aedes aldopictus dengue transmission,1,1,CC: Health,Infectious Diseases,Aedes aldopictus dengue transmission increase,Ryan et al. 2019 PLOS Neglected Tropical Diseases,2019,Census Tract,Tract
+Aedes albopictus dengue transmission,1,1,CC: Health,Infectious Diseases,Aedes albopictus dengue transmission increase,Ryan et al. 2019 PLOS Neglected Tropical Diseases,2019,Census Tract,Tract
 Aedes aegypti dengue transmission,1,1,CC: Health,Infectious Diseases,Aedes aegypti dengue transmission increase,Ryan et al. 2019 PLOS Neglected Tropical Diseases,2020,Census Tract,Tract
 Aedes aegypti zika transmission,1,1,CC: Health,Infectious Diseases,Aedes aegypti zika transmission increase,Ryan et al. 2019 PLOS Neglected Tropical Diseases,2020,Census Tract,Tract
 FEMA Hazard Mitigation Grants ,-1,1,CC: Social & Economic,Costs of Climate Disasters,FEMA Hazard Mitigation Grants ,FEMA  ,1981-2021,County,County
@@ -164,7 +164,7 @@ Methane,1,1,CC: Social & Economic,Transition Risks,Methane Emissions,EPA ,2012,N
 Property Crimes,1,1,CC: Social & Economic,Social Stressors,Property Crimes (% change),Hsiang et al. ,2017,County Level,County
 Violent Crimes,1,1,CC: Social & Economic,Social Stressors,Violent Crimes (% change),Hsiang et al. ,2017,County Level,County
 Cold Wave,1,1,CC: Extreme Events,Temperature,Cold Wave - Annualized Frequency,FEMA National Risk Index,2022,Tract Level,Tract
-TX35: Days with maximum temperature (TX) above 35 C (units = days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature above 35 C,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
+TX35: Days with maximum temperature (TX) above 35C (units = days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature above 35C,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
 TX40: Days with TX above 40C (units= days),1,1,CC: Extreme Events,Temperature,Days with maximum temperature above 40C,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
 FD: Frost Days (units = days),,1,CC: Extreme Events,Temperature,Frost Days,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)
 TXx: Maximum of maximum temperatures (unit = degrees C),1,1,CC: Extreme Events,Temperature,Maximum of maximum temperatures,IPCC AR6,2021,Tract Level processed from rasters,Tract (raster)

@@ -504,7 +504,7 @@ number of na rows:  0  or  0
 ~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/PLACES__Local_Data_for_Better_Health__Census_Tract_Data_2020_release.csv  exists?  TRUE 
  [1] "Year"                       "StateAbbr"                  "StateDesc"                  "CountyName"                 "CountyFIPS"                 "LocationName"              
  [7] "DataSource"                 "Category"                   "Measure"                    "Data_Value_Unit"            "Data_Value_Type"            "Data_Value"                
-[13] "Data_Value_Footnote_Symbol" "Data_Value_Footnote"        "Low_Confidence_Limit"       "High_Confidence_Limit"      "TotalPopulation"            "Geolocation"               
+[13] "Data_Value_Footnote_Symbol" "Data_Value_Footnote"        catnames "High_Confidence_Limit"      "TotalPopulation"            "Geolocation"               
 [19] "LocationID"                 "CategoryID"                 "MeasureId"                  "DataValueTypeID"            "Short_Question_Text"       
 ****GEOID Column Name  LocationName TRUE 
 ****Indicator subset  Older adult men aged >=65 years who are up to date on a core set of clinical preventive services: Flu shot past year, PPV shot ever, Colorectal cancer screening TRUE 
@@ -756,7 +756,7 @@ number of na rows:  21  or  NA
 
 
 [1] "----- 27"
-~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/Syphillis.csv  exists?  TRUE 
+~/Dropbox/Climate Health Vulnerability Index/Baseline Vulnerability, Health/Health/Syphilis.csv  exists?  TRUE 
 [1] "County"                                                           "State"                                                           
 [3] "FIPS Code"                                                        "Formatted FIPS"                                                  
 [5] "Rate of new primary and secondary syphilis cases reported per 10"
@@ -764,22 +764,22 @@ number of na rows:  21  or  NA
 ****Data Column Name  Rate of new primary and secondary syphilis cases reported per 10 TRUE 
 number of rows:  3234 
 number of na rows:  21  or  NA 
-   GEOID Syphillis
-1: 01001       3.6
-2: 01003       2.4
-3: 01005       4.0
-4: 01007       0.0
-5: 01009       1.7
-6: 01011       9.7
+   GEOID Syphilis
+1: 01001      3.6
+2: 01003      2.4
+3: 01005      4.0
+4: 01007      0.0
+5: 01009      1.7
+6: 01011      9.7
 -------------------------------
 
-   GEOID.County Syphillis GEOID.State
-1:        01001       3.6          01
-2:        01003       2.4          01
-3:        01005       4.0          01
-4:        01007       0.0          01
-5:        01009       1.7          01
-6:        01011       9.7          01
+   GEOID.County Syphilis GEOID.State
+1:        01001      3.6          01
+2:        01003      2.4          01
+3:        01005      4.0          01
+4:        01007      0.0          01
+5:        01009      1.7          01
+6:        01011      9.7          01
 [1] "****** 27 Verified ******"
 
 
@@ -4223,14 +4223,14 @@ number of na rows:  985  or  NA
 
 
 [1] "----- 145"
-~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Health/AldopictusDiff.csv  exists?  TRUE 
+~/Dropbox/Climate Health Vulnerability Index/Climate Change Impacts, Health/AlbopictusDiff.csv  exists?  TRUE 
 [1] "GEOID10"                                "TRACTCE10"                              "_mean TCurMean30Sum_97al_zonalstat"     "_mean rcp85_2050_HE_sum_97al_zonalstat"
 [5] "mean difference"                       
 ****GEOID Column Name  GEOID10 TRUE 
 ****Data Column Name  mean difference TRUE 
 number of rows:  73024 
 number of na rows:  0  or  25601 
-         GEOID Aedes aldopictus dengue transmission increase
+         GEOID Aedes albopictus dengue transmission increase
 1: 56025000502                                      2.000000
 2: 56025001000                                      1.890450
 3: 56025000902                                      2.000000
@@ -4239,7 +4239,7 @@ number of na rows:  0  or  25601
 6: 56025000300                                      2.000000
 -------------------------------
 
-   GEOID.Tract Aedes aldopictus dengue transmission increase GEOID.County GEOID.State
+   GEOID.Tract Aedes albopictus dengue transmission increase GEOID.County GEOID.State
 1: 56025000502                                      2.000000        56025          56
 2: 56025001000                                      1.890450        56025          56
 3: 56025000902                                      2.000000        56025          56
@@ -5118,22 +5118,22 @@ number of na rows:  0  or  0
 ****Data Column Name  CCI_EE_TX35mean_days TRUE 
 number of rows:  73057 
 number of na rows:  0  or  0 
-         GEOID Days with maximum temperature above 35 C
-1: 01001020100                                  22.2551
-2: 01001020200                                  22.2551
-3: 01001020300                                  22.2551
-4: 01001020400                                  22.2551
-5: 01001020500                                  22.2551
-6: 01001020600                                  22.2551
+         GEOID Days with maximum temperature above 35C
+1: 01001020100                                 22.2551
+2: 01001020200                                 22.2551
+3: 01001020300                                 22.2551
+4: 01001020400                                 22.2551
+5: 01001020500                                 22.2551
+6: 01001020600                                 22.2551
 -------------------------------
 
-   GEOID.Tract Days with maximum temperature above 35 C GEOID.County GEOID.State
-1: 01001020100                                  22.2551        01001          01
-2: 01001020200                                  22.2551        01001          01
-3: 01001020300                                  22.2551        01001          01
-4: 01001020400                                  22.2551        01001          01
-5: 01001020500                                  22.2551        01001          01
-6: 01001020600                                  22.2551        01001          01
+   GEOID.Tract Days with maximum temperature above 35C GEOID.County GEOID.State
+1: 01001020100                                 22.2551        01001          01
+2: 01001020200                                 22.2551        01001          01
+3: 01001020300                                 22.2551        01001          01
+4: 01001020400                                 22.2551        01001          01
+5: 01001020500                                 22.2551        01001          01
+6: 01001020600                                 22.2551        01001          01
 [1] "****** 166 Verified ******"
 
 

@@ -8,7 +8,7 @@ library(tidyr)
 library(ggpubr)
 library(ggcorrplot)
 pctdir <- "CVI-pct"
-figdir <- "SuppFigures"
+supfigdir <- "SuppFigures"
 
 # 10 colors, color-blind friendly (# removed, all lower case)
 Tol_muted <- tolower(c('88CCEE', '44AA99', '117733', '332288', 'DDCC77', '999933','CC6677', '882255', 'AA4499', 'DDDDDD'))
@@ -117,7 +117,7 @@ for (i in 1:length(categories)) {
                                 nrow=numrow,ncol=2,labels=letters[indx]),
                       labels=c(letters[1],""),
                       nrow=2,ncol=1,heights = c(2,numrow))
-  ggsave(file.path(figdir,
+  ggsave(file.path(supfigdir,
                    paste0("CVI_category-",i,"-",
                           gsub(": ","-",as.character(onecat)),"-map.pdf")),
          figmap,height=figheight,width=6.5,scale=2)
@@ -270,7 +270,7 @@ for (i in 1:length(categories)) {
   pfig <- ggarrange(scoresboxplt,
                     ggarrange(pgeo,pr2,pcat,pcor,labels=c("b","c","d","e"),ncol=2,nrow=2),
                     labels=c("a",""),ncol=1,heights=c(2,2))
-  ggsave(file.path(figdir,
+  ggsave(file.path(supfigdir,
                    paste0("CVI_category-",i,"-",
                           gsub(": ","-",as.character(onecat)),"-summary.pdf")),
          pfig,height=6,width=6.5,scale=2)

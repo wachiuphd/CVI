@@ -6,7 +6,8 @@ library(choroplethr)
 library(choroplethrMaps)
 library(tidyr)
 library(ggpubr)
-
+figdir <- "Figures"
+supfigdir <- "SuppFigures"
 data(state.regions)
 state.regions$`Census Region` <- "South"
 state.regions$`Census Region`[state.regions$abb %in% 
@@ -100,20 +101,20 @@ for (j in 1:10) {
 }
 figmaps8 <- ggarrange(plotlist=mapplt.list[1:8],nrow=4,ncol=2,
                      labels=letters[1:8])
-ggsave("CVI_maps_8.pdf",figmaps8,height=7,width=6.5,scale=2)
+ggsave(file.path(figdir,"CVI_maps_8.pdf"),figmaps8,height=7,width=6.5,scale=2)
 figmaps3 <- ggarrange(mapplt.list[[1]],
                       ggarrange(mapplt.list[[9]],mapplt.list[[10]],
                                 nrow=1,labels=letters[2:3]),
                       labels=c(letters[1],""),
                       nrow=2,ncol=1,heights = c(2,1))
-ggsave("CVI_maps_3.pdf",figmaps3,height=5.25,width=6.5,scale=2)
+ggsave(file.path(figdir,"CVI_maps_3.pdf"),figmaps3,height=5.25,width=6.5,scale=2)
 figmaps10 <- ggarrange(
   ggarrange(mapplt.list[[1]],mapplt.list[[9]],mapplt.list[[10]],
             ncol=1,labels=letters[1:3]),
   ggarrange(mapplt.list[[2]],mapplt.list[[3]],mapplt.list[[4]],mapplt.list[[5]],mapplt.list[[6]],mapplt.list[[7]],mapplt.list[[8]],
             ncol=1,labels=letters[4:11]),
   nrow=1,widths = c(32.5,13))
-ggsave("CVI_maps_10.pdf",figmaps10,height=7,width=6.5,scale=2)
+ggsave(file.path(figdir,"CVI_maps_10.pdf"),figmaps10,height=7,width=6.5,scale=2)
 
 for (j in 1:8) {
   dat.df <- data.frame(region=as.numeric(scores.df.max.county$GEOID.County),
@@ -127,7 +128,7 @@ for (j in 1:8) {
   mapplt.list[[j]]<-plt$render()
 }
 figmaps <- ggarrange(plotlist=mapplt.list[1:8],nrow=4,ncol=2)
-ggsave("CVI_maps_max.pdf",figmaps,height=7,width=6.5,scale=2)
+ggsave(file.path(supfigdir,"CVI_maps_max.pdf"),figmaps,height=7,width=6.5,scale=2)
 
 for (j in 1:8) {
   dat.df <- data.frame(region=as.numeric(scores.df.relvar.county$GEOID.County),
@@ -141,7 +142,7 @@ for (j in 1:8) {
   mapplt.list[[j]]<-plt$render()
 }
 figmaps <- ggarrange(plotlist=mapplt.list[1:8],nrow=4,ncol=2)
-ggsave("CVI_maps_relvar.pdf",figmaps,height=7,width=6.5,scale=2)
+ggsave(file.path(supfigdir,"CVI_maps_relvar.pdf"),figmaps,height=7,width=6.5,scale=2)
 
 ############# Source of variability
 
@@ -199,7 +200,7 @@ scoresboxplt<-
   scale_fill_viridis_d(begin=0.3)+
   facet_wrap(~label,nrow=1)+xlab("")+theme_bw()+theme(axis.text.x=element_text(angle=90,vjust=0.5,hjust=1))
 print(scoresboxplt)
-ggsave("StateSummaryBoxplots.pdf",scoresboxplt,height=3,width=6.5,scale=2)
+ggsave(file.path(figdir,"StateSummaryBoxplots.pdf"),scoresboxplt,height=3,width=6.5,scale=2)
 
 #####
 
@@ -241,7 +242,7 @@ pgeo <- ggplot(indicators.geo.df)+
         axis.text.y=element_text(hjust=0))+
   guides(fill = guide_legend(reverse = TRUE))
 print(pgeo)
-ggsave("GeoScale.pdf",pgeo,height=3,width=2.33,scale=2)
+ggsave(file.path(figdir,"GeoScale.pdf"),pgeo,height=3,width=2.33,scale=2)
 
 
 ##### Heterogeneity - state and county level
@@ -275,7 +276,7 @@ pr2<-ggplot(r2.df)+
   guides(fill = guide_legend(reverse = TRUE))
 
 print(pr2)
-ggsave("R2.pdf",pr2,height=3,width=2.33,scale=2)
+ggsave(file.path(figdir,"R2.pdf"),pr2,height=3,width=2.33,scale=2)
 
 ###### Bar graph of top categories
 
@@ -312,13 +313,13 @@ pcat <- ggplot(scores.df.cat)+
                                 axis.text.y=element_text(hjust=0))+
   guides(fill = guide_legend(reverse = TRUE))
 print(pcat)
-ggsave("Top.Categories.pdf",pcat,height=3,width=2.33,scale=2)
+ggsave(file.path(figdir,"Top.Categories.pdf"),pcat,height=3,width=2.33,scale=2)
 ###
 
 pfig <- ggarrange(scoresboxplt,
                   ggarrange(pgeo,pr2,pcat,labels=c("b","c","d"),nrow=1),
                   labels=c("a",""),ncol=1,heights=c(2,1))
-ggsave("State_County_summary_fig.pdf",pfig,height=4.5,width=6.5,scale=2)
+ggsave(file.path(figdir,"State_County_summary_fig.pdf"),pfig,height=4.5,width=6.5,scale=2)
 
 ### Not run
 # 

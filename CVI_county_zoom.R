@@ -14,8 +14,8 @@ library(grid)
 library(tigris)
 
 
-
-figdir <- "SuppFigures"
+figdir <- "Figures"
+supfigdir <- "SuppFigures"
 datafolder <- "Data"
 pctdir <- "CVI-pct"
 catnames <-   c(  "Baseline Vulnerability:\nHealth",
@@ -180,7 +180,7 @@ pzoom <- ggarrange(ggarrange(p,ggarrange(p2,gList(ppi_fill,ppi),ncol=1,
                    labels=c("Harris County, TX",paste("Top Ranked Tract:",last(onetract$FIPS))),
                    label.y=c(1,1.1),label.x=c(0,-0.03)
             )
-ggsave("Harris County Zoom.pdf",pzoom,height=5,width=6,scale=2.5)
+ggsave(file.path(figdir,"Harris County Zoom.pdf"),pzoom,height=5,width=6,scale=2.5)
 
 
 pscores.list <- list()
@@ -233,4 +233,4 @@ pscores <- ggarrange(ggarrange(pscores.baseline1,pscores.climate,
                                nrow=2,ncol=1,
                                heights=c(4,3)),
                      pscores.list[[4]],widths=c(3,1))
-ggsave("Harris County TopTract scores.pdf",pscores,height=5.5,width=6,scale=4)
+ggsave(file.path(supfigdir,"Harris County TopTract scores.pdf"),pscores,height=5.5,width=6,scale=4)
