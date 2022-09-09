@@ -11,3 +11,4 @@
 (9) Source State_county_parameter_summaries.R to make subcategory maps
 (10) Source CVI_analysis.R to make k-means clustering figures
 (11) Source CVI_county_zoom.R to make Harris county zoom in figures
+(12) Source CVI_CEJST_comparsion.R to do comparison between CVI and CEJST disadvantaged communities
