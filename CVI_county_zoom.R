@@ -195,6 +195,10 @@ for (i in 1:length(categories)) {
   numparms <- length(parameters)
   subcategories <- indicators.df$Subcategory[
     indicators.df$Category==onecat]
+  
+  nsubcat <- length(subcategories)
+  fillcols <- paste0("#",paste0(Tol_max[i],as.hexmode(round((1+(nsubcat:1))*255/(1+nsubcat)))))
+  
   indx <- c("FIPS",parameters)
   onetract_scores.df <- pivot_longer(subset(cvi.pct.df,
                                             FIPS==onetract$FIPS)[,..indx],
@@ -209,7 +213,7 @@ for (i in 1:length(categories)) {
     scale_y_discrete(position="right",
                      labels = function(x) str_wrap(x, width = 40))+
     scale_x_continuous(label = scales::percent,limits=c(0,1))+
-    scale_fill_manual(values=paste0("#",Tol_muted))+
+    scale_fill_manual(values=fillcols)+ 
     theme_bw()+
     theme(legend.position ="none",axis.title.y = element_blank())+
     ggtitle(paste0(catnames[i]))+
@@ -233,4 +237,4 @@ pscores <- ggarrange(ggarrange(pscores.baseline1,pscores.climate,
                                nrow=2,ncol=1,
                                heights=c(4,3)),
                      pscores.list[[4]],widths=c(3,1))
-ggsave(file.path(supfigdir,"Harris County TopTract scores.pdf"),pscores,height=5.5,width=6,scale=4)
+ggsave(file.path(supfigdir,"Harris County TopTract scores.pdf"),pscores,height=7.5,width=6,scale=2.5)
