@@ -1,7 +1,8 @@
 # CVI - Climate Vulnerability Index calculations, analyses, and visualizations
+
+To recreate all analyses and figures, run the scripts in the following order. NOTE: *Script (1) cannot be run without access to the Dropbox that has all the original data files.* However, all other scripts can be run.
  
-(1) Source get_datasets.R to load all data from individual files into one master file. 
-This script cannot be run without access to the Dropbox that has all the original data files. However, all other scripts can be run. Creates the following files:
+(1) Source get_datasets.R to load all data from individual files into one master file. Creates the following files:
 - CVI_master.csv - all details as to each indicator, including source file information and notes
 - Checkoutput.txt - output capture during data loading, used for diagnostics
 - CVI_indicators_current.csv - most important meta-data for each indicator
@@ -88,3 +89,5 @@ Uses shapefiles in Data/2010 Tracts for 2010 census tracts
 - SuppFigures/CVI_CEJST_boxplot.pdf - boxplot comparing CVI scores for CEJST disadvantaged vs. not disadvantaged communities
 
 Uses CEJST.csv file which contains the census tracts with whether it is CEJST disadvantaged 
+
+Note: Other files in Data were used to create "internal points" file for census tracts (since Gaz files sometimes had internal points on or outside the boundary of the census tract)
