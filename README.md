@@ -1,5 +1,11 @@
 # CVI - Climate Vulnerability Index calculations, analyses, and visualizations
 
+Data and analyses code for
+
+Lewis PGT, Chiu WA, Nasser E, Proville J, Barone A, Danforth C, Kim B, Prozzi J, Craft E. 2022.  Characterizing Vulnerabilities to Climate Change Across the United States (in review)
+
+Data can be visualized on an ArcGIS dashboard  available at https://arcg.is/1bvKjK0.
+
 To recreate all analyses and figures, run the scripts in the following order. NOTE: *Script (1) cannot be run without access to the Dropbox that has all the original data files.* However, all other scripts can be run.
  
 (1) Source get_datasets.R to load all data from individual files into one master file. Creates the following files:
@@ -91,3 +97,4 @@ Uses shapefiles in Data/2010 Tracts for 2010 census tracts
 Uses CEJST.csv file which contains the census tracts with whether it is CEJST disadvantaged 
 
 Note: Other files in Data were used to create "internal points" file for census tracts (since Gaz files sometimes had internal points on or outside the boundary of the census tract)
+
