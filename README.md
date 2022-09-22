@@ -94,6 +94,8 @@ Uses shapefiles in Data/2010 Tracts for 2010 census tracts
 (12) Source CVI_CEJST_comparsion.R to do comparison between CVI and CEJST disadvantaged communities. Creates the following files:
 - SuppFigures/CVI_CEJST_boxplot.pdf - boxplot comparing CVI scores for CEJST disadvantaged vs. not disadvantaged communities
 
+(13) Source plot_explanatory_vars.R to run correlation analyses between CVI overall categories (total score, baseline and climate change), and a series of explanatory variables (land use, per-capita income, population density). In addition, plot results summarized by two datasets of interest: HOLC grade, and EPA region. 
+
 Uses CEJST.csv file which contains the census tracts with whether it is CEJST disadvantaged 
 
 Note: Other files in Data were used to create "internal points" file for census tracts (since Gaz files sometimes had internal points on or outside the boundary of the census tract)

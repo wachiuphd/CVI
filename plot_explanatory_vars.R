@@ -66,7 +66,7 @@ for(i in 2:4){
   g <- ggplot(otherdomains, aes(x=xvar, y=yvar, group=xvar, fill=as.factor(xvar))) + geom_violin(trim=FALSE) + stat_summary(fun=mean, geom="point", shape=20, size=5, color="black", fill="gray")+geom_text(aes(label=format(..count..,big.mark = ",",trim = TRUE)), y=0.10, stat='count', colour="black", size=4)+geom_hline(yintercept=mean(yvar),linetype="dashed") + theme(legend.position="none",axis.text=element_text(size=10),axis.title=element_text(size=12,face="bold"))+xlab("HOLC Grade")+ylab(labs[i])+ylim(0,1)
   
   plot(g)
-  # ggsave(filename = paste0("HOLC_",labs[i],".pdf"),dpi=300)  #uncomment to export PDFs of plots
+  # ggsave(filename = paste0(working,"/Exports/HOLC_",labs[i],".pdf"),dpi=300)  #uncomment to export PDFs of plots
 }
 
 #EPA region charts
@@ -77,5 +77,5 @@ for(i in 2:4){
   g <- ggplot(otherdomains, aes(x=xvar, y=yvar, group=xvar, fill=as.factor(xvar))) + geom_violin(trim=FALSE) + scale_x_continuous(breaks=seq(1,10,1)) + stat_summary(fun=mean, geom="point", shape=20, size=5, color="black", fill="gray")+ geom_hline(yintercept=mean(yvar),linetype="dashed")+geom_text(aes(label=format(..count..,big.mark = ",",trim = TRUE)), y=0.10, stat='count', colour="black",size=3)+theme(legend.position="none",axis.text=element_text(size=10),axis.title=element_text(size=12,face="bold"))+xlab("EPA Region")+ylab(labs[i])+ylim(0,1)
   
   plot(g)
-  # ggsave(filename = paste0("EPAReg_",labs[i],".pdf"),dpi=300)  #uncomment to export PDFs of plots
+  # ggsave(filename = paste0(working,"/Exports/EPAReg_",labs[i],".pdf"),dpi=300)  #uncomment to export PDFs of plots
 }
