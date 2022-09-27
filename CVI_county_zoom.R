@@ -13,6 +13,9 @@ library(toxpiR)
 library(grid)
 library(tigris)
 
+stateabbr <- "TX"
+statename <- "texas"
+countyname <- "Harris"
 
 figdir <- "Figures"
 supfigdir <- "SuppFigures"
@@ -91,11 +94,11 @@ for (i in 1:length(categories)) {
                               keepLeadingZeros = TRUE,integer64 = "numeric")
 }
 
-onecounty.df <- subset(cvi.toxpi.df,STATE=="TX" & County_Name=="Harris")
+onecounty.df <- subset(cvi.toxpi.df,STATE==stateabbr & County_Name==countyname)
 county_zoom <- as.numeric(onecounty.df$GEOID.County[1])
 dat.df <- data.frame(region=as.numeric(onecounty.df$FIPS),
                      value=onecounty.df$`ToxPi Score`)
-plt<-TractChoropleth$new("texas",dat.df)
+plt<-TractChoropleth$new(statename,dat.df)
 plt$set_num_colors(1)
 plt$set_zoom_tract(county_zoom=county_zoom,tract_zoom=NULL)
 plt$ggplot_scale <- list(scale_fill_viridis_c("",option="A",limits=range(cvi.toxpi.df$`ToxPi Score`)),
@@ -111,7 +114,7 @@ toptract$label <- paste0("Tract ",toptract$FIPS,"\nCVI Score: ",
                          " (",toptract$pctrank,"%)")
 tractorder<-order(toptract$`ToxPi Score`,decreasing = FALSE)
 toptract <- toptract[tractorder,]
-plt<-TractChoropleth$new("texas",dat.df)
+plt<-TractChoropleth$new(statename,dat.df)
 plt$set_num_colors(1)
 tract_zoom <- as.numeric(toptract$FIPS)
 plt$set_zoom_tract(county_zoom=county_zoom,tract_zoom=tract_zoom)
@@ -177,11 +180,10 @@ pzoom <- ggarrange(ggarrange(p,ggarrange(p2,gList(ppi_fill,ppi),ncol=1,
                              ncol=2,
                              widths = c(3,2.5)),
                    psubcat,nrow=2,heights=c(2,1.25),
-                   labels=c("Harris County, TX",paste("Top Ranked Tract:",last(onetract$FIPS))),
+                   labels=c(paste(countyname,"County,",stateabbr),paste("Top Ranked Tract:",last(onetract$FIPS))),
                    label.y=c(1,1.1),label.x=c(0,-0.03)
             )
-ggsave(file.path(figdir,"Harris County Zoom.pdf"),pzoom,height=5,width=6,scale=2.5)
-
+ggsave(file.path(figdir,paste(countyname,"County Zoom.pdf")),pzoom,height=5,width=6,scale=2.5)
 
 pscores.list <- list()
 
@@ -237,4 +239,4 @@ pscores <- ggarrange(ggarrange(pscores.baseline1,pscores.climate,
                                nrow=2,ncol=1,
                                heights=c(4,3)),
                      pscores.list[[4]],widths=c(3,1))
-ggsave(file.path(supfigdir,"Harris County TopTract scores.pdf"),pscores,height=7.5,width=6,scale=2.5)
+ggsave(file.path(supfigdir,paste(countyname,"County TopTract scores.pdf")),pscores,height=7.5,width=6,scale=2.5)
