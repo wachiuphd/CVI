@@ -220,7 +220,8 @@ for (i in 1:length(categories)) {
     theme(legend.position ="none",axis.title.y = element_blank())+
     ggtitle(paste0(catnames[i]))+
     xlab("Percentile")+
-    facet_wrap(~Subcategory,scale="free_y",ncol=1)
+    facet_wrap(~Subcategory,scale="free_y",ncol=1,
+               labeller = labeller(Subcategory = label_wrap_gen(width = 17)))
     #facet_grid(Subcategory~.,scales="free_y",space="free_y")
 
   # ggplot(onetract_scores.df,aes(x=value,y=name,fill=Subcategory))+geom_col()+
