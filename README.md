@@ -2,9 +2,9 @@
 
 Data and analyses code for
 
-Lewis PGT, Chiu WA, Nasser E, Proville J, Barone A, Danforth C, Kim B, Prozzi J, Craft E. 2022.  Characterizing Vulnerabilities to Climate Change Across the United States (in review)
+Lewis PGT, Chiu WA, Nasser E, Proville J, Barone A, Danforth C, Kim B, Prozzi J, Craft E. 2023.  Characterizing Vulnerabilities to Climate Change Across the United States. Environ Int. Feb;172:107772.  doi: https://doi.org/10.1016/j.envint.2023.107772. PMID: 36731185. Epub 2023 Jan 25. 
 
-Data can be visualized on an ArcGIS dashboard  available at https://arcg.is/1bvKjK0.
+Data can be visualized on a rudimentary ArcGIS dashboard available at https://arcg.is/1bvKjK0. Additional visualization tools are in development.
 
 To recreate all analyses and figures, run the scripts in the following order. NOTE: *Script (1) cannot be run without access to the Dropbox that has all the original data files.* However, all other scripts can be run.
  
